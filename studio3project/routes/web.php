@@ -12,6 +12,10 @@ use App\Http\Controllers\pagesController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+//route to home page 
 Route::get('/',[pagesController::class ,'homepage']);
+//route to home page 
 Route::get('/home',[pagesController::class ,'homepage']);
+//route to profile page
 Route::get('/profile',[pagesController::class ,'profile']);

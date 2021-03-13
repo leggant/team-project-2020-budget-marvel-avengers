@@ -1,3 +1,4 @@
+  <!-- layout page :other content will be added to this page from other pages -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,9 +15,12 @@
 </head>
 <body>
     <!-- navbar -->
+     <!--this will include the navbar in all pages  -->
     @include('inc.navbar')
 
+
     <!-- content goes here -->
+         <!-- content from other pages that have the @ section will be called from here  -->
 @yield('homepage-content')
 
 
