@@ -14,5 +14,4 @@ class pagesController extends Controller
     public function profile(){
         return view('pages.profile');
     }
-
 }
