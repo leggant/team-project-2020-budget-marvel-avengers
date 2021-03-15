@@ -1,8 +1,11 @@
+// Bootstrap imported first so it can be overridden
+@import '~bootstrap/scss/bootstrap';
+
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import 'variables/fonts';
 
 // Variables
-@import 'variables';
+@import 'variables/variables';
 
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
+// Evidence Page Form Styles
+@import 'forms/evidence';
