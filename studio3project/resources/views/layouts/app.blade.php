@@ -7,12 +7,12 @@
         <title>@yield('title','Otago Polytech - Studio Management Portal')</title>
     </head>
     <body>
+    @include('partials.navbar')
         <div class="container">
-        @include('partials.navbar')
             <main>
                 @yield('content')
             </main>
-        @include('partials.footer')
         </div>
+    @include('partials.footer')
     </body>
 </html>

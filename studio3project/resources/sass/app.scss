@@ -9,3 +9,76 @@
 
 // Evidence Page Form Styles
 @import 'forms/evidence';
+
+html {
+    min-height: 100vh;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    h1 {
+        font-size: 3rem;
+        font-weight: 700;
+    }
+    h2, h3 {
+        font-size: 2rem;
+        font-weight: 600;
+    }
+    height: 100vh;
+}
+.navbar {
+    background-color: $OPblue;
+    display: flex;
+    margin-bottom: 2rem;
+    nav {
+        align-items: center;
+        justify-content: center;
+        color: white;
+    }
+   .nav-link {
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: 0;
+        padding: 1rem 0;
+    }
+}
+.btn {
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: $OPblue;
+}
+input {
+    border-color: $OPblue;
+}
+.form-control:focus, .custom-select:focus-within  {
+    border-color: $OPblue;
+    box-shadow: 0 0 0 0.3rem rgb(0 90 71 / 13%);
+}
+p.input-group-text {
+    background-color: transparent;
+}
+.btn-primary {
+    background-color: $OPblue;
+}
+.btn-outline-primary {
+    border-color: $OPblue;
+    &:hover {
+        background-color: $OPblue;
+        border-color: $OPblue;
+    }
+}
+
+footer {
+    color: white;
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $OPblue;
+    max-width: 100vw;
+    p {
+        margin: 0;
+        padding: 2em 0;
+    }
+}

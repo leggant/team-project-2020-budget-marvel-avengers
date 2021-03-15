@@ -1,0 +1,17 @@
+#evidence {
+    h1, h2, .form-wrapper {
+        margin-bottom: 1.5rem;
+    }
+    .form-wrapper {
+        max-width: 100%;
+        .evidence-select-search-group .custom-select {
+            max-width: 10%;
+        }
+        .evidence-select-search-group #searchStudent {
+            max-width: 50%;
+        }
+        .evidence-select-search-group .search-btn {
+            max-width: 20%;
+        }
+    }
+}

@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;700&display=swap);
 @charset "UTF-8";
 /*!
  * Bootstrap v4.6.0 (https://getbootstrap.com/)
@@ -10001,4 +10001,100 @@ h3 {
     color: inherit;
     border-color: #dee2e6;
   }
+}
+#evidence h1, #evidence h2, #evidence .form-wrapper {
+  margin-bottom: 1.5rem;
+}
+#evidence .form-wrapper {
+  max-width: 100%;
+}
+#evidence .form-wrapper .evidence-select-search-group .custom-select {
+  max-width: 10%;
+}
+#evidence .form-wrapper .evidence-select-search-group #searchStudent {
+  max-width: 50%;
+}
+#evidence .form-wrapper .evidence-select-search-group .search-btn {
+  max-width: 20%;
+}
+
+html {
+  min-height: 100vh;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  height: 100vh;
+}
+body h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+body h2, body h3 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.navbar {
+  background-color: #005AAB;
+  display: flex;
+  margin-bottom: 2rem;
+}
+.navbar nav {
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+.navbar .nav-link {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0;
+  padding: 1rem 0;
+}
+
+.btn {
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #005AAB;
+}
+
+input {
+  border-color: #005AAB;
+}
+
+.form-control:focus, .custom-select:focus-within {
+  border-color: #005AAB;
+  box-shadow: 0 0 0 0.3rem rgba(0, 90, 71, 0.13);
+}
+
+p.input-group-text {
+  background-color: transparent;
+}
+
+.btn-primary {
+  background-color: #005AAB;
+}
+
+.btn-outline-primary {
+  border-color: #005AAB;
+}
+.btn-outline-primary:hover {
+  background-color: #005AAB;
+  border-color: #005AAB;
+}
+
+footer {
+  color: white;
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #005AAB;
+  max-width: 100vw;
+}
+footer p {
+  margin: 0;
+  padding: 2em 0;
 }
