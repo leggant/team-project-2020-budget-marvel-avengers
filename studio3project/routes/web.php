@@ -19,3 +19,7 @@ Route::get('/',[pagesController::class ,'homepage']);
 Route::get('/home',[pagesController::class ,'homepage']);
 //route to profile page
 Route::get('/profile',[pagesController::class ,'profile']);
+Route::get('/notes',[pagesController::class ,'Notes']);
+Route::get('/students',[pagesController::class ,'Students']);
+Route::get('/login',[pagesController::class ,'Login']);
+Route::get('/about',[pagesController::class ,'About']);

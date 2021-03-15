@@ -10002,35 +10002,21 @@ h3 {
     border-color: #dee2e6;
   }
 }
-/*main css */
-body {
-  font-family: "Montserrat", sans-serif;
-  margin: 0;
-  padding: 0;
+.test {
+  width: 400px;
 }
 
-.navbar {
-  background-color: #005aab !important;
-}
-.navbar .login-btn .bg {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-}
-@media (max-width: 767px) {
-  .navbar .navbar .login-btn {
-    right: 75px;
-  }
+.box {
+  width: 600px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  margin-top: 200px;
 }
 
-.navbar-brand {
-  font-weight: 700;
-}
-
-.nav-item.active {
-  font-weight: bold;
-}
-
-.nav-link {
-  color: white !important;
+.container-text {
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }

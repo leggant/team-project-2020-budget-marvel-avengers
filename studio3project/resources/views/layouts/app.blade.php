@@ -5,15 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <script src="{{ asset('js/main.js') }}" defer></script>
+    <link href="{{ asset('css/main.css') }}" rel="stylesheet">
+    <script src="{{ asset('js/app.js') }}" defer></script>
     
     <title>Otago Polytech</title>
 </head>
 <body>
+    
     <!-- navbar -->
      <!--this will include the navbar in all pages  -->
-    @include('inc.navbar')
+ @include('inc.navbar')
 
 <main>
     <!-- content goes here -->

@@ -1,33 +1,27 @@
-     <!--navbar  -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="home">Otago Polytech</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="home">Home
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="profile">Profile</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Classes</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Students</a>
-          </li>
-        </ul>
-        <ul class="ml-auto navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Sign In</a>
-          </li>
-         
-        </ul>
-      </div>
+<header id="navbar">
+  <nav class="navbar-container container">
+    <a href="/" class="home-link">
+      <div class="navbar-logo"></div>
+
+    </a>
+    <!-- burger menu-->
+    <button type="button" class="navbar-toggle" aria-label="Open navigation menu">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+
+
+  <!-- navigation bar links -->
+    <div class="navbar-menu">
+      <ul class="navbar-links">
+        <li class="navbar-item"><a class="navbar-link" href="/profile">Profile</a></li>
+        <li class="navbar-item"><a class="navbar-link" href="/students">Students</a></li>
+        <li class="navbar-item"><a class="navbar-link" href="/notes">Notes</a></li>
+        <li class="navbar-item"><a class="navbar-link" href="/about">About</a></li>
+        <li class="navbar-item"><a class="navbar-link-login" href="/login">Log in</a></li>
+      </ul>
+      
     </div>
   </nav>
+</header>

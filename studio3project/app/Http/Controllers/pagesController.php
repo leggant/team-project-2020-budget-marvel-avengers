@@ -14,4 +14,16 @@ class pagesController extends Controller
     public function profile(){
         return view('pages.profile');
     }
+    public function Notes(){
+        return view('pages.Notes');
+    }
+    public function Students(){
+        return view('pages.Students');
+    }
+    public function Login(){
+        return view('pages.Login');
+    }
+    public function About(){
+        return view('pages.About');
+    }
 }
