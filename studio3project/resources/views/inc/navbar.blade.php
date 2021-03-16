@@ -15,6 +15,7 @@
   <!-- navigation bar links -->
     <div class="navbar-menu">
       <ul class="navbar-links">
+        <li class="navbar-item"><a class="navbar-link" href="/">Home</a></li>
         <li class="navbar-item"><a class="navbar-link" href="/profile">Profile</a></li>
         <li class="navbar-item"><a class="navbar-link" href="/students">Students</a></li>
         <li class="navbar-item"><a class="navbar-link" href="/notes">Notes</a></li>

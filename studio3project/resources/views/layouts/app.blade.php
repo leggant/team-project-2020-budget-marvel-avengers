@@ -21,6 +21,6 @@
     <!-- content from other pages that have the @ section will be called from here  -->
 @yield('homepage-content')
 </main>
-
+@include('inc.footer')
 </body>
 </html>
