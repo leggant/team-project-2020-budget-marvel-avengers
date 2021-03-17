@@ -45,8 +45,8 @@
   <div class="col social">
     <h1>Social</h1>
     <ul>
-      <li><img src="https://cdn3.iconfinder.com/data/icons/capsocial-round/500/facebook-512.png" width="32" style="width: 32px;"></li>
-      <li><img src="https://www.pngkey.com/png/full/283-2831746_insta-icon-instagram.png" width="32" style="width: 32px;"></li>
+      <li><a href="https://www.facebook.com/OtagoPoly"><img src="https://cdn3.iconfinder.com/data/icons/capsocial-round/500/facebook-512.png" width="32" style="width: 32px;"></li></a>
+      <li><a href="https://www.instagram.com/otagopolytechnic/"><img src="https://www.pngkey.com/png/full/283-2831746_insta-icon-instagram.png" width="32" style="width: 32px;"></li></a>
     </ul>
   </div>
 <div class="clearfix"></div>

@@ -20,7 +20,7 @@
         <li class="navbar-item"><a class="navbar-link" href="/students">Students</a></li>
         <li class="navbar-item"><a class="navbar-link" href="/notes">Notes</a></li>
         <li class="navbar-item"><a class="navbar-link" href="/about">About</a></li>
-        <li class="navbar-item"><a class="navbar-link-login" href="/login">Log in</a></li>
+        <li class="navbar-item"><a class="navbar-link-login" href="/login"><img src="https://sprayandwash.co.nz/wp-content/uploads/2018/12/person-icon-white-png-1.png" width="22" style="width: 22px;"></a></li>
       </ul>
       
     </div>
