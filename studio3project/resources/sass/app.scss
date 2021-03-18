@@ -1,22 +1,19 @@
-// Bootstrap imported first so it can be overridden
+/* -------------------------------------------------------------------------- */
+/*                            GLOBAL STYLE IMPORTS                            */
+/* -------------------------------------------------------------------------- */
+
 @import '~bootstrap/scss/bootstrap';
 
-// Fonts
-@import 'variables/fonts';
+@import 'variables/globals';
+@import 'pages/evidence';
 
-// Variables
-@import 'variables/variables';
 
-// Evidence Page Form Styles
-@import 'forms/evidence';
-
-html {
-    min-height: 100vh;
+.grid-container {
+    display: grid;
 }
 body {
     display: flex;
     flex-direction: column;
-    font-family: 'Montserrat', sans-serif;
     h1 {
         font-size: 3rem;
         font-weight: 700;
@@ -25,7 +22,6 @@ body {
         font-size: 2rem;
         font-weight: 600;
     }
-    height: 100vh;
 }
 .navbar {
     background-color: $OPblue;

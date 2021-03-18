@@ -1,5 +1,8 @@
-@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;600;700&display=swap);
 @charset "UTF-8";
+/* -------------------------------------------------------------------------- */
+/*                            GLOBAL STYLE IMPORTS                            */
+/* -------------------------------------------------------------------------- */
 /*!
  * Bootstrap v4.6.0 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -10002,8 +10005,111 @@ h3 {
     border-color: #dee2e6;
   }
 }
-#evidence h1, #evidence h2, #evidence .form-wrapper {
+/* -------------------------------------------------------------------------- */
+/*                                FONT IMPORTS                                */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                               COLOR VARIABLES                              */
+/* -------------------------------------------------------------------------- */
+html {
+  background-color: #f8fafc;
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  display: inline-block;
+}
+a:link, a:visited {
+  text-decoration: none;
+}
+a:hover, a a:active {
+  text-decoration: underline;
+}
+
+input {
+  margin: 0;
+}
+
+[type=radio] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+[type=radio] + img {
+  cursor: pointer;
+}
+
+[type=radio]:checked + img {
+  border-radius: 50%;
+  box-shadow: 5px 6px 17px -2px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 5px 6px 17px -2px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 5px 6px 17px -2px rgba(0, 0, 0, 0.75);
+  filter: brightness(122%);
+  -webkit-filter: brightness(122%);
+  -moz-filter: brightness(122%);
+}
+
+#fileurl {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+}
+
+input#inputFile.form-control {
+  line-height: 1.2;
+}
+
+.student-profile {
+  font-weight: 300;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  align-content: center;
+  margin-bottom: 0.5rem;
+  border-bottom: 2px solid #005AAB;
+}
+.student-profile label {
+  cursor: pointer;
+  padding: 1rem 0 1rem 1rem;
+}
+.student-profile label img {
+  border-radius: 50%;
+  margin-left: 2rem;
+}
+
+#evidence .form-wrapper h1, #evidence .form-wrapper h2 {
   margin-bottom: 1.5rem;
+}
+#evidence .evidence-select-search-group {
+  display: flex;
+  justify-content: flex-start;
+}
+#evidence .evidence-select-search-group .input-group {
+  width: auto;
+}
+#evidence .evidence-select-search-group #searchStudent {
+  width: 15rem;
+}
+#evidence .evidence-select-search-group button {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0 1.6rem;
 }
 #evidence .form-wrapper {
   max-width: 100%;
@@ -10018,15 +10124,13 @@ h3 {
   max-width: 20%;
 }
 
-html {
-  min-height: 100vh;
+.grid-container {
+  display: grid;
 }
 
 body {
   display: flex;
   flex-direction: column;
-  font-family: "Montserrat", sans-serif;
-  height: 100vh;
 }
 body h1 {
   font-size: 3rem;
