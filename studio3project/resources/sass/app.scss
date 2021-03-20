@@ -2,15 +2,9 @@
 /*                            GLOBAL STYLE IMPORTS                            */
 /* -------------------------------------------------------------------------- */
 
-@import '~bootstrap/scss/bootstrap';
-
 @import 'variables/globals';
 @import 'pages/evidence';
 
-
-.grid-container {
-    display: grid;
-}
 body {
     display: flex;
     flex-direction: column;
@@ -23,22 +17,20 @@ body {
         font-weight: 600;
     }
 }
-.navbar {
+
+.grid-container {
+    display: grid;
+}
+
+nav {
     background-color: $OPblue;
     display: flex;
     margin-bottom: 2rem;
-    nav {
-        align-items: center;
-        justify-content: center;
+    a {
         color: white;
     }
-   .nav-link {
-        font-size: 1rem;
-        font-weight: 600;
-        margin-bottom: 0;
-        padding: 1rem 0;
-    }
 }
+
 .btn {
     font-weight: 700;
     letter-spacing: 2px;

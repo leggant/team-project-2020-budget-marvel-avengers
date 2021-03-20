@@ -1,11 +1,11 @@
-<nav class="navbar navbar-expand-lg">
+<nav class="nav-bar">
     <!-- Left Side Of Navbar -->
-    <ul class="navbar-nav ml-auto">
+    <ul class="nav-menu">
         <li class="nav-item">
-            <a href="{{ route('pages.index') }}" class="nav-link h5 btn-link">Home</a>
+            <a href="{{ route('pages.index') }}" class="nav-link">Home</a>
         </li>
         <li class="nav-item">
-            <a href="{{route('pages.evidence')}}" class="nav-link h5 btn-link">Upload Student Evidence</a>
+            <a href="{{route('pages.evidence')}}" class="nav-link">Upload Student Evidence</a>
         </li>
     </ul>
 </nav>
