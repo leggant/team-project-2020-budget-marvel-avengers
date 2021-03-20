@@ -10,20 +10,18 @@ class pagesController extends Controller
     public function homepage(){
         return view('pages.index');
     }
-      //this function will return the profile page inside pages folder 
-    public function profile(){
-        return view('pages.profile');
+    public function students(){
+        return view('pages.students');
     }
-    public function Notes(){
-        return view('pages.Notes');
+    public function evidence(){
+        return view('pages.evidence');
     }
-    public function Students(){
-        return view('pages.Students');
+    public function notes(){
+        return view('pages.notes');
     }
-    public function Login(){
-        return view('pages.Login');
-    }
+ 
     public function About(){
-        return view('pages.About');
+        return view('pages.about');
     }
+
 }

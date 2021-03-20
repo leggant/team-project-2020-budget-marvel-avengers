@@ -17,9 +17,12 @@ use App\Http\Controllers\pagesController;
 Route::get('/',[pagesController::class ,'homepage']);
 //route to home page 
 Route::get('/home',[pagesController::class ,'homepage']);
-//route to profile page
-Route::get('/profile',[pagesController::class ,'profile']);
-Route::get('/notes',[pagesController::class ,'Notes']);
-Route::get('/students',[pagesController::class ,'Students']);
-Route::get('/login',[pagesController::class ,'Login']);
+
+Route::get('/students',[pagesController::class ,'students']);
+
+Route::get('/evidence',[pagesController::class ,'evidence']);
+
+Route::get('/notes',[pagesController::class ,'notes']);
+
+
 Route::get('/about',[pagesController::class ,'About']);

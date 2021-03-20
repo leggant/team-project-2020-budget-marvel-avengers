@@ -1,4 +1,4 @@
-require('./bootstrap');
+
 const navbar = document.getElementById("navbar");
 const navbarToggle = navbar.querySelector(".navbar-toggle");
 
