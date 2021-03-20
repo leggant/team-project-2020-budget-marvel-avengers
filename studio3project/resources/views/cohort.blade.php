@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="{{ asset('resources/css/app.css') }} ">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }} ">
     <title>Document</title>
 </head>
 <body>
     <form action="#">
 
         <header>
-          <h2>Example Responsive Form</h2>
-          <div>This form breaks at 600px and goes from a left-label form to a top-label form. At above 1200px, the labels align right.</div>
+          <h2>Cohort Assignment</h2>
+          <div>Assign students into cohorts using the form.</div>
         </header>
         
         <div>
