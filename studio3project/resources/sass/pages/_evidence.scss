@@ -1,80 +1,51 @@
-[type=radio] { 
-    position: absolute;
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-[type=radio] + img {
-    cursor: pointer;
-}
-
-[type=radio]:checked + img {
-    border-radius: 50%;
-    box-shadow: 5px 6px 17px -2px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 5px 6px 17px -2px rgba(0,0,0,0.75);
-    -moz-box-shadow: 5px 6px 17px -2px rgba(0,0,0,0.75);
-    filter: brightness(122%);
--webkit-filter: brightness(122%);
--moz-filter: brightness(122%);
-}
-#fileurl {
-    margin: 0;
-    padding: 0;
-    font-weight: 400;
-}
-input#inputFile.form-control {
-    line-height: 1.2;
-}
-.student-profile {
-    font-weight: 300;
-    font-size: 1.1rem;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    align-content: center;
-    margin-bottom: .5rem;
-    border-bottom: 2px solid $OPblue;
-    label {
-        cursor: pointer;
-        padding: 1rem 0 1rem 1rem;
-        img {
-            border-radius: 50%;
-            margin-left: 2rem;
-        }
-    }
-}
 #evidence {
-    .form-wrapper {
-
-        h1, h2 {
-            margin-bottom: 1.5rem;
-        }
-    }
-    .evidence-select-search-group {
+    width: 100%;
+    div {
         display: flex;
-        justify-content: flex-start;
-        .input-group {
-            width: auto;
-        }
-        #searchStudent {
-            width: 15rem;
-        }
-        button {
-            width: fit-content;
-            padding: 0 1.6rem;
-        }
+        flex-direction: column;
+        justify-content: center;
     }
-    .form-wrapper {
-        max-width: 100%;
-        .evidence-select-search-group .custom-select {
-            max-width: 10%;
-        }
-        .evidence-select-search-group #searchStudent {
-            max-width: 50%;
-        }
-        .evidence-select-search-group .search-btn {
-            max-width: 20%;
-        }
+}
+
+.section-form {
+    display: flex;
+    .form-col {
+        width: 50%;
     }
+}
+
+.form-col:first-child {
+    margin-right: 1rem;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+    input[type=file] {
+        cursor: pointer;
+    }
+    label {
+        font-weight: 300;
+        font-size: 1.3rem;
+        margin: .8rem 0;
+    }
+}
+
+textarea {
+    min-width: 300px;
+    max-width: 500px;
+    min-height: 100px;
+    max-height: 200px;
+}
+
+.submit-btn {
+    font-weight: 700;
+    font-size: 1rem;
+    color: $OPblue;
+    border: 2px solid $OPblue;
+    padding: .5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
 }

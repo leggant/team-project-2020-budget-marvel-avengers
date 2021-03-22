@@ -4,62 +4,26 @@
 
 @import 'variables/globals';
 @import 'pages/evidence';
-
-body {
-    display: flex;
-    flex-direction: column;
-    h1 {
-        font-size: 3rem;
-        font-weight: 700;
-    }
-    h2, h3 {
-        font-size: 2rem;
-        font-weight: 600;
-    }
-}
-
-.grid-container {
-    display: grid;
-}
-
 nav {
     background-color: $OPblue;
     display: flex;
     margin-bottom: 2rem;
+    padding: 1rem 0;
+    ul {
+        display: flex;
+        margin-left: auto;
+        margin-right: 1rem;
+    }
     a {
         color: white;
-    }
-}
-
-.btn {
-    font-weight: 700;
-    letter-spacing: 2px;
-    color: $OPblue;
-}
-input {
-    border-color: $OPblue;
-}
-.form-control:focus, .custom-select:focus-within  {
-    border-color: $OPblue;
-    box-shadow: 0 0 0 0.3rem rgb(0 90 71 / 13%);
-}
-p.input-group-text {
-    background-color: transparent;
-}
-.btn-primary {
-    background-color: $OPblue;
-}
-.btn-outline-primary {
-    border-color: $OPblue;
-    &:hover {
-        background-color: $OPblue;
-        border-color: $OPblue;
+        display: inline-block;
+        padding: .5rem 1rem;
     }
 }
 
 footer {
     color: white;
-    margin-top: auto;
+    margin-top: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;

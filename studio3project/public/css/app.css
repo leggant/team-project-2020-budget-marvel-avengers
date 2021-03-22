@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;600;700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500;600;700&display=swap);
 /* -------------------------------------------------------------------------- */
 /*                            GLOBAL STYLE IMPORTS                            */
 /* -------------------------------------------------------------------------- */
@@ -8,17 +8,38 @@
 /* -------------------------------------------------------------------------- */
 /*                               COLOR VARIABLES                              */
 /* -------------------------------------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
   background-color: #f8fafc;
   font-size: 16px;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
   font-weight: 200;
+}
+
+.container {
+  max-width: 80vw;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+h2,
+h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0;
 }
 
 ul {
@@ -31,156 +52,91 @@ a {
 a:link, a:visited {
   text-decoration: none;
 }
-a:hover, a a:active {
+a:hover,
+a a:active {
   text-decoration: underline;
 }
 
 input {
   margin: 0;
+  outline: none;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-color: #005AAB;
 }
 
-[type=radio] {
-  position: absolute;
-  opacity: 0;
-  width: 0;
-  height: 0;
+#evidence {
+  width: 100%;
 }
-
-[type=radio] + img {
-  cursor: pointer;
-}
-
-[type=radio]:checked + img {
-  border-radius: 50%;
-  box-shadow: 5px 6px 17px -2px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: 5px 6px 17px -2px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 5px 6px 17px -2px rgba(0, 0, 0, 0.75);
-  filter: brightness(122%);
-  -webkit-filter: brightness(122%);
-  -moz-filter: brightness(122%);
-}
-
-#fileurl {
-  margin: 0;
-  padding: 0;
-  font-weight: 400;
-}
-
-input#inputFile.form-control {
-  line-height: 1.2;
-}
-
-.student-profile {
-  font-weight: 300;
-  font-size: 1.1rem;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  align-content: center;
-  margin-bottom: 0.5rem;
-  border-bottom: 2px solid #005AAB;
-}
-.student-profile label {
-  cursor: pointer;
-  padding: 1rem 0 1rem 1rem;
-}
-.student-profile label img {
-  border-radius: 50%;
-  margin-left: 2rem;
-}
-
-#evidence .form-wrapper h1, #evidence .form-wrapper h2 {
-  margin-bottom: 1.5rem;
-}
-#evidence .evidence-select-search-group {
-  display: flex;
-  justify-content: flex-start;
-}
-#evidence .evidence-select-search-group .input-group {
-  width: auto;
-}
-#evidence .evidence-select-search-group #searchStudent {
-  width: 15rem;
-}
-#evidence .evidence-select-search-group button {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  padding: 0 1.6rem;
-}
-#evidence .form-wrapper {
-  max-width: 100%;
-}
-#evidence .form-wrapper .evidence-select-search-group .custom-select {
-  max-width: 10%;
-}
-#evidence .form-wrapper .evidence-select-search-group #searchStudent {
-  max-width: 50%;
-}
-#evidence .form-wrapper .evidence-select-search-group .search-btn {
-  max-width: 20%;
-}
-
-body {
+#evidence div {
   display: flex;
   flex-direction: column;
-}
-body h1 {
-  font-size: 3rem;
-  font-weight: 700;
-}
-body h2, body h3 {
-  font-size: 2rem;
-  font-weight: 600;
+  justify-content: center;
 }
 
-.grid-container {
-  display: grid;
+.section-form {
+  display: flex;
+}
+.section-form .form-col {
+  width: 50%;
+}
+
+.form-col:first-child {
+  margin-right: 1rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+}
+.input-group input[type=file] {
+  cursor: pointer;
+}
+.input-group label {
+  font-weight: 300;
+  font-size: 1.3rem;
+  margin: 0.8rem 0;
+}
+
+textarea {
+  min-width: 300px;
+  max-width: 500px;
+  min-height: 100px;
+  max-height: 200px;
+}
+
+.submit-btn {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #005AAB;
+  border: 2px solid #005AAB;
+  padding: 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
 }
 
 nav {
   background-color: #005AAB;
   display: flex;
   margin-bottom: 2rem;
+  padding: 1rem 0;
+}
+nav ul {
+  display: flex;
+  margin-left: auto;
+  margin-right: 1rem;
 }
 nav a {
   color: white;
-}
-
-.btn {
-  font-weight: 700;
-  letter-spacing: 2px;
-  color: #005AAB;
-}
-
-input {
-  border-color: #005AAB;
-}
-
-.form-control:focus, .custom-select:focus-within {
-  border-color: #005AAB;
-  box-shadow: 0 0 0 0.3rem rgba(0, 90, 71, 0.13);
-}
-
-p.input-group-text {
-  background-color: transparent;
-}
-
-.btn-primary {
-  background-color: #005AAB;
-}
-
-.btn-outline-primary {
-  border-color: #005AAB;
-}
-.btn-outline-primary:hover {
-  background-color: #005AAB;
-  border-color: #005AAB;
+  display: inline-block;
+  padding: 0.5rem 1rem;
 }
 
 footer {
   color: white;
-  margin-top: auto;
+  margin-top: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;

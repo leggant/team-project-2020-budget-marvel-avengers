@@ -5,33 +5,36 @@ Studio Management Portal | Upload Evidence
 @endsection
 
 @section('content')
-<setion class="grid-container" id="evidence">
-  <div class="title">
+<section id="evidence">
+  <div class="section-title">
       <h1>Evidence Uploads</h1>
   </div>
   <div class="file-upload">
-      <h2>Attach Evidence Documents</h2>
-    <form>
-        <div class="input-group">
-            <label for="textbox">
-            <p>Additional Comments:</p>
-                <textarea name="comments" id="textbox" cols="30" rows="5" ></textarea>
-            </label>
+      <h2>Attach Student Evidence Documents</h2>
+    <form class="section-form">
+        <div class="form-col">
+            <div class="input-group">
+                <label for="inputFile">Select File(s) For Upload</label>
+                <input type="file" id="inputFile" multiple accept=".jpg,.jpeg,.png,.pdf,.doc,.docx,.html,.md">
+            </div>
+            <div class="input-group">
+                <label for="textbox">Additional Comments: </label>
+                <textarea name="additional-comments" id="additional-comments"></textarea>
+            </div>
+            <button class="submit-btn" type="submit">Save Files</button>
         </div>
-        <div class="input-group">
-            <label for="inputFile">Select File(s) For Upload</label>
-            <input type="file" class="form-control" id="inputFile" multiple accept=".jpg,.jpeg,.png,.pdf,.doc,.docx,.html,.md">
+        <div class="form-col">
+            <div class="input-group">
+                <label for="fileurl">Document URL</label>
+                <input type="url" id="fileurl" class="form-control" placeholder="Insert Weblink.....">
+            </div>
+            <div class="input-group">
+                <label for="DateRecieved">Date Recieved: </label>
+                <input type="datetime-local" id="DateRecieved" name="DateRecieved">
+            </div>
         </div>
-        <div class="input-group">
-            <label for="fileurl">Docuement URL</label>
-            <input type="url" id="fileurl" class="form-control" placeholder="Insert Weblink.....">
-        </div>
-        <div class="input-group">
-            <label for="DateRecieved">Date :</label>
-            <input type="datetime-local" id="DateRecieved" name="DateRecieved">
-        </div>
-        <button type="submit">Save Files</button>
+        
     </form>
   </div>
-</setion>
+</section>
 @endsection
