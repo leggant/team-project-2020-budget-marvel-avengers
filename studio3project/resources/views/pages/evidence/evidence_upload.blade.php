@@ -15,7 +15,7 @@ Studio Management Portal | Upload Evidence
         <div class="form-col">
             <div class="input-group">
                 <label for="inputFile">Select File(s) For Upload</label>
-                <input type="file" id="inputFile" multiple accept=".jpg,.jpeg,.png,.pdf,.doc,.docx,.html,.md">
+                <input type="file" id="inputFile" multiple accept=".jpg,.jpeg,.png,.pdf,.doc,.docx,.html,.md,.zip,.7z,.rar">
             </div>
             <div class="input-group">
                 <label for="textbox">Additional Comments: </label>
