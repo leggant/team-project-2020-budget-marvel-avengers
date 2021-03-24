@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
 <form action="#" id="js-form">
 
   <div class="student-info">
@@ -7,6 +16,7 @@
     <input type="text" name="surname" placeholder="Smith" />
     <label for="notesBox">Student ID:</label>
     <input type="integer" name="studentID" placeholder="20007367"/>
+    
     <br>
 
     <div class="class-dropdown">
@@ -17,8 +27,17 @@
       <option value="Choice 3">Studio 5</option>
       <option value="Choice 3">Studio 6</option>
     </select>
-    <label for="notesBox">Year: </label>
+  </div>
+
+  <label for="notesBox">Year: </label>
     <input type="integer" name="Year" placeholder="2021"/>
+
+    <div class="semester-dropdown">
+    <label for="select-choice">Studio Class:</label>
+    <select name="select-choice" id="select-choice">
+      <option value="Choice 1">Semester 1</option>
+      <option value="Choice 2">Semester 2</option>
+    </select>
   </div>
 
   </div>
@@ -32,3 +51,6 @@
     <input type="submit" value="Submit" disabled/>
   </div>
 </form>
+  
+</body>
+</html>
