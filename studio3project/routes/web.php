@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\CohortController;
+use App\Http\Controllers\PagesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +14,4 @@ use App\Http\Controllers\CohortController;
 |
 */
 
-Route::get('/', [CohortController::class , 'cohortpage']);
-//Route::get('/',[pagesController::class ,'homepage']);
+Route::get('/cohortAdmin', [PagesController::class , 'cohortpage']);

@@ -8,6 +8,6 @@ use Illuminate\Http\Request;
 class PagesController extends Controller
 {
     public function cohortpage(){
-    return view('cohort');
+    return view('pages.cohort');
     }
 }
