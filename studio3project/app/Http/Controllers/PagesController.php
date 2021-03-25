@@ -3,11 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-//use  App\Models\Cohort;
 
 class pagesController extends Controller
 {
-    public function cohortpage(){
-    return view('pages.cohort');
+    //this function will return the index page inside pages folder 
+    public function homepage(){
+        return view('pages.index');
+    }
+    public function evidencePage() {
+        return view('pages.evidence.evidence_upload');
     }
 }
