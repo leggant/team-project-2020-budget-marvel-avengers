@@ -1,0 +1,51 @@
+#evidence {
+    width: 100%;
+    div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.section-form {
+    display: flex;
+    .form-col {
+        width: 50%;
+    }
+}
+
+.form-col:first-child {
+    margin-right: 1rem;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+    input[type=file] {
+        cursor: pointer;
+    }
+    label {
+        font-weight: 300;
+        font-size: 1.3rem;
+        margin: .8rem 0;
+    }
+}
+
+textarea {
+    min-width: 300px;
+    max-width: 500px;
+    min-height: 100px;
+    max-height: 200px;
+}
+
+.submit-btn {
+    font-weight: 700;
+    font-size: 1rem;
+    color: $OPblue;
+    border: 2px solid $OPblue;
+    padding: .5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}

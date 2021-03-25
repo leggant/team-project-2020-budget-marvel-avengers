@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\pagesController;
+use App\Http\Controllers\PagesController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,16 +13,16 @@ use App\Http\Controllers\pagesController;
 |
 */
 
+Route::get('/', [PagesController::class, 'homepage'])->name('pages.index');
+Route::get('/evidence-upload', [PagesController::class, 'EvidencePage'])->name('pages.evidence');
 //route to home page 
-Route::get('/',[pagesController::class ,'homepage']);
-//route to home page 
-Route::get('/home',[pagesController::class ,'homepage']);
+Route::get('/home',[PagesController::class ,'homepage']);
 
-Route::get('/students',[pagesController::class ,'students']);
+Route::get('/students',[PagesController::class ,'students']);
 
-Route::get('/evidence',[pagesController::class ,'evidence']);
+Route::get('/evidence',[PagesController::class ,'evidence']);
 
-Route::get('/notes',[pagesController::class ,'notes']);
+Route::get('/notes',[PagesController::class ,'notes']);
 
 
-Route::get('/about',[pagesController::class ,'About']);
+Route::get('/about',[PagesController::class ,'About']);
