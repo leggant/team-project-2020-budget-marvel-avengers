@@ -1,0 +1,70 @@
+/* -------------------------------------------------------------------------- */
+/*                                FONT IMPORTS                                */
+/* -------------------------------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500;600;700&display=swap');
+
+/* -------------------------------------------------------------------------- */
+/*                               COLOR VARIABLES                              */
+/* -------------------------------------------------------------------------- */
+
+$body-bg: #f8fafc;
+$OPblue: #005AAB;
+$OPgreen: #91C441;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: $body-bg;
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+}
+
+.container {
+    max-width: 80vw;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+h2,
+h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    display: inline-block;
+    &:link,
+    &:visited {
+        text-decoration: none;
+    }
+    &:hover,
+    a:active {
+        text-decoration: underline;
+    }
+}
+
+input {
+    margin: 0;
+    outline: none;
+    font-size: 1rem;
+    padding: .5rem;
+    border-color: $OPblue;
+}
