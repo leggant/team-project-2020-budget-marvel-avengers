@@ -12,3 +12,5 @@ Homestead.yaml
 npm-debug.log
 yarn-error.log
 package.lock.json
+studio3project/public/css/app.css
+studio3project/public/js/app.js

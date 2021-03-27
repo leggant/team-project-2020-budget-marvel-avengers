@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\notesController;
+use App\Http\Controllers\PagesController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,4 +13,4 @@ use App\Http\Controllers\notesController;
 |
 */
 
-Route::get('/', [notesController::class,'view']);
+Route::get('/notes', [PagesController::class,'Notes']);
