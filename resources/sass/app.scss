@@ -1,12 +1,15 @@
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-  }
 @import 'pages/_notes';
 @import 'pages/cohort';
 @import 'variables/globals';
 @import 'pages/evidence';
+@import 'variables/fonts';
+@import 'variables/variables';
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
 nav {
     background-color: $OPblue;
     display: flex;
@@ -37,13 +40,3 @@ footer {
         padding: 2em 0;
     }
 }
-// Fonts
-@import 'variables/fonts';
-
-// Variables
-@import 'variables/variables';
-
-
-//scss custom file
-@import'pages/partials';
-
