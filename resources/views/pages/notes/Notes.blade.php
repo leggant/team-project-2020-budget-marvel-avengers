@@ -1,3 +1,10 @@
+@extends('layouts.app')
+@section('homepage-content')
+
+@endsection
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
