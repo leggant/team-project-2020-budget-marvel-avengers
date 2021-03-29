@@ -14,6 +14,7 @@
       <ul class="navbar-links">
         <li class="navbar-item"><a href="{{ route('pages.index') }}" class="navbar-link">Home</a></li>
         <li class="navbar-item"><a href="{{route('pages.evidence')}}" class="navbar-link">Upload Student Evidence</a></li>
+        <li class="navbar-item"><a href="{{route('pages.notes')}}" class="navbar-link">Student Notes</a></li>
       </ul>
     </div>
   </nav>

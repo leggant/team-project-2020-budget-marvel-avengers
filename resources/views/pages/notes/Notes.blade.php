@@ -1,47 +1,26 @@
 @extends('layouts.app')
-@section('homepage-content')
 
+@section('title')
+Studio Management Portal | Student Notes
 @endsection
 
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/app.css">
-</head>
-<body>
-<form action="#">
-
-<header>
-  <h2>
-    Add Notes
-  <h2>
-</header>
-
-
+@section('content')
 <div>
   <label class="desc" id="title1" for="Field1">
     First Name
   </label>
 
   <div>
-    <input id="Field1" name="Field1" type="text" class="field text fn" value="" size="8" tabindex="1">
+    <input id="Field1" name="Field1" type="text" class="field text fn" value="" size="8" tabindex="1"  placeholder="First Name">
   </div>
-
 </div>
-
 
 <div>   
     <label class="desc" id="title1" for="Field1">
       Last Name
     </label>
-    <input id="Field1" name="Field2" type="text" class="field text fn" value="" size="8" tabindex="1">
+    <input id="Field1" name="Field2" type="text" class="field text fn" value="" size="8" tabindex="1" placeholder="Last Name"> 
   </div>
-
 </div>
 
 <div>
@@ -49,7 +28,7 @@
     Email
   </label>
   <div>
-    <input id="Field1" name="Field3" type="email" spellcheck="false" value="" maxlength="255" tabindex="3"> 
+    <input id="Field1" name="Field3" type="email" spellcheck="false" value="" maxlength="255" tabindex="3" placeholder="Email Address"> 
  </div>
 </div>
 
@@ -58,7 +37,7 @@
     Student ID:
   </label>
   <div>
-    <input id="Field1" name="Field3" type="email" spellcheck="false" value="" maxlength="255" tabindex="3"> 
+    <input id="Field1" name="Field3" type="email" spellcheck="false" value="" maxlength="255" tabindex="3" placeholder="ID Number"> 
  </div>
 </div>
 
@@ -95,7 +74,7 @@
     Year:
   </label>
   <div>
-    <input id="Field1" name="Field3" type="email" spellcheck="false" value="" maxlength="255" tabindex="3"> 
+    <input id="Field1" name="Field3" type="email" spellcheck="false" value="" maxlength="255" tabindex="3" placeholder="Year"> 
  </div>
 </div>
   
@@ -105,7 +84,7 @@
   </label>
 
   <div>
-    <textarea id="Field4" name="Field4" spellcheck="true" rows="10" cols="50" tabindex="4"></textarea>
+    <textarea id="Field4" name="Field4" spellcheck="true" rows="10" cols="50" tabindex="4" placeholder="Enter notes here"></textarea>
   </div>
 </div>
 
@@ -114,7 +93,4 @@
     <input id="saveForm" name="saveForm" type="submit" value="Submit">
   </div>
 </div>
-
-</form>
-</body>
-</html>
+@endsection
