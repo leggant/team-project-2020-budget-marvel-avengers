@@ -1,17 +1,22 @@
 <!-- Cohort screen-->
 
+<!-- These lines pull the header from the partials-->
 @extends('layouts.app')
-@section('homepage-content')
 
+@section('title')
+Studio Management Portal | Cohort Management
 @endsection
 
+<!-- From begins-->
+@section('content')
+    
 <form action="#">
-
+  <div>
     <header>
       <h2>Cohort Assignment</h2>
       <div>Assign students into cohorts using the form.</div>
     </header>
-    
+  </div>   
     <div>
       <fieldset>
       
@@ -49,7 +54,7 @@
       </select>
       </div>
     </div>
-
+    <!--The intention here is to have a text box that shows who you have selected, in the same fashion as setting up a group on Facebook Messenger or Teams -->
     <div>
       <label class="desc" id="title4" for="Field4">
         Selected Students
@@ -67,3 +72,4 @@
       </div>
     
   </form>
+@endsection
