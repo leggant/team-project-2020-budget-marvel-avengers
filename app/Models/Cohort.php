@@ -8,5 +8,5 @@ class Cohort extends Model
 {
     protected $table = 'cohort';
 
-    protected $fillable = ['name', 'email', 'cohort', 'id', 'studentId'];
+    protected $fillable = ['id', 'name', 'email', 'cohort', 'studentId'];
 }
