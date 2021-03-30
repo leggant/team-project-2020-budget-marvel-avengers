@@ -20,7 +20,7 @@ class CreateCohortsTable extends Migration
             $table->string('name');
             $table->string('email');
             $table->string('cohort');
-            $table->string('studentId');
+            $table->integer('studentId');
             $table->timestamps();
         });
     }
