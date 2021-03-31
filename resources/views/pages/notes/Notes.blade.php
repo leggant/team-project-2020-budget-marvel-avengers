@@ -1,73 +1,52 @@
 @extends('layouts.app')
-@section('homepage-content')
 
+@section('title')
+Studio Management Portal | Notes
 @endsection
 
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/app.css">
-</head>
-<body>
-<form action="#">
-
-<header>
-  <h2>
-    Add Notes
-  <h2>
-</header>
-
-
+@section('content')
 <div>
-  <label class="desc" id="title1" for="Field1">
+  <label class="desc" id="First-name" for="First-name">
     First Name
   </label>
 
   <div>
-    <input id="Field1" name="Field1" type="text" class="field text fn" value="" size="8" tabindex="1">
+    <input id="First-name" name="First-name" type="text" class="field text fn" value="" size="8" tabindex="1"  placeholder="First Name">
   </div>
-
 </div>
 
-
 <div>   
-    <label class="desc" id="title1" for="Field1">
+    <label class="desc" id="Last-name" for="Last-name">
       Last Name
     </label>
-    <input id="Field1" name="Field2" type="text" class="field text fn" value="" size="8" tabindex="1">
+    <input id="Last-name" name="Last-name" type="text" class="field text fn" value="" size="8" tabindex="1" placeholder="Last Name"> 
   </div>
-
 </div>
 
 <div>
-  <label class="desc" id="title3" for="Field3">
+  <label class="desc" id="Email" for="Email">
     Email
   </label>
   <div>
-    <input id="Field1" name="Field3" type="email" spellcheck="false" value="" maxlength="255" tabindex="3"> 
+    <input id="Email" name="Email" type="email" spellcheck="false" value="" maxlength="255" tabindex="3" placeholder="Email Address"> 
  </div>
 </div>
 
 <div>
-  <label class="desc" id="title3" for="Field3">
+  <label class="desc" id="Student-id" for="Student-id">
     Student ID:
   </label>
   <div>
-    <input id="Field1" name="Field3" type="email" spellcheck="false" value="" maxlength="255" tabindex="3"> 
+    <input id="Student-id" name="Student-id" type="email" spellcheck="false" value="" maxlength="255" tabindex="3" placeholder="ID Number"> 
  </div>
 </div>
 
   <div>
-  <label class="desc" id="title106" for="Field106">
+  <label class="desc" id="StudioDropdown" for="StudioDropdown">
     Studio class:
   </label>
   <div>
-  <select id="Field106" name="Field106" class="field select medium" tabindex="11"> 
+  <select id="StudioDropdown" name="StudioDropdown" class="field select medium" tabindex="11"> 
     <option value="First Choice">Studio 1</option>
     <option value="Second Choice">Studio 2</option>
     <option value="Third Choice">Studio 3</option>
@@ -79,11 +58,11 @@
 </div>
 
 <div>
-  <label class="desc" id="title106" for="Field106">
+  <label class="desc" id="SemDropdown" for="SemDropdown">
     Semester:
   </label>
 <div>
-  <select id="Field106" name="Field106" class="field select medium" tabindex="11"> 
+  <select id="SemDropdown" name="SemDropdown" class="field select medium" tabindex="11"> 
     <option value="First Choice">Stream 1</option>
     <option value="Second Choice">Stream 2</option>
   </select>
@@ -91,21 +70,21 @@
 </div>
 
 <div>
-  <label class="desc" id="title3" for="Field3">
+  <label class="desc" id="Year" for="Year">
     Year:
   </label>
   <div>
-    <input id="Field1" name="Field3" type="email" spellcheck="false" value="" maxlength="255" tabindex="3"> 
+    <input id="Year" name="Year" type="email" spellcheck="false" value="" maxlength="255" tabindex="3" placeholder="Year"> 
  </div>
 </div>
   
 <div>
-  <label class="desc" id="title4" for="Field4">
+  <label class="desc" id="Notes" for="Notes">
     Notes:
   </label>
 
   <div>
-    <textarea id="Field4" name="Field4" spellcheck="true" rows="10" cols="50" tabindex="4"></textarea>
+    <textarea id="FielNotesd6" name="Notes" spellcheck="true" rows="10" cols="50" tabindex="4" placeholder="Enter notes here"></textarea>
   </div>
 </div>
 
@@ -114,7 +93,4 @@
     <input id="saveForm" name="saveForm" type="submit" value="Submit">
   </div>
 </div>
-
-</form>
-</body>
-</html>
+@endsection
