@@ -10,7 +10,7 @@
         <input type="text" id="ghUser" name="ghUser"><br><br>
         <label for="idNumber">Student ID Number:</label><br>
         <input type="number" id="idNumber" name="idNumber"><br><br>
-        <label for="email">Email:</label><br>
+        <label for="email">Student Email:</label><br>
         <input type="text" name="email" id="email"><br><br>
         <input type="radio" id="male" name="gender" value="male">
         <label for="male">Male</label><br>

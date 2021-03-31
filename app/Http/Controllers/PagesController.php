@@ -21,4 +21,8 @@ class PagesController extends Controller
     public function evidencePage() {
         return view('pages.evidence.evidence_upload');
     }
+
+    public function student() {
+        return view('pages.students.students');
+    }
 }
