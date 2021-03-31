@@ -9,8 +9,8 @@ Studio Management Portal | Cohort Management
 
 <!-- Form begins-->
 @section('content')
-    
-<form id="cohort-form" action="#">
+<section>
+<form id="cohort-form" class="formContainer" action="#">
   <div>
     <header>
       <h2>Cohort Assignment</h2>
@@ -72,4 +72,5 @@ Studio Management Portal | Cohort Management
       </div>
     
   </form>
+</section>
 @endsection

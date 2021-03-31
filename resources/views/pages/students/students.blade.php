@@ -1,7 +1,8 @@
 @extends('layouts.app')
 @section('content')
+<section>
 <h1>Student Page</h1>
-    <form action="">
+    <form action="" class="formContainer">
         <label for="fname">First name:</label><br>
         <input type="text" id="fname" name="fname"><br><br>
         <label for="lname">Last name:</label><br>
@@ -21,4 +22,5 @@
 
         
     </form>
+</section>
     @endsection
