@@ -22,7 +22,7 @@ class PagesController extends Controller
         return view('pages.evidence.evidence_upload');
     }
 
-    public function student() {
+    public function students() {
         return view('pages.students.students');
     }
 }
