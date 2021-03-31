@@ -7,16 +7,16 @@
 Studio Management Portal | Cohort Management
 @endsection
 
-<!-- From begins-->
+<!-- Form begins-->
 @section('content')
     
-<form action="#">
+<form id="cohort-form" action="#">
   <div>
     <header>
       <h2>Cohort Assignment</h2>
       <div>Assign students into cohorts using the form.</div>
     </header>
-  </div>   
+  </div>
     <div>
       <fieldset>
       
