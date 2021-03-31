@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Query\Expression;
 use Illuminate\Support\Facades\Schema;
 use App\Models\StudentEvidence;
 
@@ -31,8 +32,10 @@ class CreateStudentEvidenceTable extends Migration
             // workaround is to use json in the migration
             // in the model this json is cast to an array which is used in/by the
             // database 
-            $table->json('file_uploads');
+            $table->json('file_uploads')->nullable(true);
             $table->json('comments');
+            $table->json('urls')->nullable(true);
+            $table->date('date_received');
             $table->timestamps();
         });
     }
