@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('homepage-content')
+@section('content')
 <h1>Student Page</h1>
     <form action="">
         <label for="fname">First name:</label><br>
