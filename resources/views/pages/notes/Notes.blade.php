@@ -24,57 +24,11 @@ Studio Management Portal | Notes
 </div>
 
 <div>
-  <label class="desc" id="Email" for="Email">
-    Email
-  </label>
-  <div>
-    <input id="Email" name="Email" type="email" spellcheck="false" value="" maxlength="255" tabindex="3" placeholder="Email Address"> 
- </div>
-</div>
-
-<div>
   <label class="desc" id="Student-id" for="Student-id">
     Student ID:
   </label>
   <div>
     <input id="Student-id" name="Student-id" type="email" spellcheck="false" value="" maxlength="255" tabindex="3" placeholder="ID Number"> 
- </div>
-</div>
-
-  <div>
-  <label class="desc" id="StudioDropdown" for="StudioDropdown">
-    Studio class:
-  </label>
-  <div>
-  <select id="StudioDropdown" name="StudioDropdown" class="field select medium" tabindex="11"> 
-    <option value="First Choice">Studio 1</option>
-    <option value="Second Choice">Studio 2</option>
-    <option value="Third Choice">Studio 3</option>
-    <option value="Third Choice">Studio 4</option>
-    <option value="Third Choice">Studio 5</option>
-    <option value="Third Choice">Studio 6</option>
-  </select>
-  </div>
-</div>
-
-<div>
-  <label class="desc" id="SemDropdown" for="SemDropdown">
-    Semester:
-  </label>
-<div>
-  <select id="SemDropdown" name="SemDropdown" class="field select medium" tabindex="11"> 
-    <option value="First Choice">Stream 1</option>
-    <option value="Second Choice">Stream 2</option>
-  </select>
-  </div>
-</div>
-
-<div>
-  <label class="desc" id="Year" for="Year">
-    Year:
-  </label>
-  <div>
-    <input id="Year" name="Year" type="email" spellcheck="false" value="" maxlength="255" tabindex="3" placeholder="Year"> 
  </div>
 </div>
   
