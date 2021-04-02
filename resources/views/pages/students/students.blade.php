@@ -12,10 +12,6 @@
         <input type="number" id="idNumber" name="idNumber"><br><br>
         <label for="email">Student Email:</label><br>
         <input type="text" name="email" id="email"><br><br>
-        <input type="radio" id="male" name="gender" value="male">
-        <label for="male">Male</label><br>
-        <input type="radio" id="female" name="gender" value="female">
-        <label for="female">Female</label><br><br>
         
         <input type="submit" value="Submit">
 
