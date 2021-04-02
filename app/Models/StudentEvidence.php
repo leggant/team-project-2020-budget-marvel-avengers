@@ -10,7 +10,8 @@ class StudentEvidence extends Model
     use HasFactory;
     protected $table = 'student_evidence';
     protected $primaryKey = 'evidence_id';
-    protected $fillable = ['student_id', 'staff_id', 'cohort_id', 'file_uploads', 'comments', 'urls', 'date_received'];
+    protected $dateFormat = 'Y-m-d H:i';
+    protected $fillable = ['student_id', 'staff_id', 'cohort_id', 'file_uploads', 'comments', 'urls', 'date_received', 'assignment_received', 'assignment_due', 'medical_certificate_supplied', 'medical_cert_start', 'medical_cert_end'];
     protected $casts = [
         'file_uploads' => 'array',
         'comments' => 'array',
