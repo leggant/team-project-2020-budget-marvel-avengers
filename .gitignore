@@ -15,5 +15,4 @@ npm-debug.log
 yarn-error.log
 composer.lock
 .DS_Store
-public/mix-manifest.json
 package-lock.json
