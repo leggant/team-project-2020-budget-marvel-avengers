@@ -14,7 +14,7 @@ class CreateStudentScreensTable extends Migration
     public function up()
     {
         Schema::create('student_screens', function (Blueprint $table) {
-            $table->bigIncrements('student_id');
+            $table->id('student_id');
             $table->string('first_name',100);
             $table->string('last_name',100);
             $table->string('github_username',100)->unique();
