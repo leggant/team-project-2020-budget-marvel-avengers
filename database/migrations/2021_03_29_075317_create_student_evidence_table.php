@@ -19,20 +19,19 @@ class CreateStudentEvidenceTable extends Migration
             $table->unsignedInteger('student_id')->nullable(false)->unique();
             $table->unsignedInteger('staff_id')->nullable(false)->unique();
             $table->unsignedInteger('cohort_id')->nullable(false)->unique();
-            
-            // shorthand way of adding foreign key, only works if a table 
-            // migration exists-which cohorts currently does. Will uncomment this when
-            // the foreign keys exist in other table/migrations
-            // $table->foreignId('student_id')->constrained('students');  
-            // $table->foreignId('staff_id')->constrained('staff');  
-            // $table->foreignId('cohort_id')->constrained('cohorts');  
-            
             // laravel cannot create arrays natively, the recommended 
             // workaround is to use json in the migration
             // in the model this json is cast to an array which is used in/by the
             // database 
-            $table->json('file_uploads');
+            $table->json('file_uploads')->nullable(true);
             $table->json('comments');
+            $table->json('urls')->nullable(true);
+            $table->datetime('date_received')->format('d.m.y h.m');
+            $table->datetime('assignment_received')->format('d.m.y h.m')->nullable(true);
+            $table->datetime('assignment_due')->format('d.m.y h.m')->nullable(true);
+            $table->boolean('medical_certificate_supplied')->default(false);
+            $table->date('medical_cert_start')->format('d.m.y')->nullable(true);
+            $table->date('medical_cert_end')->format('d.m.y')->nullable(true);
             $table->timestamps();
         });
     }
