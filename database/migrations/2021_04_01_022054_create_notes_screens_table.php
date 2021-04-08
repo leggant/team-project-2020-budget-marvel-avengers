@@ -7,26 +7,28 @@ use Illuminate\Support\Facades\Schema;
 class CreateNotesScreensTable extends Migration
 {
     /**
-     * Run the migrations.
-     *
      * @return void
      */
+
     public function up()
     {
         Schema::create('notes_screen', function (Blueprint $table) {
-            $table->id('student_id');
-            $table->string('first_name');
-            $table->string('last_name');
+            $table->bigIncrements('studioID');
+            $table->integer('student_id')->unique();
+            $table->string('first_name', 50);
+            $table->string('last_name', 50);
+            $table->string('repo_url')->unique();
             $table->string('notes');
+            $table->string('group_id')->unique();
+            $table->string('group_name');
             $table->timestamps();
         });
     }
 
     /**
-     * Reverse the migrations.
-     *
      * @return void
      */
+
     public function down()
     {
         Schema::dropIfExists('notes_screen');
