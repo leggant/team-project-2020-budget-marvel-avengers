@@ -5,6 +5,10 @@ Studio Management Portal | Notes
 @endsection
 
 @section('content')
+<div class="section-title">
+      <h1>Student Notes</h1>
+  </div>
+
 <div>
   <label class="desc" id="First-name" for="First-name">
     First Name
@@ -19,6 +23,8 @@ Studio Management Portal | Notes
     <label class="desc" id="Last-name" for="Last-name">
       Last Name
     </label>
+    <div>
+
     <input id="Last-name" name="Last-name" type="text" class="field text fn" value="" size="8" tabindex="1" placeholder="Last Name"> 
   </div>
 </div>
