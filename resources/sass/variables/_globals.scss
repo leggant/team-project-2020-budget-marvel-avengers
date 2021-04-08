@@ -20,9 +20,15 @@ body {
     font-weight: 200;
 }
 
+//main container
 .container {
     max-width: 80vw;
     margin: 0 auto;
+    height: 100vh;
+    //sections wrapping content
+    section{
+        margin-top: 100px;
+    }
 }
 
 h1 {
