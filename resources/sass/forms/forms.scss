@@ -21,12 +21,11 @@ label {
 .input-group {
     display: flex;
     flex-direction: column;
-    input[type=file] {
-        cursor: pointer;
-    }
-
+    margin-bottom: .5rem;
 }
-
+input[type=file] {
+    cursor: pointer;
+}
 textarea {
     min-width: 300px;
     max-width: 500px;

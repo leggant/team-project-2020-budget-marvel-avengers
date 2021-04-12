@@ -16,7 +16,7 @@ Studio Management Portal | Notes
     <input id="Student-id" name="Student-id" type="email" spellcheck="false" value="" maxlength="255" tabindex="3" placeholder="ID Number"> 
     <label class="desc" for="FileNotes">Notes:</label>
     <textarea id="FileNotes" name="Notes" spellcheck="true" rows="10" cols="50" tabindex="4" placeholder="Enter notes here"></textarea>
-    <input id="saveForm" name="saveForm" type="submit" value="Submit">
+    <input id="saveForm" name="saveForm" type="submit" value="Submit" class="submit-btn">
   </form>
 </section>
 @endsection

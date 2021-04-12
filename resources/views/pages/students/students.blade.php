@@ -13,11 +13,7 @@
         <input type="number" id="idNumber" name="idNumber">
         <label for="email">Student Email:</label>
         <input type="text" name="email" id="email">
-        <!-- <input type="radio" id="male" name="gender" value="male">
-        <label for="male">Male</label>
-        <input type="radio" id="female" name="gender" value="female">
-        <label for="female">Female</label> -->
-        <input type="submit" value="Submit">
+        <input type="submit" value="Submit" class="submit-btn">
     </form>
 </section>
 @endsection

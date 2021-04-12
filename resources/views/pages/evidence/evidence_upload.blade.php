@@ -11,7 +11,7 @@ Studio Management Portal | Upload Evidence
   </div>
   <div class="file-upload">
       <h2>Attach Student Evidence Documents</h2>
-    <form class="section-form">
+    <form>
         <div class="form-col">
             <div class="input-group">
                 <label for="inputFile">Select File(s) For Upload</label>
@@ -33,7 +33,6 @@ Studio Management Portal | Upload Evidence
                 <input type="datetime-local" id="DateRecieved" name="DateRecieved">
             </div>
         </div>
-        
     </form>
   </div>
 </section>
