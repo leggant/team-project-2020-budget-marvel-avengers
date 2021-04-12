@@ -5,23 +5,32 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    //temp
     div{
         width: 500px;
     }
 }
 
-.section-form {
+// .section-form {
+//     display: flex;
+//     .form-col {
+//         width: 50%;
+//     }
+// }
+form {
+    width: 50%;
     display: flex;
-    .form-col {
-        width: 50%;
-    }
+    flex-direction: column;
 }
-
 .form-col:first-child {
     margin-right: 1rem;
 }
-
+input {
+    margin: 0;
+    outline: none;
+    font-size: 1rem;
+    padding: .5rem;
+    border-color: $OPblue;
+}
 .input-group {
     display: flex;
     flex-direction: column;
@@ -53,61 +62,3 @@ textarea {
     cursor: pointer;
     outline: none;
 }
-
-
-//   form header h2 {
-//     margin: 0 0 5px 0;
-//   }
-//   form > div {
-//     clear: both;
-//     overflow: hidden;
-//     padding: 1px;
-//     margin: 0 0 10px 0;
-//   }
-//   form > div > fieldset > div > div {
-//     margin: 0 0 5px 0;
-//   }
-//   form > div > label,
-//   legend {
-//       width: 25%;
-//     float: left;
-//     padding-right: 10px;
-//   }
-//   form > div > div,
-//   form > div > fieldset > div {
-//     width: 75%;
-//     float: right;
-//   }
-//   form > div > fieldset label {
-//       font-size: 90%;
-//   }
-//   fieldset {
-//       border: 0;
-//     padding: 0;
-//   }
-  
-//   input[type=text],
-//   input[type=email],
-//   input[type=url],
-//   input[type=password],
-//   textarea {
-//       width: 100%;
-//     border-top: 1px solid #ccc;
-//     border-left: 1px solid #ccc;
-//     border-right: 1px solid #eee;
-//     border-bottom: 1px solid #eee;
-//   }
-//   input[type=text],
-//   input[type=email],
-//   input[type=url],
-//   input[type=password] {
-    
-//   }
-//   input[type=text]:focus,
-//   input[type=email]:focus,
-//   input[type=url]:focus,
-//   input[type=password]:focus,
-//   textarea:focus {
-//     outline: 0;
-//     border-color: #4697e4;
-//   }

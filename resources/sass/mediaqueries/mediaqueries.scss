@@ -22,9 +22,9 @@
       width: 100%; 
     }
   }
-  @media (min-width: 1200px) {
-    form > div > label,
-      legend {
-        text-align: right;
-    }
+@media (min-width: 1200px) {
+  form > div > label,
+    legend {
+      text-align: right;
   }
+}
