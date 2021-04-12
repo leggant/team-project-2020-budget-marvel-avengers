@@ -27,6 +27,10 @@ body {
     height: 100vh;
     //sections wrapping content
     section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         margin-top: 100px;
     }
 }
@@ -58,12 +62,4 @@ a {
     a:active {
         text-decoration: underline;
     }
-}
-
-input {
-    margin: 0;
-    outline: none;
-    font-size: 1rem;
-    padding: .5rem;
-    border-color: $OPblue;
 }
