@@ -14,7 +14,7 @@ class CreateStudentEvidenceTable extends Migration
      */
     public function up()
     {
-        Schema::create('studentEvidence', function (Blueprint $table) {
+        Schema::create('studentUploads', function (Blueprint $table) {
             $table->id('id');
             $table->unsignedInteger('studentId')->nullable(false)->unique();
             $table->unsignedInteger('staffId')->nullable(false)->unique();

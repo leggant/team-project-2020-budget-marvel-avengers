@@ -8,6 +8,3 @@ Route::get('/cohortAdmin', [PagesController::class , 'cohortpage'])->name('pages
 Route::get('/evidence-upload', [PagesController::class, 'EvidencePage'])->name('pages.evidence');
 Route::get('/notes',[PagesController::class ,'notes'])->name('pages.notes');
 Route::get('/students',[PagesController::class ,'students'])->name('pages.students');
-
- 
-

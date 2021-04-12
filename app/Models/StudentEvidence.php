@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class StudentEvidence extends Model
 {
     use HasFactory;
-    protected $table = 'studentEvidence';
+    protected $table = 'studentUploads';
     protected $primaryKey = 'id';
     protected $dateFormat = 'Y-m-d H:i';
     protected $fillable = [

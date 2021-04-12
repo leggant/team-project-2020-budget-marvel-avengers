@@ -8,15 +8,17 @@ input {
     margin: 0;
     outline: none;
     font-size: 1rem;
-    padding: .5rem;
-    border-color: $OPblue;
+    padding: .8rem;
+    border: 1.2px solid $OPblue;
+    max-width: 500px;
 }
 
 label {
     font-weight: 300;
     font-size: 1.3rem;
-    margin-top: .8rem;
+    margin: .8rem 0;
 }
+
 .input-group {
     display: flex;
     flex-direction: column;
@@ -41,4 +43,5 @@ textarea {
     border-radius: 5px;
     cursor: pointer;
     outline: none;
+    margin-top: 1rem;
 }

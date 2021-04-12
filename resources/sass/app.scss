@@ -1,14 +1,4 @@
-@import 'variables/globals';
+@import'variables/globals';
 @import'forms/forms';
 @import"/resources/css/partials/navbar.css";
 @import"/resources/css/partials/footer.css";
-
-
-//temp
-.home{
-    margin-top: 100px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
