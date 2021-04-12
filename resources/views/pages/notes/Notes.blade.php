@@ -5,9 +5,10 @@ Studio Management Portal | Notes
 @endsection
 
 @section('content')
-<div class="section-title">
-      <h1>Student Notes</h1>
-  </div>
+<section>
+
+<h1>Student Notes</h1>
+
 
 <div>
   <label class="desc" id="First-name" for="First-name">
@@ -53,4 +54,5 @@ Studio Management Portal | Notes
     <input id="saveForm" name="saveForm" type="submit" value="Submit">
   </div>
 </div>
+</section>
 @endsection

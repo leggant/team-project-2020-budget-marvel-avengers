@@ -9,21 +9,15 @@ Studio Management Portal | Cohort Management
 
 <!-- Form begins-->
 @section('content')
-    
+<section>   
 <form id="cohort-form" action="#">
+  <header>
+    <h1>Cohort Assignment</h1>
+    <h2>Assign students into cohorts using the form.</h2>
+  </header>
   <div>
-    <header>
-      <h2>Cohort Assignment</h2>
-      <div>Assign students into cohorts using the form.</div>
-    </header>
-  </div>
-    <div>
-      <fieldset>
-      
-        <legend id="title5" class="desc">
-          Select a Cohort
-        </legend>
-        
+    <fieldset>
+      <legend id="title5" class="desc">Select a Cohort</legend>
         <div>
             <input id="radioDefault_5" name="Field5" type="hidden" value="">
             <div>
@@ -41,7 +35,6 @@ Studio Management Portal | Cohort Management
         </div>
       </fieldset>
     </div>
-      
     <div>
       <label class="desc" id="title106" for="Field106">
           Select Students
@@ -59,17 +52,11 @@ Studio Management Portal | Cohort Management
       <label class="desc" id="title4" for="Field4">
         Selected Students
       </label>
-    
-      <div>
-        <textarea id="Field4" name="Field4" spellcheck="true" rows="10" cols="50" tabindex="4"></textarea>
-      </div>
+      <textarea id="Field4" name="Field4" spellcheck="true" rows="10" cols="50" tabindex="4"></textarea>
     </div>
-    
-    <div>
-          <div>
-            <input id="saveForm" name="saveForm" type="submit" value="Submit">
+      <div>
+        <input id="saveForm" name="saveForm" type="submit" value="Submit">
       </div>
-      </div>
-    
   </form>
+</section> 
 @endsection

@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('content')
-<h1>Student Page</h1>
+<section>
+    <h1>Student Page</h1>
     <form action="">
         <label for="fname">First name:</label><br>
         <input type="text" id="fname" name="fname"><br><br>
@@ -16,9 +17,7 @@
         <label for="male">Male</label><br>
         <input type="radio" id="female" name="gender" value="female">
         <label for="female">Female</label><br><br>
-        
         <input type="submit" value="Submit">
-
-        
     </form>
-    @endsection
+</section>
+@endsection
