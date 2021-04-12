@@ -2,61 +2,55 @@
 
 <!-- These lines pull the header from the partials-->
 @extends('layouts.app')
-
-@section('title')
-Studio Management Portal | Cohort Management
-@endsection
-
 <!-- Form begins-->
 @section('content')
-<section>   
-<form id="cohort-form" action="#">
-  <header>
-    <h1>Cohort Assignment</h1>
-    <h2>Assign students into cohorts using the form.</h2>
-  </header>
-  <div>
-    <fieldset>
-      <legend id="title5" class="desc">Select a Cohort</legend>
-        <div>
-            <input id="radioDefault_5" name="Field5" type="hidden" value="">
-            <div>
-                <input id="Field5_0" name="Field5" type="radio" value="First Choice" tabindex="5" checked="checked">
+    <section>
+        <form id="cohort-form" action="#">
+            <header>
+                <h1>Cohort Assignment</h1>
+                <h4>Assign students into cohorts using the form.</h4>
+            </header>
+
+            <fieldset id="cohort-select">
+                <legend id="title5" class="desc">Select a Cohort</legend>
+
+                <input id="radioDefault_5" name="Field5" type="hidden" value="">
+
+                <input id="Field5_0" name="Field5" type="radio" value="First Cohort" tabindex="5" checked="checked">
                 <label class="choice" for="Field5_0">Cohort 1</label>
+
+
+                <input id="Field5_1" name="Field5" type="radio" value="Second Cohort" tabindex="6">
+                <label class="choice" for="Field5_1">Cohort 2</label>
+
+
+                <input id="Field5_2" name="Field5" type="radio" value="Third Cohort" tabindex="7">
+                <label class="choice" for="Field5_2">Cohort 3</label>
+
+
+            </fieldset>
+
+            <label class="desc" id="title106" for="Field106">
+                Select Students
+            </label>
+
+            <select id="Field106" name="Field106" class="field select medium" tabindex="11">
+                <option value="First Choice">Joe Bloggs</option>
+                <option value="Second Choice">Mary Jane</option>
+                <option value="Third Choice">Donald Trump</option>
+            </select>
+
+
+            <!--The intention here is to have a text box that shows who you have selected, in the same fashion as setting up a group on Facebook Messenger or Teams -->
+
+            <label class="desc" id="title4" for="Field4">
+                Selected Students
+            </label>
+            <textarea id="Field4" name="Field4" spellcheck="true" rows="10" cols="50" tabindex="4"></textarea>
+
+            <div>
+                <button class="submit-btn" type="submit">Submit</button>
             </div>
-          <div>
-              <input id="Field5_1" name="Field5" type="radio" value="Second Choice" tabindex="6">
-              <label class="choice" for="Field5_1">Cohort 2</label>
-          </div>
-          <div>
-              <input id="Field5_2" name="Field5" type="radio" value="Third Choice" tabindex="7">
-              <label class="choice" for="Field5_2">Cohort 3</label>
-          </div>
-        </div>
-      </fieldset>
-    </div>
-    <div>
-      <label class="desc" id="title106" for="Field106">
-          Select Students
-      </label>
-      <div>
-      <select id="Field106" name="Field106" class="field select medium" tabindex="11"> 
-        <option value="First Choice">Joe Bloggs</option>
-        <option value="Second Choice">Mary Jane</option>
-        <option value="Third Choice">Donald Trump</option>
-      </select>
-      </div>
-    </div>
-    <!--The intention here is to have a text box that shows who you have selected, in the same fashion as setting up a group on Facebook Messenger or Teams -->
-    <div>
-      <label class="desc" id="title4" for="Field4">
-        Selected Students
-      </label>
-      <textarea id="Field4" name="Field4" spellcheck="true" rows="10" cols="50" tabindex="4"></textarea>
-    </div>
-      <div>
-        <input id="saveForm" name="saveForm" type="submit" value="Submit">
-      </div>
-  </form>
-</section> 
+        </form>
+    </section>
 @endsection
