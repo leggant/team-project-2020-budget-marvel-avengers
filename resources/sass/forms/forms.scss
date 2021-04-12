@@ -1,25 +1,7 @@
-
-//conatiner for all forms
-.formContainer{
-    margin-top: 150px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    div{
-        width: 500px;
-    }
-}
-
-// .section-form {
-//     display: flex;
-//     .form-col {
-//         width: 50%;
-//     }
-// }
 form {
-    width: 50%;
     display: flex;
     flex-direction: column;
+    max-width: 500px;
 }
 .form-col:first-child {
     margin-right: 1rem;
@@ -31,18 +13,18 @@ input {
     padding: .5rem;
     border-color: $OPblue;
 }
+label {
+    font-weight: 300;
+    font-size: 1.3rem;
+    margin-top: .8rem;
+}
 .input-group {
     display: flex;
     flex-direction: column;
-    margin: 1rem 0;
     input[type=file] {
         cursor: pointer;
     }
-    label {
-        font-weight: 300;
-        font-size: 1.3rem;
-        margin: .8rem 0;
-    }
+
 }
 
 textarea {
