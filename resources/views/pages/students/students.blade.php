@@ -5,20 +5,30 @@
 @endsection
 
 @section('content')
-    <section id="studentDetails">
-        <h1>Student Details</h1>
-        <form>
+<section id="studentDetails">
+    <h1>Student Details</h1>
+    <form>
+        <div class="input-group">
             <label for="firstName">First name:</label>
             <input type="text" id="firstName" name="firstName">
-            <label for="lname">Last name:</label>
+        </div>
+        <div class="input-group">
+            <label for="lastName">Last name:</label>
             <input type="text" id="lastName" name="lastName">
+        </div>
+        <div class="input-group">
             <label for="githubUserName">GitHub Username:</label>
             <input type="text" id="githubUserName" name="githubUserName">
+        </div>
+        <div class="input-group">
             <label for="idNumber">Student ID Number:</label>
             <input type="text" id="idNumber" name="studentIdNumber">
+        </div>
+        <div class="input-group">
             <label for="studentEmail">Student Email:</label>
             <input type="email" name="studentEmail" id="studentEmail">
-            <button class="submit-btn" type="submit">Submit</button>
-        </form>
-    </section>
+        </div>
+        <button class="submit-btn" type="submit">Submit</button>
+    </form>
+</section>
 @endsection
