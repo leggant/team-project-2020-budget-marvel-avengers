@@ -1,8 +1,11 @@
 @extends('layouts.app')
+@section('title')
+    Studio Management Portal | Student Details
+@endsection
 @section('content')
     <section>
         <h1>Student Page</h1>
-        <form action="">
+        <form>
             <label for="fname">First name:</label>
             <input type="text" id="fname" name="fname">
             <label for="lname">Last name:</label>
