@@ -5,7 +5,6 @@
 @endsection
 
 @section('content')
-<<<<<<< HEAD
     <section id="evidence">
         <div class="section-title">
             <h1>Evidence Uploads</h1>
@@ -36,7 +35,6 @@
                     </div>
                 </div>
             </form>
-=======
 <section id="evidence">
   <div class="section-title">
       <h1>Evidence Uploads</h1>
@@ -65,7 +63,6 @@
                 <input type="datetime-local" id="DateRecieved" name="DateRecieved">
             </div>
             <button class="submit-btn" type="submit">Save Files</button>
->>>>>>> 3b8ab562aa727b2545e9c0e0faa8ee0b4b4e729f
         </div>
     </section>
 @endsection
