@@ -21,7 +21,7 @@ Studio Management Portal | Upload Evidence
                 <label for="textbox">Additional Comments: </label>
                 <textarea name="additional-comments" id="additional-comments"></textarea>
             </div>
-            <button class="submit-btn" type="submit">Save Files</button>
+            
         </div>
         <div class="form-col">
             <div class="input-group">
@@ -32,6 +32,7 @@ Studio Management Portal | Upload Evidence
                 <label for="DateRecieved">Date Recieved: </label>
                 <input type="datetime-local" id="DateRecieved" name="DateRecieved">
             </div>
+            <button class="submit-btn" type="submit">Save Files</button>
         </div>
     </form>
   </div>
