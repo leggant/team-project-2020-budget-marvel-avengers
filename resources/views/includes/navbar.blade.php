@@ -1,5 +1,5 @@
 <header id="navbar">
-  <nav class="navbar-container container">
+  <nav class="navbar-container containerNavbar">
     <a href="/" class="home-link">
       <div class="navbar-logo"></div>
     </a>
