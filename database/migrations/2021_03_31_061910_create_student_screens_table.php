@@ -14,12 +14,12 @@ class CreateStudentScreensTable extends Migration
     public function up()
     {
         Schema::create('student_screens', function (Blueprint $table) {
-            $table->bigIncrements('studioID');
-            $table->string('student_id')->unique();
-            $table->string('first_name',100);
-            $table->string('last_name',100);
-            $table->string('github_username',100)->unique();
-            $table->string('student_email',100)->unique();
+            $table->id();
+            $table->string('first_name');
+            $table->string('last_lame');
+            $table->string('github_username')->unique();
+            $table->string('student_email')->unique();
+            $table->unsignedBigInteger('');
             $table->timestamp('added_on');
         });
     }
