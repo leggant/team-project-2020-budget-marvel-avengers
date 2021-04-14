@@ -9,7 +9,8 @@ class Cohort extends Model
 {
     use HasFactory;
 
-    protected $table = 'cohort';
-
+    protected $table = 'cohorts';
+    // Cohorts are made of one of six studio papers
+    // Year and semester
     protected $fillable = ['cohortId', 'name', 'email', 'cohort', 'studentId'];
 }

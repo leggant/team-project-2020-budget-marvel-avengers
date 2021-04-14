@@ -5,16 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class StudentEvidence extends Model
+class Upload extends Model
 {
     use HasFactory;
-    protected $table = 'studentUploads';
+    protected $table = 'uploads';
     protected $primaryKey = 'id';
     protected $dateFormat = 'Y-m-d H:i';
     protected $fillable = [
-        'studentId', 
-        'staffId', 
-        'cohortId', 
+        'student_id', 
+        'staff_id', 
+        'cohort_id', 
         'fileUploads', 
         'comments', 
         'urls', 
@@ -26,7 +26,7 @@ class StudentEvidence extends Model
         'medicalCertEnd'
     ];
     protected $casts = [
-        'file_uploads' => 'array',
+        'fileUploads' => 'array',
         'comments' => 'array',
         'urls' => 'array'
     ];

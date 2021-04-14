@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateNotesScreensTable extends Migration
+class CreateNotesTable extends Migration
 {
     /**
      * @return void
@@ -12,7 +12,7 @@ class CreateNotesScreensTable extends Migration
 
     public function up()
     {
-        Schema::create('notes_screen', function (Blueprint $table) {
+        Schema::create('notes', function (Blueprint $table) {
             $table->bigIncrements('studioID');
             $table->integer('student_id')->unique();
             $table->string('first_name', 50);
@@ -31,6 +31,6 @@ class CreateNotesScreensTable extends Migration
 
     public function down()
     {
-        Schema::dropIfExists('notes_screen');
+        Schema::dropIfExists('notes');
     }
 }
