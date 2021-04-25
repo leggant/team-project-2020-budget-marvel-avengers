@@ -15,7 +15,6 @@ class Cohort extends Model
         'staff_id',
         'paper', 
         'semester', 
-        'year', 
-        'student_id'
+        'year'
     ];
 }

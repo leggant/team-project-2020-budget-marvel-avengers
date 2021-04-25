@@ -12,8 +12,8 @@ class CreateNotesScreensTable extends Migration
 
     public function up()
     {
-        Schema::create('notes_screen', function (Blueprint $table) {
-            $table->bigIncrements('studioID');
+        Schema::create('notes', function (Blueprint $table) {
+            $table->id('id');
             $table->integer('student_id')->unique();
             $table->string('first_name', 50);
             $table->string('last_name', 50);
@@ -31,6 +31,6 @@ class CreateNotesScreensTable extends Migration
 
     public function down()
     {
-        Schema::dropIfExists('notes_screen');
+        Schema::dropIfExists('notes');
     }
 }

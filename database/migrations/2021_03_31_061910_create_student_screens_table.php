@@ -13,14 +13,15 @@ class CreateStudentScreensTable extends Migration
      */
     public function up()
     {
-        Schema::create('student_screens', function (Blueprint $table) {
-            $table->id();
+        Schema::create('students', function (Blueprint $table) {
+            $table->id('id');
+            $table->string('studentID', 10)->unique();
+            $table->string('studentUserName', 10)->unique();
             $table->string('first_name');
             $table->string('last_lame');
             $table->string('github_username')->unique();
             $table->string('student_email')->unique();
-            $table->unsignedBigInteger('');
-            $table->timestamp('added_on');
+            $table->timestamps();
         });
     }
 
@@ -31,6 +32,6 @@ class CreateStudentScreensTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('student_screens');
+        Schema::dropIfExists('students');
     }
 }
