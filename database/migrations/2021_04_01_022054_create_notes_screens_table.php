@@ -14,12 +14,12 @@ class CreateNotesScreensTable extends Migration
     {
         Schema::create('notes', function (Blueprint $table) {
             $table->id('id');
-            $table->integer('student_id')->unique();
+            $table->unsignedBigInteger('student_id');
             $table->string('first_name', 50);
             $table->string('last_name', 50);
             $table->string('repo_url')->unique();
-            $table->string('notes');
-            $table->string('group_id')->unique();
+            $table->text('notes');
+            $table->unsignedBigInteger('group_id');
             $table->string('group_name');
             $table->timestamps();
         });

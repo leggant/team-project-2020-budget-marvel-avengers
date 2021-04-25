@@ -16,9 +16,9 @@ class CreateStudentEvidenceTable extends Migration
     {
         Schema::create('uploads', function (Blueprint $table) {
             $table->id('id');
-            $table->unsignedInteger('student_id');
-            $table->unsignedInteger('staff_id');
-            $table->unsignedInteger('cohort_id');
+            $table->unsignedBigInteger('student_id');
+            $table->unsignedBigInteger('staff_id');
+            $table->unsignedBigInteger('cohort_id');
             $table->json('fileUploads')->nullable();
             $table->json('comments');
             $table->json('urls')->nullable();
