@@ -16,7 +16,7 @@ class CreateStudentScreensTable extends Migration
         Schema::create('students', function (Blueprint $table) {
             $table->id('id');
             $table->string('studentID', 10)->unique();
-            $table->string('studentUserName', 10)->unique();
+            $table->string('student_username', 10)->unique();
             $table->string('first_name');
             $table->string('last_lame');
             $table->string('github_username')->unique();

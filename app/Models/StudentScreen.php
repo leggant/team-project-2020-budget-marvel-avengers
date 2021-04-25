@@ -17,7 +17,6 @@ class StudentScreen extends Model
         'student_username',
         'github_username', 
         'student_email',
-        'cohort_id'
     ];
     protected $hidden = ['created_at', 'updated_at'];
 }
