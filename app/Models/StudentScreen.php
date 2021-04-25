@@ -8,7 +8,16 @@ use Illuminate\Database\Eloquent\Model;
 class StudentScreen extends Model
 {
     use HasFactory;
-    protected $table = 'student_screens';
-    protected $fillable = ['first_name', 'last_ame', 'github_username', 'student_email'];
+    protected $table = 'students';
+    protected $primaryKey = 'id';
+    protected $fillable = [
+        'studentID',
+        'first_name', 
+        'last_name', 
+        'student_username',
+        'github_username', 
+        'student_email',
+        'cohort_id'
+    ];
     protected $hidden = ['created_at', 'updated_at'];
 }

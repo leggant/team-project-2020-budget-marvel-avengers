@@ -9,7 +9,13 @@ class NotesScreen extends Model
 {
     use HasFactory;
 
-    protected $table = 'notes_screen';
-    protected $primaryKey = 'student_id';
-    protected $fillable = ['student_id', 'first_name', 'last_name', 'repo_url', 'notes', 'group_id', 'group_name'];
+    protected $table = 'notes';
+    protected $primaryKey = 'id';
+    protected $fillable = [
+        'student_id', 
+        'staff_id', 
+        'group_id', 
+        'repo_url', 
+        'notes'
+    ];
 }
