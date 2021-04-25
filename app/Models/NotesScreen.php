@@ -14,8 +14,7 @@ class NotesScreen extends Model
     protected $fillable = [
         'student_id', 
         'staff_id', 
-        'group_id', 
-        'repo_url', 
-        'notes'
+        'group_id',  
+        'note'
     ];
 }

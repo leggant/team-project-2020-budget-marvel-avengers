@@ -17,10 +17,11 @@ class CreateStudentScreensTable extends Migration
             $table->id('id');
             $table->string('studentID', 10)->unique();
             $table->string('student_username', 10)->unique();
-            $table->string('first_name');
-            $table->string('last_lame');
-            $table->string('github_username')->unique();
+            $table->string('first_name', 50);
+            $table->string('last_lame', 50);
             $table->string('student_email')->unique();
+            $table->string('github_username')->unique();
+            $table->string('github_url')->unique()->nullable();
             $table->timestamps();
         });
     }
