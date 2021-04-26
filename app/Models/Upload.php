@@ -5,10 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class StudentEvidence extends Model
+class Upload extends Model
 {
     use HasFactory;
-    protected $table = 'uploads';
+    protected $table = 'upload';
     protected $primaryKey = 'id';
     protected $dateFormat = 'Y-m-d H:i';
     protected $fillable = [

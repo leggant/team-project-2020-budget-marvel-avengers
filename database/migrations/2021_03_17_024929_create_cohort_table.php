@@ -4,30 +4,34 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateNotesScreensTable extends Migration
+class CreateCohortTable extends Migration
 {
     /**
+     * Run the migrations.
+     *
      * @return void
      */
 
+     //create cohort
     public function up()
     {
-        Schema::create('notes', function (Blueprint $table) {
+        Schema::create('cohort', function (Blueprint $table) {
             $table->id('id');
+            $table->string('name');
+            $table->string('semester');
+            $table->string('year');
             $table->unsignedBigInteger('student_id');
-            $table->unsignedBigInteger('staff_id');
-            $table->unsignedBigInteger('group_id')->nullable(); //Include later if group model/migration created
-            $table->text('note');
             $table->timestamps();
         });
     }
 
     /**
+     * Reverse the migrations.
+     *
      * @return void
      */
-
     public function down()
     {
-        Schema::dropIfExists('notes');
+        Schema::dropIfExists('cohorts');
     }
 }

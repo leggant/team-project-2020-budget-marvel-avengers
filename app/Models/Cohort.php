@@ -9,7 +9,7 @@ class Cohort extends Model
 {
     use HasFactory;
 
-    protected $table = 'cohorts';
+    protected $table = 'cohort';
     protected $primaryKey = 'id';
     protected $fillable = [
         'staff_id',

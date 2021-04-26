@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class NotesScreen extends Model
+class Note extends Model
 {
     use HasFactory;
 
-    protected $table = 'notes';
+    protected $table = 'note';
     protected $primaryKey = 'id';
     protected $fillable = [
         'student_id', 

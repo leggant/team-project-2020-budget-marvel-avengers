@@ -5,7 +5,7 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 use App\Models\StudentEvidence;
 
-class CreateStudentEvidenceTable extends Migration
+class CreateUploadTable extends Migration
 {
     /**
      * Run the migrations.

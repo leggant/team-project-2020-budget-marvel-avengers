@@ -5,10 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class StudentScreen extends Model
+class Student extends Model
 {
     use HasFactory;
-    protected $table = 'students';
+    protected $table = 'student';
     protected $primaryKey = 'id';
     protected $fillable = [
         'studentID',
