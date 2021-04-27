@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Upload extends Model
 {
     use HasFactory;
+
     protected $table = 'upload';
     protected $primaryKey = 'id';
     protected $dateFormat = 'Y-m-d H:i';
