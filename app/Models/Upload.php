@@ -8,7 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Upload extends Model
 {
     use HasFactory;
-    protected $table = 'uploads';
+
+    protected $table = 'upload';
     protected $primaryKey = 'id';
     protected $dateFormat = 'Y-m-d H:i';
     protected $fillable = [
@@ -26,8 +27,10 @@ class Upload extends Model
         'medicalCertEnd'
     ];
     protected $casts = [
-        'fileUploads' => 'array',
+        'file_uploads' => 'array',
         'comments' => 'array',
-        'urls' => 'array'
+        'urls' => 'array',
+        'medicalCertificateSupplied' => 'boolean',
+        'assignmentReceived' => 'boolean'
     ];
 }
