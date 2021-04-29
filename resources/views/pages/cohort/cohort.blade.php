@@ -2,7 +2,6 @@
 <!-- These lines pull the header from the partials-->
 @extends('layouts.app')
 @section('title')
-    <!-- Inserts Page Title On the Web browser tab -->
     Studio Management Portal | Student Cohort
 @endsection
 <!-- Form begins-->
