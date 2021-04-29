@@ -36,6 +36,17 @@
             <option value="Third Choice">Donald Trump</option>
         </select>
 
+        <label class="desc" id="title107" for="Field107">
+            Select Paper
+        </label>
+
+        <select id="Field107" name="Field107" class="field select medium" tabindex="11">
+            <option value="First Choice">Studio 1</option>
+            <option value="Second Choice">Studtio 2</option>
+            <option value="Third Choice">Studio 3</option>
+            <option value="Fourth Choice">Studio 4</option>
+            <option value="Fifth Choice">Studio 5</option>
+        </select>
 
         <!--The intention here is to have a text box that shows who you have selected, in the same fashion as setting up a group on Facebook Messenger or Teams -->
 
