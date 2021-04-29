@@ -9,7 +9,7 @@ form {
     flex-direction: row;
     .form-col {
         &:first-child {
-            margin-right: 1rem;
+            margin-right: 2rem;
         }
         width: 50%;
     }
@@ -38,8 +38,11 @@ label {
 }
 input[type=file] {
     cursor: pointer;
+    margin-top: .5rem;
+    width: 100%;
 }
 textarea {
+    width: 100%;
     min-width: 300px;
     max-width: 500px;
     min-height: 100px;
