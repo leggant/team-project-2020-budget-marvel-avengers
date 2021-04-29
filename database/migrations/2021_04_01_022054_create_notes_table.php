@@ -13,14 +13,11 @@ class CreateNotesTable extends Migration
     public function up()
     {
         Schema::create('notes', function (Blueprint $table) {
-            $table->bigIncrements('studioID');
-            $table->integer('student_id')->unique();
-            $table->string('first_name', 50);
-            $table->string('last_name', 50);
-            $table->string('repo_url')->unique();
-            $table->string('notes');
-            $table->string('group_id')->unique();
-            $table->string('group_name');
+            $table->id('id');
+            $table->unsignedBigInteger('student_id');
+            $table->unsignedBigInteger('staff_id');
+            $table->unsignedBigInteger('group_id')->nullable(); //Include later if group model/migration created
+            $table->text('note');
             $table->timestamps();
         });
     }

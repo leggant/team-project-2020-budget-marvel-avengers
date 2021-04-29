@@ -32,6 +32,14 @@
                 <label for="DateRecieved">Date Recieved: </label>
                 <input type="datetime-local" id="DateRecieved" name="DateRecieved">
             </div>
+            <div class="input-group">
+                <label for="medicalCert">Medical Certificate Supplied: </label>
+                <input type="check" id="medicalCert" name="medicalCert" value="true">
+                <label for="medicalStart">Medical Start Date: </label>
+                <input type="datetime-local" id="medicalStart" name="medicalStart">
+                <label for="medicalEnd">Medical End Date: </label>
+                <input type="datetime-local" id="medicalEnd" name="medicalEnd">
+            </div>
         </div>
     </form>
 </section>
