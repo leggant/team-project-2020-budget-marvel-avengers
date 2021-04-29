@@ -15,7 +15,7 @@ class CreateCohortsTable extends Migration
      //create cohort
     public function up()
     {
-        Schema::create('cohort', function (Blueprint $table) {
+        Schema::create('cohorts', function (Blueprint $table) {
             $table->id('id');
             $table->string('name');
             $table->string('paper');
