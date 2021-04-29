@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500;600;700&display=swap");
 
 $body-bg: #f8fafc;
-$OPblue: #005AAB;
-$OPgreen: #91C441;
+$OPblue: #005aab;
+$OPgreen: #91c441;
 
 * {
     margin: 0;
@@ -16,8 +16,15 @@ html {
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Inter", sans-serif;
+    color: #808191;
     font-weight: 200;
+    background-color: #79508eb3
+    // background-image: url("/images/l.jpeg");
+    // // background-size: cover;
+    // background-attachment: fixed;
+    
+
 }
 
 //main container
@@ -26,12 +33,12 @@ body {
     margin: 0 auto;
     height: 100vh;
     //sections wrapping content
-    section{
+    section {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        height: 80vh;
+        height: 90vh;
         header {
             margin-bottom: 2rem;
         }
@@ -67,3 +74,52 @@ a {
     }
 }
 
+section {
+    background-image: linear-gradient(to right bottom, #0e5ba5, #3169b1, #4777bd, #5b85ca, #6e94d6, #58a1e1, #3aaee9, #00bbec, #00c6d7, #00ccb0, #5fcd80, #a3c853);
+     margin-top: 130px;   
+    max-width: 1240px;
+    max-height: 900px;
+    height: 95vh;
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    border-radius: 20px;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+  
+  .owl-prev {
+    background: url('https://res.cloudinary.com/milairagny/image/upload/v1487938188/left-arrow_rlxamy.png') left center no-repeat;
+    height: 54px;
+    position: absolute;
+    top: 50%;
+    width: 27px;
+    z-index: 1000;
+    left: 2%;
+    cursor: pointer;
+    color: transparent;
+    margin-top: -27px;
+  }
+  
+  .owl-next {
+    background: url('https://res.cloudinary.com/milairagny/image/upload/v1487938220/right-arrow_zwe9sf.png') right center no-repeat;
+    height: 54px;
+    position: absolute;
+    top: 50%;
+    width: 27px;
+    z-index: 1000;
+    right: 2%;
+    cursor: pointer;
+    color: transparent;
+    margin-top: -27px;
+  }
+  .owl-next span{
+      font-size:70px
+  }
+  .owl-prev span{
+    font-size:70px
+}
