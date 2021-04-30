@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+<div class="hero">
 <div class="homepage-carousel">
     <div class="owl-carousel owl-theme">
       <div class="item"><img src="https://www.op.ac.nz/assets/Campaign2020/Study-For-Free-Homepage-Banner-v2__FillWzk0OCw1MzRd.jpg" alt=""></div>
@@ -7,6 +8,13 @@
       <div class="item"><img src="/images/slideshow/img-1.jpg" alt=""></div>
       <div class="item"><img src="/images/slideshow/img-2.jpg" alt=""></div>
     </div>
+    <div class="cube"></div>
+    <div class="cube"></div>
+    <div class="cube"></div>
+    <div class="cube"></div>
+    <div class="cube"></div>
+    <div class="cube"></div>
+  </div>
   </div>
 <script>
         jQuery(document).ready(function($){
