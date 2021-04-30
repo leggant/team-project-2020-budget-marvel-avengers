@@ -51,7 +51,13 @@ textarea {
     border-radius: 20px;
     margin-bottom: 30px;
 }
-
+#cohort-select{
+    border:1px;
+    padding:10px;
+    #cohortSelect{
+        font-size:20px
+    }
+}
 
 .submit-btn {
     width: 120px;

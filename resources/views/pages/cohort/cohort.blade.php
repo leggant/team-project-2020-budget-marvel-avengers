@@ -9,7 +9,6 @@
 <section>
     <header>
         <h1>Cohort Assignment</h1>
-        <h4>Assign students into cohorts using the form.</h4>
     </header>
     <form id="cohort-form" action="#">
         <fieldset id="cohort-select">
