@@ -1,3 +1,19 @@
+@media only screen and (max-width: 340px) {
+  .footer .col {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .footer .col {
+    width: 50%;
+  }
+  .footer .col h1 {
+    font-size: 14px;
+  }
+  .footer .col ul li {
+    font-size: 13px;
+  }
+}
 @media (max-width: 600px) {
   form > div {
     margin: 0 0 15px 0; 
@@ -22,7 +38,6 @@
     width: 100%; 
   }
 }
-
 @media only screen and (max-width: 768px) {
   .nav-menu {
       position: fixed;
@@ -37,7 +52,6 @@
       transition: 0.3s;
       box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
   }
-
     .nav-menu.active {
         left: 0;
     }
@@ -65,28 +79,6 @@
         transform: translateY(-8px) rotate(-45deg);
     }
 }
-@media (min-width: 1200px) {
-  form > div > label,
-    legend {
-      text-align: right;
-  }
-}
-
-@media only screen and (min-width: 1280px) {
-  .contain {
-    width: 1200px;
-    margin: 0 auto;
-  }
-}
-@media only screen and (max-width: 1139px) {
-  .contain .social {
-    width: 1000px;
-    display: block;
-  }
-  .social h1 {
-    margin: 0px;
-  }
-}
 @media only screen and (max-width: 950px) {
   .footer .col {
     width: 33%;
@@ -98,19 +90,24 @@
     font-size: 13px;
   }
 }
-@media only screen and (max-width: 500px) {
-    .footer .col {
-      width: 50%;
-    }
-    .footer .col h1 {
-      font-size: 14px;
-    }
-    .footer .col ul li {
-      font-size: 13px;
-    }
+@media only screen and (max-width: 1139px) {
+  .contain .social {
+    width: 1000px;
+    display: block;
+  }
+  .social h1 {
+    margin: 0px;
+  }
 }
-@media only screen and (max-width: 340px) {
-  .footer .col {
-    width: 100%;
+@media (min-width: 1200px) {
+  form > div > label,
+    legend {
+      text-align: right;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .contain {
+    width: 1200px;
+    margin: 0 auto;
   }
 }
