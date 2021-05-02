@@ -8,14 +8,14 @@
       <div class="item"><img src="/images/slideshow/img-1.jpg" alt=""></div>
       <div class="item"><img src="/images/slideshow/img-2.jpg" alt=""></div>
     </div>
+    <!-- <div class="cube"></div>
     <div class="cube"></div>
     <div class="cube"></div>
     <div class="cube"></div>
     <div class="cube"></div>
-    <div class="cube"></div>
-    <div class="cube"></div>
+    <div class="cube"></div> -->
   </div>
-  </div>
+</div>
 <script>
         jQuery(document).ready(function($){
           $('.owl-carousel').owlCarousel({
