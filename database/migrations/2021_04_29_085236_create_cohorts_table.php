@@ -16,11 +16,12 @@ class CreateCohortsTable extends Migration
     public function up()
     {
         Schema::create('cohorts', function (Blueprint $table) {
-            $table->increments('cohortId')->unique();
+            $table->id('id');
             $table->string('name');
-            $table->string('email');
-            $table->string('cohort');
-            $table->integer('studentId');
+            $table->string('paper');
+            $table->string('semester');
+            $table->string('year');
+            $table->unsignedBigInteger('student_id');
             $table->timestamps();
         });
     }
