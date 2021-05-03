@@ -24,7 +24,7 @@ class EvidenceUploadController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.evidence.evidence_upload');
     }
 
     /**
