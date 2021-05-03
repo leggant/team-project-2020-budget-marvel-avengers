@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    Studio Management Portal | Edit Evidence Uploads
+    Studio Management Portal | View Evidence Uploads
 @endsection
 
 @section('content')
