@@ -47,6 +47,9 @@
     <ul>
       <li><a href="https://www.facebook.com/OtagoPoly"><img src="https://cdn3.iconfinder.com/data/icons/capsocial-round/500/facebook-512.png" width="32" style="width: 32px;"></li></a>
       <li><a href="https://www.instagram.com/otagopolytechnic/"><img src="https://www.pngkey.com/png/full/283-2831746_insta-icon-instagram.png" width="32" style="width: 32px;"></li></a>
+      <li><a href="https://www.youtube.com/channel/UCRSet54nNLAiFTGvVT7b0-g"><img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/YouTube_play_button_circular_%282013-2017%29.svg" width="32" style="width: 32px;"></li></a>
+      <li><a href="https://www.linkedin.com/school/otagopolytechnic/"><img src="https://cdn4.iconfinder.com/data/icons/social-media-icons-the-circle-set/48/linkedin_circle-512.png" width="32" style="width: 32px;"></li></a>
+
     </ul>
   </div>
 <div class="clearfix"></div>

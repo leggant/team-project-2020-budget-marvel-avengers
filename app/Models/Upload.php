@@ -8,15 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Upload extends Model
 {
     use HasFactory;
-
-    protected $table = 'upload';
+    protected $table = 'uploads';
     protected $primaryKey = 'id';
-    protected $dateFormat = 'Y-m-d H:i';
+    protected $dateFormat = 'd-m-Y H:i';
     protected $fillable = [
         'student_id', 
         'staff_id', 
         'cohort_id', 
-        'fileUploads', 
+        'uploadURL', 
         'comments', 
         'urls', 
         'dateReceived', 
