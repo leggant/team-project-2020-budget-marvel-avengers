@@ -10,6 +10,9 @@
     <header>
         <h1>Cohort Assignment</h1>
     </header>
+    <div>
+        <button><a href = "{{route('pages.')}}"> View an existing Cohort:</button>
+    </div>
     <form id="cohort-form" action="#">
         <fieldset id="cohort-select">
             <legend id="cohortSelect">Select a Cohort</legend>
