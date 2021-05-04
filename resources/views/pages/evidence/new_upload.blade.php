@@ -7,9 +7,52 @@
 @section('content')
 <section id="evidence">
     <header>
-        <h1>Evidence Uploads</h1>
+        <h1>File Location Data</h1>
     </header>
-    <form>
+    <div class="form-col">
+        <h3>Insert New Record</h3>
+        <form>
+            <div class="input-group">
+                <label for="studentName">Student Name</label>
+                <input type="text" id="studentName" class="form-control" placeholder="Enter Student Name">
+            </div>
+            <div class="input-group">
+                <label for="fileurl">Document URL</label>
+                <input type="url" id="fileurl" class="form-control" placeholder="Insert Weblink.....">
+            </div>
+            <button class="submit-btn" type="submit">Save Files</button>
+        </form>
+    </div>
+    <div class="form-col studentDocumentLinks">
+        <h3>Latest Records</h3>
+        <table>
+            <tr>
+                <th>Student Name</th>
+                <th>Document URL</th>
+            </tr>
+            <tr>
+                <td>Student 1</td>
+                <td><a href="https://via.placeholder.com/300/">https://via.placeholder.com/300/</a></td>
+            </tr>
+            <tr>
+                <td>Student 2</td>
+                <td><a href="https://via.placeholder.com/300/">https://via.placeholder.com/300/</a></td>
+            </tr>
+                <tr>
+                <td>Student 3</td>
+                <td><a href="https://via.placeholder.com/300/">https://via.placeholder.com/300/</a></td>
+            </tr>
+                <tr>
+                <td>Student 4</td>
+                <td><a href="https://via.placeholder.com/300/">https://via.placeholder.com/300/</a></td>
+            </tr>
+                <tr>
+                <td>Student 5</td>
+                <td><a href="https://via.placeholder.com/300/">https://via.placeholder.com/300/</a></td>
+            </tr>
+        </table>
+    </div>
+    <!-- <form>
         <div class="form-col">
             <h3>Find Student</h3>
             <div class="input-group">
@@ -47,7 +90,6 @@
             <div class="input-group">
                 <textarea name="additional-comments" id="additional-comments"></textarea>
             </div>
-            
         </div>
         <div class="form-col">
             <h3>Upload Files</h3>
@@ -78,6 +120,6 @@
             </div>
             <button class="submit-btn" type="submit">Save Files</button>
         </div>
-    </form>
+    </form> -->
 </section>
 @endsection

@@ -15,7 +15,7 @@ class EvidenceUploadController extends Controller
     public function index()
     {
         
-        return view('pages.evidence.view_uploads');
+        //return view('pages.evidence.view_uploads');
     }
 
     /**
@@ -26,7 +26,7 @@ class EvidenceUploadController extends Controller
     public function create()
     {
         
-        return view('pages.evidence.new_upload');
+        //return view('pages.evidence.new_upload');
     }
 
     /**
@@ -49,7 +49,7 @@ class EvidenceUploadController extends Controller
     public function show(Upload $upload)
     {
 
-        return view('pages.evidence.view_upload_by_id');
+        //return view('pages.evidence.view_upload_by_id');
     }
 
     /**
@@ -60,7 +60,7 @@ class EvidenceUploadController extends Controller
      */
     public function edit(Upload $upload)
     {
-        return view('pages.evidence.view_uploads');
+        //return view('pages.evidence.view_uploads');
     }
 
     /**
@@ -72,7 +72,7 @@ class EvidenceUploadController extends Controller
      */
     public function update(Request $request, Upload $upload)
     {
-        return view('pages.evidence.edit_upload');
+        // return view('pages.evidence.edit_upload');
     }
 
     /**

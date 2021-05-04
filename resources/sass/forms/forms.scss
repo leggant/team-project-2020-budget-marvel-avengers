@@ -1,17 +1,35 @@
 form {
     display: flex;
     flex-direction: column;
-    max-width: 500px;
+    width: fit-content;
 }
 
-#evidence form {
-    max-width: 800px;
-    flex-direction: row;
-    .form-col {
-        &:first-child {
-            margin-right: 2rem;
+#evidence {
+    h3 {
+        overflow-wrap: break-word;
+    }
+    form {
+        flex-direction: row;
+        justify-content: space-around;
+        flex-grow: 1;
+        .input-group {
+            width: 50%;
+            &:first-child {
+                margin-right: 2rem;
+            }
+            &:nth-child(2) {
+                margin-right: 2rem;
+            }
         }
-        width: 50%;
+    }
+    .form-col {
+        h3 {
+           margin: 1rem 0; 
+        }
+    }
+    .studentDocumentLinks {
+        width: 100%;
+        
     }
 }
 
@@ -29,6 +47,7 @@ label {
     font-weight: 300;
     font-size: 1.3rem;
     margin: .8rem 0;
+    margin-right: 1rem;
 }
 
 .input-group {
@@ -36,6 +55,7 @@ label {
     justify-content:space-between;
     margin-bottom: .5rem;
     align-items: center;
+    width: max-content;
 }
 input[type=file] {
     cursor: pointer;
@@ -55,33 +75,33 @@ textarea {
     border:1px;
     padding:10px;
     #cohortSelect{
-        font-size:20px
+        font-size:1.6rem
     }
 }
 
 .submit-btn {
-    width: 120px;
-    height: 35px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 11px;
+    width: 9.3em;
+    height: 2.6em;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
     text-transform: uppercase;
-    letter-spacing: 2.5px;
-    font-weight: 500;
+    letter-spacing: 1.5px;
+    font-weight: 600;
     color: #000;
     background-color: #fff;
     border: none;
     border-radius: 45px;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease 0s;
+    transition: all 0.2s ease 0s;
     cursor: pointer;
-    }
+}
   
-  .submit-btn:hover {
-    background-color: #ff5722;
-        box-shadow: 0px 15px 20px rgba(119, 29, 0, 0.73);
+.submit-btn:hover {
+    background-color: $OPgreen;
+    box-shadow: 0px 10px 10px rgba(119, 29, 0, 0.3);
     color: #fff;
-    transform: translateY(-7px);
-  }
+    transform: translateY(-2px);
+}
   
   
   
