@@ -9,6 +9,11 @@
     <header>
         <h1>File Location Data</h1>
     </header>
+    @if (session('status'))
+        <div class="alert alert-success">
+            <h4>{{ session('status') }}</h4>
+        </div>
+    @endif
     <div class="form-col">
         <h3>Insert New Record</h3>
         <form>
@@ -27,28 +32,40 @@
         <h3>Latest Records</h3>
         <table>
             <tr>
-                <th>Student Name</th>
-                <th>Document URL</th>
+                <th class="title">Student Name</th>
+                <th class="title">Document URL</th>
+                <th class="title">Date</th>
+                <th class="title"></th>
             </tr>
             <tr>
-                <td>Student 1</td>
-                <td><a href="https://via.placeholder.com/300/">https://via.placeholder.com/300/</a></td>
+                <td class="name">Student 1</td>
+                <td class="documentURL"><a href="https://via.placeholder.com/300/" target="_blank">https://via.placeholder.com/300/</a></td>
+                <td class="datetime"><p>01-01-2020</p></td>
+                <td class="update-links"><button class="update">Update</button><button class="delete">Delete</button></td>
             </tr>
             <tr>
-                <td>Student 2</td>
-                <td><a href="https://via.placeholder.com/300/">https://via.placeholder.com/300/</a></td>
+                <td class="name">Student 2</td>
+                <td class="documentURL"><a href="https://via.placeholder.com/300/" target="_blank">https://via.placeholder.com/300/</a></td>
+                <td class="datetime"><p>01-01-2020</p></td>
+                <td class="update-links"><button class="update">Update</button><button class="delete">Delete</button></td>
             </tr>
                 <tr>
-                <td>Student 3</td>
-                <td><a href="https://via.placeholder.com/300/">https://via.placeholder.com/300/</a></td>
+                <td class="name">Student 3</td>
+                <td class="documentURL"><a href="https://via.placeholder.com/300/" target="_blank">https://via.placeholder.com/300/</a></td>
+                <td class="datetime"><p>01-01-2020</p></td>
+                <td class="update-links"><button class="update">Update</button><button class="delete">Delete</button></td>
             </tr>
                 <tr>
-                <td>Student 4</td>
-                <td><a href="https://via.placeholder.com/300/">https://via.placeholder.com/300/</a></td>
+                <td class="name">Student 4</td>
+                <td class="documentURL"><a href="https://via.placeholder.com/300/" target="_blank">https://via.placeholder.com/300/</a></td>
+                <td class="datetime"><p>01-01-2020</p></td>
+                <td class="update-links"><button class="update">Update</button><button class="delete">Delete</button></td>
             </tr>
                 <tr>
-                <td>Student 5</td>
-                <td><a href="https://via.placeholder.com/300/">https://via.placeholder.com/300/</a></td>
+                <td class="name">Student 5</td>
+                <td class="documentURL"><a href="https://via.placeholder.com/300/" target="_blank">https://via.placeholder.com/300/</a></td>
+                <td class="datetime"><p>01-01-2020</p></td>
+                <td class="update-links"><button class="update">Update</button><button class="delete">Delete</button></td>
             </tr>
         </table>
     </div>
