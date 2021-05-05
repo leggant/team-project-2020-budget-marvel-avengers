@@ -5,7 +5,6 @@
 @endsection
 
 @section('content')
-<section id="studentDetails">
     <h1>Student Details</h1>
     <form>
         <div class="input-group">
@@ -30,5 +29,4 @@
         </div>
         <button class="submit-btn" type="submit">Submit</button>
     </form>
-</section>
 @endsection
