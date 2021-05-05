@@ -11,7 +11,7 @@
         <h1>Cohort Assignment</h1>
     </header>
     <div>
-        <button><a href = "{{route('pages.cohort_select')}}"> View an existing Cohort:</button>
+        <button class="submit-btn"> <a href="{{ route('pages.cohort_select') }}"> View a Cohort</a></button>
     </div>
     <form id="cohort-form" action="#">
         <fieldset id="cohort-select">
