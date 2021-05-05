@@ -2,7 +2,7 @@
 <!-- These lines pull the header from the partials-->
 @extends('layouts.app')
 @section('title')
-    Studio Management Portal | Student Cohort
+    Studio Management Portal | Cohort
 @endsection
 <!-- Form begins-->
 @section('content')
@@ -11,7 +11,7 @@
         <h1>Cohort Assignment</h1>
     </header>
     <div>
-        <button><a href = "{{route('pages.')}}"> View an existing Cohort:</button>
+        <button><a href = "{{route('pages.cohort_select')}}"> View an existing Cohort:</button>
     </div>
     <form id="cohort-form" action="#">
         <fieldset id="cohort-select">
