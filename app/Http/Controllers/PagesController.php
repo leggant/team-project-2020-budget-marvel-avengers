@@ -21,4 +21,7 @@ class PagesController extends Controller
     public function students() {
         return view('pages.students.students');
     }
+    public function success() {
+        return view('pages.confirmation');
+    }
 }

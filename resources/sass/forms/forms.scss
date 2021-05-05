@@ -29,7 +29,6 @@ form {
     }
     .studentDocumentLinks {
         width: 100%;
-        
     }
 }
 
@@ -55,7 +54,6 @@ label {
     justify-content:space-between;
     margin-bottom: .5rem;
     align-items: center;
-    width: max-content;
 }
 input[type=file] {
     cursor: pointer;
@@ -80,7 +78,7 @@ textarea {
 }
 
 .submit-btn {
-    width: 9.3em;
+    width: 10.3em;
     height: 2.6em;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.1rem;
