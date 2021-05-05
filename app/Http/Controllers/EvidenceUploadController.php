@@ -14,8 +14,7 @@ class EvidenceUploadController extends Controller
      */
     public function index()
     {
-        
-        //return view('pages.evidence.view_uploads');
+        return view('pages.evidence.new_upload');
     }
 
     /**
@@ -25,7 +24,7 @@ class EvidenceUploadController extends Controller
      */
     public function create()
     {
-        return view('pages.evidence.new_upload');
+        //return view('pages.evidence.new_upload');
     }
 
     /**
