@@ -17,34 +17,27 @@
         <thead>
             <tr class="c-header-row">
             <th scope="col">Name</th>
-            <th scope="col">Number</th>
-            <th scope="col">Notes</th>
+            <th scope="col">Paper</th>
+            <th scope="col">GitHub Username</th>
             </tr>
         </thead>
         <tbody>
             <tr class="c-row">
-            <th scope="row">Adelaide</th>
-            <td>4507</td>
-            <td>Notes</td>
+            <th scope="row">Conor West</th>
+            <td>Studio 3</td>
+            <td>westcl4</td>
             </tr>
             <tr class="c-row">
-            <th scope="row">Bucharest</th>
-            <td>3</td>
-            <td>Notes</td>
+            <th scope="row">Anthony Legg</th>
+            <td>Studio 3</td>
+            <td>leggant</td>
             </tr>
             <tr class="c-row">
-            <th scope="row">Catalina</th>
-            <td>56232</td>
-            <td>Notes</td>
+            <th scope="row">Mohammed Alhasan</th>
+            <td>Studio 3</td>
+            <td>Mohammed-alhasan</td>
             </tr>
         </tbody>
-        <tfoot>
-            <tr class="c-footer-row">
-            <td></td>
-            <td>60742 total</td>
-            <td></td>
-            </tr>
-        </tfoot>
         </table>
     </div>
 @endsection
