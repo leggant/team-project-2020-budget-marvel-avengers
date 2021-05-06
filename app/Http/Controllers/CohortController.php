@@ -24,7 +24,7 @@ class CohortController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.cohort.cohort_select');
     }
 
     /**
