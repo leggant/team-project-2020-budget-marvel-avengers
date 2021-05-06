@@ -17,15 +17,23 @@
     <div class="form-col">
         <h3>Insert New Record</h3>
         <form>
-            <div class="input-group">
-                <label for="studentName">Student Name</label>
-                <input type="text" id="studentName" class="form-control" placeholder="Enter Student Name">
+            <div class="form-col">
+                <div class="input-group">
+                    <label for="studentName">Student Name</label>
+                    <input type="text" id="studentName" class="form-control" placeholder="Enter Student Name">
+                </div>
+                <div class="input-group">
+                    <label for="description">Link Description: </label>
+                    <textarea name="description" id="description" placeholder="Enter a description...."></textarea>
+                </div>
             </div>
+            <div class="form-col">
             <div class="input-group">
                 <label for="fileurl">Document URL</label>
-                <input type="url" id="fileurl" class="form-control" placeholder="Insert Weblink.....">
+                <input type="url" id="fileurl" class="form-control" placeholder="Enter URL.....">
             </div>
             <button class="submit-btn" type="submit">Save Files</button>
+            </div>
         </form>
     </div>
     <div class="form-col studentDocumentLinks">
