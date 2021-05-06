@@ -14,6 +14,15 @@
         <caption>
             The caption is an accessible description of what the table shows.
         </caption>
+        <fieldset id="cohort-select">
+            <select id="Field101" name="Field101" class="field select medium" tabindex="5">
+                <option value="First Choice">Started Sem 1 '19</option>
+                <option value="Second Choice">Started Sem 2 '19</option>
+                <option value="Third Choice">Started Sem 1 '20</option>
+                <option value="Fourth Choice">Started Sem 2 '20</option>
+                <option value="Fifth Choice">Started Sem 1 '21</option>
+                <option value="Fifth Choice">Started Sem 2 '21</option>
+            </select>
         <thead>
             <tr class="c-header-row">
             <th scope="col">Name</th>
