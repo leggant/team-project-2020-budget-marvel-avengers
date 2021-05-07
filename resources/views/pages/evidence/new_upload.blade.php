@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    Studio Management Portal | Upload Evidence
+    Studio Management Portal | Evidence
 @endsection
 
 @section('content')
@@ -16,11 +16,12 @@
     @endif
     <div class="form-col">
         <h3>Insert New Record</h3>
-        <form>
+        <form action="{{route('uploads.store')}}" method="POST">
+            @csrf
             <div class="form-col">
                 <div class="input-group">
                     <label for="studentName">Student Name</label>
-                    <input type="text" id="studentName" class="form-control" placeholder="Enter Student Name">
+                    <input type="text" id="studentName" class="form-control" placeholder="Enter Student Name" name="studentName">
                 </div>
                 <div class="input-group">
                     <label for="description">Link Description: </label>
@@ -28,53 +29,44 @@
                 </div>
             </div>
             <div class="form-col">
-            <div class="input-group">
-                <label for="fileurl">Document URL</label>
-                <input type="url" id="fileurl" class="form-control" placeholder="Enter URL.....">
-            </div>
-            <button class="submit-btn" type="submit">Save Files</button>
+                <div class="input-group">
+                    <label for="fileurl">Document URL</label>
+                    <input type="url" id="fileurl" class="form-control" placeholder="Enter URL....." name="uploadURL">
+                </div>
+                <button class="submit-btn" type="submit">Save Files</button>
             </div>
         </form>
     </div>
     <div class="form-col studentDocumentLinks">
         <h3>Latest Records</h3>
         <table>
-            <tr>
-                <th class="title">Student Name</th>
-                <th class="title">Document URL</th>
-                <th class="title">Date</th>
-                <th class="title"></th>
-            </tr>
-            <tr>
-                <td class="name">Student 1</td>
-                <td class="documentURL"><a href="https://via.placeholder.com/300/" target="_blank">https://via.placeholder.com/300/</a></td>
-                <td class="datetime"><p>01-01-2020</p></td>
-                <td class="update-links"><button class="update">Update</button><button class="delete">Delete</button></td>
-            </tr>
-            <tr>
-                <td class="name">Student 2</td>
-                <td class="documentURL"><a href="https://via.placeholder.com/300/" target="_blank">https://via.placeholder.com/300/</a></td>
-                <td class="datetime"><p>01-01-2020</p></td>
-                <td class="update-links"><button class="update">Update</button><button class="delete">Delete</button></td>
-            </tr>
+            <thead>
                 <tr>
-                <td class="name">Student 3</td>
-                <td class="documentURL"><a href="https://via.placeholder.com/300/" target="_blank">https://via.placeholder.com/300/</a></td>
-                <td class="datetime"><p>01-01-2020</p></td>
-                <td class="update-links"><button class="update">Update</button><button class="delete">Delete</button></td>
-            </tr>
-                <tr>
-                <td class="name">Student 4</td>
-                <td class="documentURL"><a href="https://via.placeholder.com/300/" target="_blank">https://via.placeholder.com/300/</a></td>
-                <td class="datetime"><p>01-01-2020</p></td>
-                <td class="update-links"><button class="update">Update</button><button class="delete">Delete</button></td>
-            </tr>
-                <tr>
-                <td class="name">Student 5</td>
-                <td class="documentURL"><a href="https://via.placeholder.com/300/" target="_blank">https://via.placeholder.com/300/</a></td>
-                <td class="datetime"><p>01-01-2020</p></td>
-                <td class="update-links"><button class="update">Update</button><button class="delete">Delete</button></td>
-            </tr>
+                    <th class="title">Student Name</th>
+                    <th class="title">Document URL</th>
+                    <th class="title">Description</th>
+                    <th class="title">Date</th>
+                </tr>
+            </thead>
+            <table>
+                <tbody>
+                @foreach($uploads as $upload)
+                    <tr>
+                        <td>{{ $upload->studentName }}</td>
+                        <td class="documentURL"><a href="{{ $upload->uploadURL }}" target="_blank">{{ $upload->uploadURL }}</a></td>
+                        <td class="documentDescription"><p>{{ $upload->description }}</p></td>
+                        <td class="datetime"><p>{{ $upload->created_at}}</p></td>
+                        <td class="update-links">
+                            <form action="">
+                            <button class="update">Update</button>
+                            </form>
+                            
+                            <button class="delete">Delete</button>
+                        </td>
+                    </tr>
+                @endforeach
+                </tbody>
+            </table>
         </table>
     </div>
     <!-- <form>

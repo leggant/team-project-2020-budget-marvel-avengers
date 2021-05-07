@@ -1,32 +1,10 @@
+/* -------------------------------------------------------------------------- */
+/*                             GLOBAL FORM STYLES                             */
+/* -------------------------------------------------------------------------- */
+
 form {
     display: flex;
     flex-direction: column;
-    width: fit-content;
-}
-
-#evidence {
-    h3 {
-        overflow-wrap: break-word;
-    }
-    form {
-        flex-direction: row;
-        justify-content: space-around;
-        flex-grow: 1;
-        .input-group {
-            width: 50%;
-            &:first-child {
-                margin-right: 2rem;
-            }
-            &:nth-child(2) {
-                margin-right: 2rem;
-            }
-        }
-    }
-    .form-col {
-        h3 {
-           margin: 1rem 0; 
-        }
-    }
 }
 
 input, select, textarea {
@@ -37,6 +15,18 @@ input, select, textarea {
     border: 1.2px solid $OPblue;
     max-width: 500px;
     border-radius: 20px;
+    width: 100%;
+    textarea {
+        outline: none;
+        #description{
+            width: 100%;
+            min-width: 200px;
+            max-width: 200px;
+            min-height: 60px;
+            max-height: 70px;
+            padding: .5rem;
+        }
+    }
 }
 
 label {
@@ -48,9 +38,10 @@ label {
 
 .input-group {
     display: flex;
-    justify-content:space-between;
-    margin-bottom: .5rem;
-    align-items: center;
+    flex-direction: column;
+    justify-content:stretch;
+    align-items: baseline;
+    flex-wrap: wrap;
 }
 input[type=file] {
     cursor: pointer;
@@ -58,27 +49,8 @@ input[type=file] {
     width: 100%;
 }
 input[type=url] {
-    max-width: 350px;
-}
-textarea {
-    outline: none;
-}
-textarea#description{
     width: 100%;
-    min-width: 200px;
-    max-width: 200px;
-    min-height: 70px;
-    max-height: 70px;
-    padding: .5rem;
 }
-#cohort-select{
-    border:1px;
-    padding:10px;
-    #cohortSelect{
-        font-size:1.6rem
-    }
-}
-
 .submit-btn {
     width: 10.3em;
     height: 2.6em;
@@ -102,10 +74,55 @@ textarea#description{
     color: #fff;
     transform: translateY(-2px);
 }
+
+/* -------------------------------------------------------------------------- */
+/*                             COHORT FORM STYLES                             */
+/* -------------------------------------------------------------------------- */
+
+#cohort-select{
+    border:1px;
+    padding:10px;
+    #cohortSelect{
+        font-size:1.6rem
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                            EVIDENCE FORM STYLES                            */
+/* -------------------------------------------------------------------------- */
+
+form#evidence {
+    h3 {
+        overflow-wrap: break-word;
+    }
+    form {
+        justify-content: space-around;
+        &:first-child .input-group {
+            margin-right: 1rem;
+        }
+        .input-group {
+            
+            &:nth-child(2) {
+                margin-right: 2rem;
+            }
+        }
+    }
+    .form-col {
+        flex-grow: 1;
+        h3 {
+           margin: 1rem 0; 
+        }
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                             STUDENT FORM STYLES                            */
+/* -------------------------------------------------------------------------- */
   
   
   
   
-  
-  
+/* -------------------------------------------------------------------------- */
+/*                              NOTES FORM STYLES                             */
+/* -------------------------------------------------------------------------- */
  

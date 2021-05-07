@@ -14,7 +14,8 @@ class EvidenceUploadController extends Controller
      */
     public function index()
     {
-        return view('pages.evidence.new_upload');
+        $uploads = Upload::all();
+        return view('pages.evidence.new_upload', ['uploads' => $uploads]);
     }
 
     /**
@@ -35,7 +36,8 @@ class EvidenceUploadController extends Controller
      */
     public function store(Request $request)
     {
-        
+        Upload::create($request->all());
+        return redirect('pages.evidence.new_upload');
     }
 
     /**
