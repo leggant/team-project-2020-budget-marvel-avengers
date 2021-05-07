@@ -37,7 +37,7 @@ class EvidenceUploadController extends Controller
     public function store(Request $request)
     {
         Upload::create($request->all());
-        return redirect('pages.evidence.new_upload');
+        return redirect('uploads');
     }
 
     /**
@@ -81,8 +81,13 @@ class EvidenceUploadController extends Controller
      * @param  \App\Models\Upload  $upload
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Upload $upload)
+    public function destroy($id, Request $request)
     {
-        //
+        $uploads = Upload::query();
+        if($uploads->where('id', $id)->exists()) {
+            $upload = $uploads->find($id);
+            $upload->delete($id);
+            return redirect('uploads');
+        }
     }
 }

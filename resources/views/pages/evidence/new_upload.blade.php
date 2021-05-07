@@ -58,10 +58,13 @@
                         <td class="datetime"><p>{{ $upload->created_at}}</p></td>
                         <td class="update-links">
                             <form action="">
-                            <button class="update">Update</button>
+                                <button class="update">Update</button>
                             </form>
-                            
-                            <button class="delete">Delete</button>
+                            <form action="{{route('uploads.destroy', $upload->id)}}" method="post">
+                            @csrf 
+                            @method('delete')
+                                <button class="delete" type="submit">Delete</button>
+                            </form>
                         </td>
                     </tr>
                 @endforeach

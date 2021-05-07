@@ -3,7 +3,7 @@
         <div class="logo-image">
               <img src="/images/logo.jpg">
         </div>
-  </a>
+    </a>
     <ul class="nav-menu">
         <li class="nav-item">
             <a href="{{ route('pages.index') }}" class="navbar-link">Home</a></li>
