@@ -39,16 +39,20 @@
     </div>
     <div class="form-col studentDocumentLinks">
         <h3>Latest Records</h3>
-        <table>
-            <thead>
-                <tr>
-                    <th class="title">Student Name</th>
-                    <th class="title">Document URL</th>
-                    <th class="title">Description</th>
-                    <th class="title">Date</th>
-                </tr>
-            </thead>
-            <table>
+        <div class="tbl-header">
+            <table cellpadding="0" cellspacing="0" cellborder="0" class="titles">
+                <thead>
+                    <tr>
+                        <th class="title">Student Name</th>
+                        <th class="title">Document URL</th>
+                        <th class="title">Description</th>
+                        <th class="title">Date</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="tbl-content">
+            <table cellpadding="0" cellspacing="0" cellborder="0">
                 <tbody>
                 @foreach($uploads as $upload)
                     <tr>
@@ -57,9 +61,7 @@
                         <td class="documentDescription"><p>{{ $upload->description }}</p></td>
                         <td class="datetime"><p>{{ $upload->created_at}}</p></td>
                         <td class="update-links">
-                            <form action="">
-                                <button class="update">Update</button>
-                            </form>
+                        <a class="update" href="{{ route('uploads.edit', $upload->id)}}">Update</a>
                             <form action="{{route('uploads.destroy', $upload->id)}}" method="post">
                             @csrf 
                             @method('delete')
@@ -70,7 +72,7 @@
                 @endforeach
                 </tbody>
             </table>
-        </table>
+        </div>
     </div>
     <!-- <form>
         <div class="form-col">

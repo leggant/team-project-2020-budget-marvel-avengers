@@ -48,7 +48,6 @@ class EvidenceUploadController extends Controller
      */
     public function show(Upload $upload)
     {
-
         //return view('pages.evidence.view_upload_by_id');
     }
 
@@ -60,7 +59,7 @@ class EvidenceUploadController extends Controller
      */
     public function edit(Upload $upload)
     {
-        //return view('pages.evidence.view_uploads');
+        return view('pages.evidence.edit_upload', compact('upload'));
     }
 
     /**
@@ -70,9 +69,17 @@ class EvidenceUploadController extends Controller
      * @param  \App\Models\Upload  $upload
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Upload $upload)
+    public function update($id, Request $request)
     {
-        // return view('pages.evidence.edit_upload');
+        $uploads = Upload::query();
+        if ($uploads->where('id', $id)->exists()) {
+            $upload = $uploads->find($id);
+            $upload->studentName = is_null($request->studentName) ? $upload->studentName : $request->studentName;
+            $upload->uploadURL = is_null($request->uploadURL) ? $upload->uploadURL : $request->uploadURL;
+            $upload->description = is_null($request->description) ? $upload->description : $request->description;
+            $upload->save();
+            return redirect('uploads');
+        }
     }
 
     /**
