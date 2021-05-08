@@ -3,7 +3,7 @@
 /* -------------------------------------------------------------------------- */
 
 form {
-    display: flex;
+    display: grid;
     flex-direction: column;
 }
 
@@ -38,8 +38,7 @@ label {
 
 .input-group {
     display: flex;
-    flex-direction: column;
-    justify-content:stretch;
+    justify-content:space-between;
     align-items: baseline;
     flex-wrap: wrap;
 }
@@ -101,14 +100,14 @@ form#evidence {
             margin-right: 1rem;
         }
         .input-group {
-            
+            display: grid;
             &:nth-child(2) {
                 margin-right: 2rem;
             }
         }
     }
     .form-col {
-        flex-grow: 1;
+        display: flex;
         h3 {
            margin: 1rem 0; 
         }
