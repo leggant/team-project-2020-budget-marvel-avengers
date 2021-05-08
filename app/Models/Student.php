@@ -15,7 +15,6 @@ class Student extends Model
         'studentID',
         'first_name', 
         'last_name', 
-        'student_username',
         'github_username', 
         'student_email',
     ];

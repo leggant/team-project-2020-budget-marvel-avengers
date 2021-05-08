@@ -24,10 +24,6 @@
                         <label for="github_username">GitHub username:</label>
                         <input type="text" id="github_username" name="github_username" value="{{ $student->github_username }}">
                     </div>
-                    <div class="input-group">
-                        <label for="student_username">student_username:</label>
-                        <input type="text" id="student_username" name="student_username" value="{{ $student->student_username }}">
-                    </div>
                 
                     <div class="input-group">
                         <label for="student_email">Student Email:</label>

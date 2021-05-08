@@ -11,7 +11,7 @@ class StudentController extends Controller
     public function index()
     {
         $student = Student::all();
-        return view('pages/students.student',['student'=>$student]);
+        return view('pages/students.students',['student'=>$student]);
     }
     
     public function create()
@@ -46,7 +46,6 @@ class StudentController extends Controller
             $student->studentID = is_null($request->studentID) ? $student->studentID : $request->studentID;
             $student->first_name = is_null($request->first_name) ? $student->first_name : $request->first_name;
             $student->last_name = is_null($request->last_name) ? $student->last_name : $request->last_name;
-            $student->student_username = is_null($request->student_username) ? $student->student_username : $request->student_username;
             $student->github_username = is_null($request->github_username) ? $student->github_username : $request->github_username;
             $student->student_email = is_null($request->student_email) ? $student->student_email : $request->student_email;
             $student->save();
