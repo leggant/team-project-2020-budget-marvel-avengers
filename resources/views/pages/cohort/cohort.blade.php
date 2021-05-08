@@ -11,7 +11,7 @@
         <h1>Cohort Assignment</h1>
     </header>
     <div>
-        <button class="submit-btn"> <a href="{{ route('pages.cohort_select') }}"> View a Cohort</a></button>
+        <button class="submit-btn"> <a href="#"> View a Cohort</a></button>
     </div>
     <form id="cohort-form" action="#">
         <fieldset id="cohort-select">
@@ -53,6 +53,35 @@
         <div>
             <button class="submit-btn" type="submit">Submit</button>
         </div>
+        <table class="cohort-table">
+            <thead>
+                <tr class="c-header-row">
+                <th scope="col">Name</th>
+                <th scope="col">Paper</th>
+                <th scope="col">GitHub Username</th>
+                </tr>
+            </thead>
+
+            
+            <tbody>
+                {{-- @foreach ($cohorts as $cohort) --}}
+                    <tr class="c-row">
+                    <th scope="row">Conor West</th>
+                    <td>Studio 3</td>
+                    <td>westcl4</td>
+                    </tr>
+                    <tr class="c-row">
+                    <th scope="row">Anthony Legg</th>
+                    <td>Studio 3</td>
+                    <td>leggant</td>
+                    </tr>
+                    <tr class="c-row">
+                    <th scope="row">Mohammed Alhasan</th>
+                    <td>Studio 3</td>
+                    <td>Mohammed-alhasan</td>
+                    </tr>
+            </tbody>
+        </table>
     </form>
 </section>
 @endsection

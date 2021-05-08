@@ -14,7 +14,7 @@ class CohortController extends Controller
      */
     public function index()
     {
-        return view('pages.cohort.cohort');
+         return view('pages.cohort.cohort');
     }
 
     /**
@@ -24,7 +24,7 @@ class CohortController extends Controller
      */
     public function create()
     {
-        return view('pages.cohort.cohort_select');
+        // return view('pages.cohort.cohort_select');
     }
 
     /**
@@ -35,7 +35,16 @@ class CohortController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+            'paper' => 'required',
+            'cohort' => 'required'
+        ]);
+
+        Cohort::create($request->all());
+
+        return redirect()->route('pages.cohort.cohort_select')
+            ->with('success','Cohort successfully created');
     }
 
     /**
@@ -46,7 +55,7 @@ class CohortController extends Controller
      */
     public function show(Cohort $cohort)
     {
-        //
+        //return view('pages.cohort.cohort_select')
     }
 
     /**
@@ -69,7 +78,16 @@ class CohortController extends Controller
      */
     public function update(Request $request, Cohort $cohort)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+            'paper' => 'required',
+            'cohort' => 'required'
+        ]);
+
+        $cohort->update($request->all());
+
+        return redirect()->route('pages.cohort.cohort_select')
+            ->with('success', 'Cohort updated successfully');
     }
 
     /**
