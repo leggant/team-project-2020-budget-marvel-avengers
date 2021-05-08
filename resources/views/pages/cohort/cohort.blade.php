@@ -13,9 +13,10 @@
     <div>
         <button class="submit-btn"> <a href="#"> View a Cohort</a></button>
     </div>
-    <form id="cohort-form" action="#">
+    <form id="cohort-form" action="{{ route('cohorts.store')}}" method='POST'>
+        @csrf
         <fieldset id="cohort-select">
-            <select id="Field101" name="Field101" class="field select medium" tabindex="5">
+            <select id="cohort" name="cohort" class="field select medium" tabindex="5">
                 <option value="First Choice">Started Sem 1 '19</option>
                 <option value="Second Choice">Started Sem 2 '19</option>
                 <option value="Third Choice">Started Sem 1 '20</option>
@@ -26,33 +27,34 @@
 
         </fieldset>
 
-        <label class="desc" id="title106" for="Field106">
+        <label class="desc" id="title106" for="name">
             Student Name:
         </label>
 
-        <textarea id="Field106" name="Field106" class="field select medium" tabindex="11"></textarea>
+        <textarea id="name" name="name" class="field select medium" tabindex="11"></textarea>
 
-        <label class="desc" id="title107" for="Field107">
+        <label class="desc" id="paper" for="paper">
             Select Paper
         </label>
 
-        <select id="Field107" name="Field107" class="field select medium" tabindex="11">
-            <option value="First Choice">Studio 1</option>
-            <option value="Second Choice">Studio 2</option>
-            <option value="Third Choice">Studio 3</option>
-            <option value="Fourth Choice">Studio 4</option>
-            <option value="Fifth Choice">Studio 5</option>
-            <option value="Fifth Choice">Studio 6</option>
+        <select id="paper" name="paper" class="field select medium" tabindex="11">
+            <option value="Studio 1">Studio 1</option>
+            <option value="Studio 2">Studio 2</option>
+            <option value="Studio 3">Studio 3</option>
+            <option value="Studio 4">Studio 4</option>
+            <option value="Studio 5">Studio 5</option>
+            <option value="Studio 6">Studio 6</option>
         </select>
 
-        <label class="desc" id="title4" for="Field4">
+        <label class="desc" id="github" for="github">
             GitHub Username:
         </label>
-        <textarea id="Field4" name="Field4" spellcheck="true" rows="1" cols="50" tabindex="4"></textarea>
+        <textarea id="github" name="github" spellcheck="true" rows="1" cols="50" tabindex="4"></textarea>
 
         <div>
             <button class="submit-btn" type="submit">Submit</button>
         </div>
+    </form>
         <table class="cohort-table">
             <thead>
                 <tr class="c-header-row">
@@ -64,24 +66,26 @@
 
             
             <tbody>
-                {{-- @foreach ($cohorts as $cohort) --}}
+                @foreach ($cohort as $cohorts)
                     <tr class="c-row">
-                    <th scope="row">Conor West</th>
-                    <td>Studio 3</td>
-                    <td>westcl4</td>
+                        {{-- <td>{{ ++$i}}</td> --}}
+                        <td>{{ $cohorts->name }}</td>
+                        <td>{{ $cohorts->paper }}</td>
+                        <td>{{ $cohorts->github }}</td>
                     </tr>
-                    <tr class="c-row">
-                    <th scope="row">Anthony Legg</th>
+                    {{-- <tr class="c-row">
+                    <th>Anthony Legg</th>
                     <td>Studio 3</td>
                     <td>leggant</td>
                     </tr>
                     <tr class="c-row">
-                    <th scope="row">Mohammed Alhasan</th>
+                    <th>Mohammed Alhasan</th>
                     <td>Studio 3</td>
-                    <td>Mohammed-alhasan</td>
+                    <td>Mohammed-alhasan</td> --}}
                     </tr>
+                @endforeach
             </tbody>
         </table>
-    </form>
+   
 </section>
 @endsection

@@ -20,7 +20,7 @@ class CreateCohortsTable extends Migration
             $table->string('name');
             $table->string('paper');
             $table->string('cohort');
-            $table->unsignedBigInteger('github');
+            $table->string('github');
             $table->timestamps();
         });
     }

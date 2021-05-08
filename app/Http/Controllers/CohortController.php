@@ -14,7 +14,8 @@ class CohortController extends Controller
      */
     public function index()
     {
-         return view('pages.cohort.cohort');
+        $cohort = Cohort::all();
+        return view('pages.cohort.cohort',['cohort' => $cohort]);
     }
 
     /**
@@ -43,8 +44,9 @@ class CohortController extends Controller
 
         Cohort::create($request->all());
 
-        return redirect()->route('pages.cohort.cohort_select')
-            ->with('success','Cohort successfully created');
+        return redirect()->route('cohort')
+            // ->with('success','Cohort successfully created');
+        ;
     }
 
     /**
@@ -86,7 +88,7 @@ class CohortController extends Controller
 
         $cohort->update($request->all());
 
-        return redirect()->route('pages.cohort.cohort_select')
+        return redirect()->route('cohorts')
             ->with('success', 'Cohort updated successfully');
     }
 

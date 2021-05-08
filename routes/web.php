@@ -10,4 +10,4 @@ Route::get('/', [PagesController::class, 'homepage'])->name('pages.index');
 Route::get('/evidence-upload', [PagesController::class, 'EvidencePage'])->name('pages.evidence');
 Route::get('/notes',[PagesController::class ,'notes'])->name('pages.notes');
 Route::get('/students',[PagesController::class ,'students'])->name('pages.students');
-Route::resource('cohort', CohortController::class);
+Route::resource('cohorts', CohortController::class);
