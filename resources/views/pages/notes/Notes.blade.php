@@ -19,8 +19,7 @@ Studio Management Portal | Notes
         <label for="FileNotes">Notes:</label>
         <textarea id="FileNotes" name="Notes" spellcheck="true" placeholder="Enter notes here"></textarea>
       </div>
-        <input id="saveForm" name="saveForm" type="submit" value="Submit" class="submit-btn">
-      </div>
+      <input id="saveForm" name="saveForm" type="submit" value="Submit" class="submit-btn">
     </div>
   </form>
 </section>
