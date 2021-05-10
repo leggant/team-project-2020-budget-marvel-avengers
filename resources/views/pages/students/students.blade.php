@@ -60,7 +60,7 @@
     <td>{{ $user->github_username}}</td>
         <td>
             <a href="{{ route('students.edit',$user->id) }}"><button class="btn btn-edit">Edit</button></a>  
-            <form action="{{ route('students.destroy',$user->id) }}" method="POST">      
+            <form  onsubmit="return confirm('Do you really want to delete this student?');" action="{{ route('students.destroy',$user->id) }}" method="POST">      
                 @csrf
                 @method('DELETE')      
                 <button class="btn btn-delete" type="submit" class="">Delete</button>
