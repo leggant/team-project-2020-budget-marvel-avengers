@@ -17,21 +17,15 @@
         @csrf
         <fieldset id="cohort-select">
             <select id="cohort" name="cohort" class="field select medium" tabindex="5">
-                <option value="First Choice">Started Sem 1 '19</option>
-                <option value="Second Choice">Started Sem 2 '19</option>
-                <option value="Third Choice">Started Sem 1 '20</option>
-                <option value="Fourth Choice">Started Sem 2 '20</option>
-                <option value="Fifth Choice">Started Sem 1 '21</option>
-                <option value="Fifth Choice">Started Sem 2 '21</option>
+                <option value="Sem 1 '19">Started Sem 1 '19</option>
+                <option value="Sem 2 '19">Started Sem 2 '19</option>
+                <option value="Sem 1 '20">Started Sem 1 '20</option>
+                <option value="Sem 2 '20">Started Sem 2 '20</option>
+                <option value="Sem 1 '21">Started Sem 1 '21</option>
+                <option value="Sem 2 '21">Started Sem 2 '21</option>
             </select>
 
         </fieldset>
-
-        <label class="desc" id="title106" for="name">
-            Student Name:
-        </label>
-
-        <textarea id="name" name="name" class="field select medium" tabindex="11"></textarea>
 
         <label class="desc" id="paper" for="paper">
             Select Paper
@@ -46,10 +40,11 @@
             <option value="Studio 6">Studio 6</option>
         </select>
 
-        <label class="desc" id="github" for="github">
-            GitHub Username:
+        <label class="desc" id="title106" for="name">
+            Student Name:
         </label>
-        <textarea id="github" name="github" spellcheck="true" rows="1" cols="50" tabindex="4"></textarea>
+
+        <textarea id="name" name="name" class="field select medium" tabindex="11"></textarea>
 
         <div>
             <button class="submit-btn" type="submit">Submit</button>
@@ -60,7 +55,7 @@
                 <tr class="c-header-row">
                 <th scope="col">Name</th>
                 <th scope="col">Paper</th>
-                <th scope="col">GitHub Username</th>
+                <th scope="col">Cohort</th>
                 </tr>
             </thead>
 
@@ -68,20 +63,10 @@
             <tbody>
                 @foreach ($cohort as $cohorts)
                     <tr class="c-row">
-                        {{-- <td>{{ ++$i}}</td> --}}
                         <td>{{ $cohorts->name }}</td>
                         <td>{{ $cohorts->paper }}</td>
-                        <td>{{ $cohorts->github }}</td>
+                        <td>{{ $cohorts->cohort }}</td>
                     </tr>
-                    {{-- <tr class="c-row">
-                    <th>Anthony Legg</th>
-                    <td>Studio 3</td>
-                    <td>leggant</td>
-                    </tr>
-                    <tr class="c-row">
-                    <th>Mohammed Alhasan</th>
-                    <td>Studio 3</td>
-                    <td>Mohammed-alhasan</td> --}}
                     </tr>
                 @endforeach
             </tbody>

@@ -43,10 +43,9 @@ class CohortController extends Controller
         ]);
 
         Cohort::create($request->all());
-
-        return redirect()->route('cohort')
-            // ->with('success','Cohort successfully created');
-        ;
+        return redirect('cohorts');
+        //     // ->with('success','Cohort successfully created');
+        // ;
     }
 
     /**
