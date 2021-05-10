@@ -4,13 +4,13 @@ table{
     table-layout: fixed;
   }  
   .tbl-header{
-    background-color: rgba(255,255,255,0.3);
+    background-color: rgb(22 94 168);
    }
   .tbl-content{
     height:300px;
     overflow-x:auto;
     margin-top: 0px;
-    border: 1px solid rgba(255,255,255,0.3);
+
   }
   th{
     padding: 20px 15px;
@@ -86,4 +86,7 @@ table{
     background-color:#135da7;
     color: white;
 
+}
+.student-section{
+height: 100vh  !important;
 }

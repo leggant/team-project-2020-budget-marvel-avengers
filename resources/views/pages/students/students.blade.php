@@ -3,7 +3,7 @@
     Studio Management Portal | Student Details
 @endsection
 @section('content')
-<section>
+<section class="student-section">
 <h2>Add new student</h2>
 <div class="wrap">
      
