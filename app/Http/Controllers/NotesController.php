@@ -14,7 +14,8 @@ class NotesController extends Controller
      */
     public function index()
     {
-        return view('pages.notes.notes'); 
+        $notes = Note::all();
+        return view('pages.notes.notes', ['notes'=>$notes]); 
     }
 
     /**
@@ -35,7 +36,8 @@ class NotesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Note::create($request->all());
+        return redirect('notes');
     }
 
     /**
@@ -57,7 +59,7 @@ class NotesController extends Controller
      */
     public function edit(Note $note)
     {
-        //
+        return view('pages.notes.Notes_edit', compact('note'));
     }
 
     /**
@@ -67,10 +69,17 @@ class NotesController extends Controller
      * @param  \App\Models\Note  $note
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Note $note)
+    public function update($id, Request $request)
     {
-        //
+        $notes = Note::query();
+        if ($notes->where('id', $id)->exists()) {
+            $note = $notes->find($id);
+            $note->student_name = is_null($request->student_name) ? $note->student_name : $request->student_name;
+            $note->note = is_null($request->note) ? $note->note : $request->note;
+            $note->save();
+            return redirect('notes');
     }
+}
 
     /**
      * Remove the specified resource from storage.
@@ -78,8 +87,13 @@ class NotesController extends Controller
      * @param  \App\Models\Note  $note
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Note $note)
+    public function destroy($id)
     {
-        //
+        $notes = Note::query();
+        if($notes->where('id', $id)->exists()) {
+            $note = $notes->find($id);
+            $note->delete($id);
+            return redirect('notes');
+        }
     }
 }

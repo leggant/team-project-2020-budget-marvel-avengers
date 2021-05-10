@@ -12,9 +12,7 @@ class Note extends Model
     protected $table = 'notes';
     protected $primaryKey = 'id';
     protected $fillable = [
-        'student_id', 
-        'staff_id', 
-        'group_id',  
+        'student_name', 
         'note'
     ];
 }
