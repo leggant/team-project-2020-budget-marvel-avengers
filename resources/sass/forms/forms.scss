@@ -15,11 +15,14 @@ input, select, textarea {
     max-width: 500px;
     border-radius: 20px;
     width: 100%;
-    textarea {
-        outline: none;
-    }
 }
-
+textarea{
+    outline: none;
+    height: 60px;
+    max-height: 70px;
+    padding: .5rem;
+    resize: vertical;
+}
 label {
     font-weight: 300;
     font-size: 1.3rem;
@@ -105,14 +108,7 @@ form#evidence {
     .form-col {
         display: flex;
     }
-    #description{
-        width: 100%;
-        min-width: 200px;
-        max-width: 200px;
-        height: 60px;
-        max-height: 70px;
-        padding: .5rem;
-    }
+
 }
 
 /* -------------------------------------------------------------------------- */
