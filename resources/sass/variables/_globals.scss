@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500;600;700&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
-$body-bg: #f8fafc;
+$body-bg: #001326;
 $OPblue: #005aab;
 $OPgreen: #91c441;
 
@@ -13,6 +13,8 @@ $OPgreen: #91c441;
 html {
     background-color: $body-bg;
     font-size: 16px;
+    height: 100vh;
+
 }
 
 body {
@@ -21,12 +23,13 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: 100vh;
 }
 
 //main container
 .container {
     margin: 0 auto;
-    height: fit-content;
+    min-height: min-content;
     padding-top: 2rem;
     padding-bottom: 2rem;
     //sections wrapping content
@@ -34,6 +37,7 @@ body {
         width: max-content;
         min-width: 60vw;
         max-width: 1200px;
+        height: 100%;
         padding: 4rem 4rem;
         margin: 0 auto;
         background-image: linear-gradient(
@@ -87,6 +91,10 @@ a {
     a:active {
         text-decoration: underline;
     }
+}
+
+button {
+    cursor: pointer;
 }
 
 /* -------------------------------------------------------------------------- */

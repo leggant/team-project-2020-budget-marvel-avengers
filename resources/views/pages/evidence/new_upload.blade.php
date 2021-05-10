@@ -18,22 +18,24 @@
         <h3>Insert New Record</h3>
         <form action="{{route('uploads.store')}}" method="POST">
             @csrf
-            <div class="form-col">
+            <div>
                 <div class="input-group">
                     <label for="studentName">Student Name</label>
                     <input type="text" id="studentName" class="form-control" placeholder="Enter Student Name" name="studentName">
                 </div>
                 <div class="input-group">
-                    <label for="description">Link Description: </label>
-                    <textarea name="description" id="description" placeholder="Enter a description...."></textarea>
-                </div>
-            </div>
-            <div class="form-col">
-                <div class="input-group">
                     <label for="fileurl">Document URL</label>
                     <input type="url" id="fileurl" class="form-control" placeholder="Enter URL....." name="uploadURL">
                 </div>
-                <button class="submit-btn" type="submit">Save Files</button>
+            </div>
+            <div>
+                <div class="input-group">
+                    <label for="description">Link Description: </label>
+                    <textarea name="description" id="description" placeholder="Enter a description...."></textarea>
+                </div>
+                <div class="input-group">
+                    <button class="submit-btn" type="submit">Save Files</button>
+                </div>
             </div>
         </form>
     </div>
@@ -47,6 +49,7 @@
                         <th class="title">Document URL</th>
                         <th class="title">Description</th>
                         <th class="title">Date</th>
+                        <th></th>
                     </tr>
                 </thead>
             </table>
@@ -56,15 +59,15 @@
                 <tbody>
                 @foreach($uploads as $upload)
                     <tr>
-                        <td>{{ $upload->studentName }}</td>
+                        <td><p>{{ $upload->studentName }}</p></td>
                         <td class="documentURL"><a href="{{ $upload->uploadURL }}" target="_blank">{{ $upload->uploadURL }}</a></td>
                         <td class="documentDescription"><p>{{ $upload->description }}</p></td>
-                        <td class="datetime"><p>{{ $upload->created_at}}</p></td>
+                        <td class="datetime"><p>{{ $upload->created_at->format('d-m-Y')}}</p></td>
                         <td class="update-links">
-                        <a class="update" href="{{ route('uploads.edit', $upload->id)}}">Update</a>
+                            <button><a class="update" href="{{ route('uploads.edit', $upload->id)}}">Update</a></button>
                             <form action="{{route('uploads.destroy', $upload->id)}}" method="post">
-                            @csrf 
-                            @method('delete')
+                                @csrf 
+                                @method('delete')
                                 <button class="delete" type="submit">Delete</button>
                             </form>
                         </td>
