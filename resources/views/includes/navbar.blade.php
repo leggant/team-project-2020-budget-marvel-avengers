@@ -10,7 +10,7 @@
         <li class="nav-item">
             <a href="{{ route('pages.students') }}" class="navbar-link">Students</a></li>
         <li class="nav-item">
-            <a href="{{ route('pages.notes') }}" class="navbar-link">Notes</a></li>
+            <a href="/notes" class="navbar-link">Notes</a></li>
         <li class="nav-item">
             <li class="navbar-item"><a href="{{ route('pages.evidence') }}" class="navbar-link">Upload Evidence</a>
         <li class="nav-item">

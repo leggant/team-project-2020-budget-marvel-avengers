@@ -1,8 +1,7 @@
 
 <!-- FOOTER START -->
-<div class="footer">
-  <div class="contain">
-
+<footer class="footer">
+  <div class="footer-info">
   <div class="col">
    <h1>General enquiries</h1>
     <p>New Zealand 0800 762 786<p>
@@ -41,7 +40,7 @@
       International +64 9 309 0301
       Email auckland@op.ac.nz</p>
   </div>
-  
+  </div>
   <div class="col social">
     <h1>Social</h1>
     <ul>
@@ -52,7 +51,6 @@
 
     </ul>
   </div>
-<div class="clearfix"></div>
-</div>
+
 </div>
 <!-- END OF FOOTER -->

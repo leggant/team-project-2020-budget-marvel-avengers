@@ -10,10 +10,6 @@ class PagesController extends Controller
         return view('pages.index');
     }
 
-    public function notes () {
-        return view('pages.notes.notes'); 
-    }
-
     public function cohortpage(){
         return view('pages.cohort.cohort');
     }
