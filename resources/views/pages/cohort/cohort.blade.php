@@ -14,14 +14,14 @@
         <fieldset id="cohort-select">
             <legend id="cohortSelect">Select a Cohort</legend>
             <!-- <input id="Cohort1" name="cohortID" type="hidden" value="cohort1"> -->
-            <input id="Field5_0" name="cohortID" type="radio" value="cohort2" checked="checked">
-            <label class="choice" for="Field5_0">Cohort 1</label>
+            <input id="Cohort_1" name="cohortID" type="radio" value="First_Cohort" >
+            <label class="choice" for="Cohort_1">Cohort 1</label>
 
-            <input id="Field5_1" name="Field5" type="radio" value="Second Cohort" tabindex="6">
-            <label class="choice" for="Field5_1">Cohort 2</label>
+            <input id="Cohort_2" name="cohortID" type="radio" value="Second Cohort" tabindex="6">
+            <label class="choice" for="Cohort_2">Cohort 2</label>
 
-            <input id="Field5_2" name="Field5" type="radio" value="Third Cohort" tabindex="7">
-            <label class="choice" for="Field5_2">Cohort 3</label>
+            <input id="Cohort_3" name="cohortID" type="radio" value="Third Cohort" tabindex="7">
+            <label class="choice" for="Cohort_3">Cohort 3</label>
 
         </fieldset>
 
