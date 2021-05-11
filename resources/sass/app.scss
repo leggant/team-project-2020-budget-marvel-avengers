@@ -1,5 +1,6 @@
 @import'variables/globals';
+@import"layout/_footer";
+@import"layout/_navbar";
+@import"layout/_tables";
 @import'forms/forms';
-@import"/resources/css/partials/navbar.css";
-@import"/resources/css/partials/footer.css";
-
+@import'mediaqueries/mediaqueries';
