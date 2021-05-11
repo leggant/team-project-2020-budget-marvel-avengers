@@ -101,7 +101,6 @@ button {
 /*                           HOME PAGE SLIDER STYLES                          */
 /* -------------------------------------------------------------------------- */
 
-
 .home {
     height: max-content;
     overflow: hidden;
@@ -113,6 +112,12 @@ button {
     .hero {
         overflow: hidden;
     }
+
+.owl-carousel .item img{
+    display: block;
+    width: 100%;
+    max-height: 500px;
+    border-radius: 20px;
 }
 
 .owl-carousel .item img {
