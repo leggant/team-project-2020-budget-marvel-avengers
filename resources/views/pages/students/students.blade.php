@@ -4,7 +4,7 @@
 @endsection
 @section('content')
 <section class="student-section">
-<h2>Add new student</h2>
+<h1>Students</h1>
 <div class="wrap">
      
     <div class="formwrapper">
@@ -17,13 +17,13 @@
             <label for="last_name">Last name:</label>
             <input  class="form-styling" type="text" id="last_name" name="last_name">
      
-            <label for="studentID">student ID:</label>
+            <label for="studentID">Student id:</label>
             <input  class="form-styling" type="text" id="studentID" name="studentID">
      
             <label for="github_username">GitHub username:</label>
             <input  class="form-styling" type="text" id="github_username" name="github_username">
   
-            <label for="student_email">Student Email:</label>
+            <label for="student_email">Student email:</label>
             <input  class="form-styling" type="email"  id="student_email" name="student_email">
     
             <button class="submit-btn" type="submit">Submit</button>
@@ -40,7 +40,7 @@
         <th>Student ID</th>
         <th>First name</th>
         <th>Last name</th>
-        <th>Student Email</th>
+        <th>Student email</th>
         <th>Github username</th>
         <th width="150px">Action</th>
          </tr>

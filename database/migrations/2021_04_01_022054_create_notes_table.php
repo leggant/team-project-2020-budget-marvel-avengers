@@ -14,9 +14,7 @@ class CreateNotesTable extends Migration
     {
         Schema::create('notes', function (Blueprint $table) {
             $table->id('id');
-            $table->unsignedBigInteger('student_id');
-            $table->unsignedBigInteger('staff_id');
-            $table->unsignedBigInteger('group_id')->nullable(); //Include later if group model/migration created
+            $table->string('student_name');
             $table->text('note');
             $table->timestamps();
         });
