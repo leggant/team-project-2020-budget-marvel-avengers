@@ -8,7 +8,6 @@
     <header>
         <h1>Cohort View</h1>
     </header>
-    {{-- Cheers to Emma Hossenlopp at Codepen.io for the basic table structure https://codepen.io/ehossenlopp/pen/gNPwpr --}}
     <div class="ns-music-v1">
         <table class="c-table  c-table--content">
         <caption>
