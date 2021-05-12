@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use App\Models\StudentEvidence;
+use App\Models\Upload;
 
 class CreateUploadsTable extends Migration
 {
@@ -16,18 +16,9 @@ class CreateUploadsTable extends Migration
     {
         Schema::create('uploads', function (Blueprint $table) {
             $table->id('id');
-            $table->unsignedBigInteger('student_id');
-            $table->unsignedBigInteger('staff_id');
-            $table->unsignedBigInteger('cohort_id');
+            $table->string('studentName');
             $table->string('uploadURL');
-            $table->json('comments');
-            $table->json('urls')->nullable();
-            $table->datetime('dateReceived')->format('d.m.Y h.m');
-            $table->datetime('assignmentReceived')->nullable()->format('d.m.Y h.m');
-            $table->datetime('assignmentDue')->nullable()->format('d.m.Y h.m');
-            $table->boolean('medicalCertificateSupplied')->default(false);
-            $table->date('medicalCertStart')->nullable()->format('d.m.Y');
-            $table->date('medicalCertEnd')->nullable()->format('d.m.Y');
+            $table->longText('description')->nullable();
             $table->timestamps();
         });
     }

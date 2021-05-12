@@ -10,26 +10,9 @@ class Upload extends Model
     use HasFactory;
     protected $table = 'uploads';
     protected $primaryKey = 'id';
-    protected $dateFormat = 'd-m-Y H:i';
     protected $fillable = [
-        'student_id', 
-        'staff_id', 
-        'cohort_id', 
+        'studentName', 
         'uploadURL', 
-        'comments', 
-        'urls', 
-        'dateReceived', 
-        'assignmentReceived', 
-        'assignmentDue', 
-        'medicalCertificateSupplied', 
-        'medicalCertStart', 
-        'medicalCertEnd'
-    ];
-    protected $casts = [
-        'file_uploads' => 'array',
-        'comments' => 'array',
-        'urls' => 'array',
-        'medicalCertificateSupplied' => 'boolean',
-        'assignmentReceived' => 'boolean'
+        'description'
     ];
 }
