@@ -13,10 +13,10 @@
             <a href="{{ route('pages.notes') }}" class="navbar-link">Notes</a></li>
         <li class="nav-item">
             <li class="navbar-item">
-                <a href="{{ route('pages.evidence') }}" class="navbar-link">Upload Evidence</a>
+<li class="navbar-item"><a href="/uploads" class="navbar-link">Upload Evidence</a>
         <li class="nav-item">
             <li class="navbar-item">
-                <a href="/cohorts" class="navbar-link">Cohort</a></li>
+                <a href="\cohorts" class="navbar-link">Cohort</a></li>
     </ul>
     <div class="hamburger">
         <span class="bar"></span>
