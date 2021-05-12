@@ -1,16 +1,8 @@
-.student-table{
-table{
-    width:100%;
-    table-layout: fixed;
-  }  
-  .tbl-header{
-    background-color: rgb(22 94 168);
-   }
+.student-table{ 
   .tbl-content{
     height:300px;
     overflow-x:auto;
     margin-top: 0px;
-
   }
   th{
     padding: 20px 15px;
@@ -50,6 +42,10 @@ table{
   .formwrapper{
      margin: auto;
       width: 40%;
+      form {
+        display: flex;
+        flex-direction: column;
+    }
   }
   .student-form{
     label{
@@ -85,8 +81,12 @@ table{
 .btn-edit{
     background-color:#135da7;
     color: white;
-
 }
 .student-section{
-height: 100vh  !important;
+height: 100vh;
+padding: 4rem 0 !important;
+.title{
+  text-align: center;
+  padding:1rem
+}
 }
