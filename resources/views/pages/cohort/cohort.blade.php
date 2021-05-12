@@ -24,6 +24,16 @@
                 <option value="Sem 1 '21">Started Sem 1 '21</option>
                 <option value="Sem 2 '21">Started Sem 2 '21</option>
             </select>
+            <legend id="cohortSelect">Select a Cohort</legend>
+            <!-- <input id="Cohort1" name="cohortID" type="hidden" value="cohort1"> -->
+            <input id="Cohort_1" name="cohortID" type="radio" value="First_Cohort" >
+            <label class="choice" for="Cohort_1">Cohort 1</label>
+
+            <input id="Cohort_2" name="cohortID" type="radio" value="Second Cohort" tabindex="6">
+            <label class="choice" for="Cohort_2">Cohort 2</label>
+
+            <input id="Cohort_3" name="cohortID" type="radio" value="Third Cohort" tabindex="7">
+            <label class="choice" for="Cohort_3">Cohort 3</label>
 
         </fieldset>
 
