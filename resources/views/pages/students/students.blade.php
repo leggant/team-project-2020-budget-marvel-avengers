@@ -1,34 +1,76 @@
 @extends('layouts.app')
-
 @section('title')
     Studio Management Portal | Student Details
 @endsection
-
 @section('content')
-<section id="studentDetails">
-    <h1>Student Details</h1>
-    <form>
-        <div class="input-group">
-            <label for="firstName">First name:</label>
-            <input type="text" id="firstName" name="firstName">
-        </div>
-        <div class="input-group">
-            <label for="lastName">Last name:</label>
-            <input type="text" id="lastName" name="lastName">
-        </div>
-        <div class="input-group">
-            <label for="githubUserName">GitHub Username:</label>
-            <input type="text" id="githubUserName" name="githubUserName">
-        </div>
-        <div class="input-group">
-            <label for="idNumber">Student ID Number:</label>
-            <input type="text" id="idNumber" name="studentIdNumber">
-        </div>
-        <div class="input-group">
-            <label for="studentEmail">Student Email:</label>
-            <input type="email" name="studentEmail" id="studentEmail">
-        </div>
-        <button class="submit-btn" type="submit">Submit</button>
-    </form>
+<section class="student-section">
+<h1>Students</h1>
+<div class="wrap">
+     
+    <div class="formwrapper">
+     <form class="student-form" action="{{ route('students.store') }}" method="POST">
+        @csrf
+       
+            <label for="first_name">First name:</label>
+            <input  class="form-styling"  type="text" id="first_name" name="first_name">
+     
+            <label for="last_name">Last name:</label>
+            <input  class="form-styling" type="text" id="last_name" name="last_name">
+     
+            <label for="studentID">Student id:</label>
+            <input  class="form-styling" type="text" id="studentID" name="studentID">
+     
+            <label for="github_username">GitHub username:</label>
+            <input  class="form-styling" type="text" id="github_username" name="github_username">
+  
+            <label for="student_email">Student email:</label>
+            <input  class="form-styling" type="email"  id="student_email" name="student_email">
+    
+            <button class="submit-btn" type="submit">Submit</button>
+
+     </form>
+    </div>
+</div>
+
+<div class="student-table">
+<div class="tbl-header">
+    <table cellpadding="0" cellspacing="0" cellborder="0">
+      <thead>
+        <tr>
+        <th>Student ID</th>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Student email</th>
+        <th>Github username</th>
+        <th width="150px">Action</th>
+         </tr>
+     </thead>
+    </table>
+</div>
+
+<div class="tbl-content">
+    <table cellpadding="0" cellspacing="0" cellborder="0">
+      <tbody>
+    @foreach ($student as $user)
+    <tr>
+    <td>{{ $user->studentID }}</td>
+    <td>{{ $user->first_name }}</td>
+    <td>{{ $user->last_name }}</td>
+    <td>{{ $user->student_email }}</td>
+    <td>{{ $user->github_username}}</td>
+        <td>
+            <a href="{{ route('students.edit',$user->id) }}"><button class="btn btn-edit">Edit</button></a>  
+            <form  onsubmit="return confirm('Do you really want to delete this student?');" action="{{ route('students.destroy',$user->id) }}" method="POST">      
+                @csrf
+                @method('DELETE')      
+                <button class="btn btn-delete" type="submit" class="">Delete</button>
+            </form>
+        </td>
+    </tr>
+    @endforeach
+        </tbody>
+</table>
+</div>
+</div>
 </section>
-@endsection
+@endsection 

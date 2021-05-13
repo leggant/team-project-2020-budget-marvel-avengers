@@ -1,68 +1,83 @@
+/* -------------------------------------------------------------------------- */
+/*                             GLOBAL FORM STYLES                             */
+/* -------------------------------------------------------------------------- */
+
 form {
     display: flex;
-    flex-direction: column;
-    max-width: 500px;
 }
 
-#evidence form {
-    max-width: 800px;
-    flex-direction: row;
-    .form-col {
-        &:first-child {
-            margin-right: 2rem;
-        }
-        width: 50%;
-    }
-}
-
-input, select {
+input,
+select,
+textarea {
     margin: 0;
     outline: none;
     font-size: 1rem;
-    padding: .8rem;
+    padding: 0.8rem;
     border: 1.2px solid $OPblue;
     max-width: 500px;
     border-radius: 20px;
+    width: 100%;
 }
-
+textarea {
+    outline: none;
+    height: 60px;
+    max-height: 70px;
+    padding: 0.5rem;
+    resize: vertical;
+}
 label {
     font-weight: 300;
     font-size: 1.3rem;
-    margin: .8rem 0;
+    margin: 0.8rem 0;
+    margin-right: 1rem;
 }
 
 .input-group {
     display: flex;
-    justify-content:space-between;
-    margin-bottom: .5rem;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: baseline;
+    flex-wrap: wrap;
+    margin: 0.8rem;
 }
-input[type=file] {
+.input-group textarea#description {
+    max-height: 80px;
+    min-height: 60px;
+}
+input[type="file"] {
     cursor: pointer;
-    margin-top: .5rem;
+    margin-top: 0.5rem;
     width: 100%;
 }
-textarea {
+input[type="url"] {
     width: 100%;
-    min-width: 300px;
-    max-width: 500px;
-    min-height: 100px;
-    max-height: 200px;
-    border-radius: 20px;
-    margin-bottom: 30px;
 }
-#cohort-select{
-    border:1px;
-    padding:10px;
-    #cohortSelect{
-        font-size:20px
-    }
+.submit-btn {
+    width: 10.3em;
+    height: 2.6em;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease 0s;
+    cursor: pointer;
 }
 
-.submit-btn {
-    width: 120px;
-    height: 35px;
-    font-family: 'Roboto', sans-serif;
+.submit-btn:hover {
+    background-color: $OPgreen;
+    box-shadow: 0px 10px 10px rgba(119, 29, 0, 0.3);
+    color: #fff;
+    transform: translateY(-2px);
+}
+//form buttons
+.btn {
+    width: 90px;
+    height: 25px;
     font-size: 11px;
     text-transform: uppercase;
     letter-spacing: 2.5px;
@@ -70,22 +85,82 @@ textarea {
     color: #000;
     background-color: #fff;
     border: none;
-    border-radius: 45px;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease 0s;
     cursor: pointer;
+    margin: 5px;
+}
+.btn-delete {
+    background-color: rgba(224, 11, 11, 0.808);
+    color: white;
+}
+.btn-edit {
+    background-color: #135da7;
+    color: white;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                             COHORT FORM STYLES                             */
+/* -------------------------------------------------------------------------- */
+
+#cohort-select {
+    border: 1px;
+    padding: 10px;
+    #cohortSelect {
+        font-size: 1.6rem;
     }
-  
-  .submit-btn:hover {
-    background-color: #ff5722;
-        box-shadow: 0px 15px 20px rgba(119, 29, 0, 0.73);
-    color: #fff;
-    transform: translateY(-7px);
-  }
-  
-  
-  
-  
-  
-  
- 
+}
+
+/* -------------------------------------------------------------------------- */
+/*                            EVIDENCE FORM STYLES                            */
+/* -------------------------------------------------------------------------- */
+
+form#evidence {
+    h3 {
+        overflow-wrap: break-word;
+    }
+    form {
+        justify-content: space-around;
+        &:first-child .input-group {
+            margin-right: 1rem;
+        }
+        .input-group {
+            display: grid;
+            &:nth-child(2) {
+                margin-right: 2rem;
+            }
+        }
+    }
+    .form-col {
+        display: flex;
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                             STUDENT FORM STYLES                            */
+/* -------------------------------------------------------------------------- */
+.student-section {
+    h1 {
+        text-align: center;
+    }
+}
+.formwrapper {
+    margin: auto;
+    width: 40%;
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+}
+.submit-btn {
+    margin: 20px auto;
+}
+
+.student-section {
+    height: 100vh;
+    padding: 4rem 0 !important;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                              NOTES FORM STYLES                             */
+/* -------------------------------------------------------------------------- */
