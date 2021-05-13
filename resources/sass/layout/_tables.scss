@@ -1,6 +1,9 @@
 table {
     width: 100%;
     padding-top: 2rem;
+    ::-webkit-scrollbar {
+      width: 6px;
+    } 
   p, a, button {
     font-size: 1.2rem;
   }
@@ -28,9 +31,7 @@ table {
     text-transform: uppercase;
   }
 }
-::-webkit-scrollbar {
-  width: 6px;
-} 
+
 //makes table scrollable
 .tbl-content{
   height:300px;
