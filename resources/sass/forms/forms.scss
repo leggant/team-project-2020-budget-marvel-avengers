@@ -35,7 +35,7 @@ label {
     justify-content:flex-start;
     align-items: baseline;
     flex-wrap:wrap;
-    margin-top: .8rem;
+    margin: .8rem;
 }
 .input-group textarea#description {
     max-height: 80px;
@@ -72,6 +72,30 @@ input[type=url] {
     color: #fff;
     transform: translateY(-2px);
 }
+//form buttons 
+.btn{
+    width: 90px;
+    height: 25px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer; 
+    margin:5px;
+  }
+  .btn-delete{
+    background-color:rgba(224, 11, 11, 0.808);
+    color: white;
+  }
+  .btn-edit{
+    background-color:#135da7;
+    color: white;
+  }
 
 /* -------------------------------------------------------------------------- */
 /*                             COHORT FORM STYLES                             */
@@ -114,11 +138,34 @@ form#evidence {
 /* -------------------------------------------------------------------------- */
 /*                             STUDENT FORM STYLES                            */
 /* -------------------------------------------------------------------------- */
-  
+.student-section{
+    h1{
+        text-align:center
+    }
+}
+.formwrapper{
+   margin: auto;
+    width: 40%;
+    form {
+      display: flex;
+      flex-direction: column;
+  }
+}
+  .submit-btn{
+      margin: 20px auto;
+  }
+
+.student-section{
+height: 100vh;
+padding: 4rem 0 !important;
+}
+
   
   
   
 /* -------------------------------------------------------------------------- */
 /*                              NOTES FORM STYLES                             */
 /* -------------------------------------------------------------------------- */
+
+
  

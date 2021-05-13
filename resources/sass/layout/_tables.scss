@@ -31,3 +31,8 @@ table {
 ::-webkit-scrollbar {
   width: 6px;
 } 
+//makes table scrollable
+.tbl-content{
+  height:300px;
+  overflow-x:auto;
+}

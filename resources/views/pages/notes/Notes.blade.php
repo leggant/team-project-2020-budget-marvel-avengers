@@ -47,11 +47,11 @@ Studio Management Portal | Notes
                     <td><p>{{ $note->note}}</p></td>
                     <td><p>{{ $note->updated_at->format('d-m-Y')}}</p></td>
                     <td class="update-links">
-                        <button><a class="update" href="{{ route('notes.edit', $note->id)}}">Update</a></button>
+                      <a href="{{ route('notes.edit', $note->id)}}"><button class="btn btn-edit">Update</button></a>  
                         <form action="{{route('notes.destroy', $note->id)}}" method="post">
                             @csrf 
                             @method('delete')
-                            <button class="delete" type="submit">Delete</button>
+                            <button class="btn btn-delete" type="submit">Delete</button>
                         </form>
                     </td>
                 </tr>

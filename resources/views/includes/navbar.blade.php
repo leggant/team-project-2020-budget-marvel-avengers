@@ -6,10 +6,10 @@
     </a>
     <ul class="nav-menu">
         <li class="nav-item">
-            <a href="{{ route('pages.index') }}" class="navbar-link">Home</a>
+            <a href="{{ route('pages.index') }}" class="navbar-link">Home</a></li>
         </li>
         <li class="nav-item">
-            <a href="{{ route('pages.students') }}" class="navbar-link">Students</a>
+            <a href="/students"class="navbar-link">Students</a>
         </li>
         <li class="nav-item">
             <a href="/notes" class="navbar-link">Notes</a></li>

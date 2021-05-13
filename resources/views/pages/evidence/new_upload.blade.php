@@ -64,11 +64,11 @@
                     <td class="documentDescription"><p>{{ $upload->description }}</p></td>
                     <td class="datetime"><p>{{ $upload->created_at->format('d-m-Y')}}</p></td>
                     <td class="update-links">
-                        <button><a class="update" href="{{ route('uploads.edit', $upload->id)}}">Update</a></button>
+                        <a href="{{ route('uploads.edit', $upload->id)}}"><button class="btn btn-edit">Update</button></a>  
                         <form action="{{route('uploads.destroy', $upload->id)}}" method="post">
                             @csrf 
                             @method('delete')
-                            <button class="delete" type="submit">Delete</button>
+                            <button class="btn btn-delete" type="submit">Delete</button>
                         </form>
                     </td>
                 </tr>
