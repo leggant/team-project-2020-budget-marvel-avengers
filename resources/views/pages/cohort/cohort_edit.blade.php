@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('title')
-    Studio Management Portal | Cohort View
+    Studio Management Portal | Student Cohorts
 @endsection
 
 @section('content')
