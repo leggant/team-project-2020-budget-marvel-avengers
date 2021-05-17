@@ -15,7 +15,7 @@ class NotesController extends Controller
     public function index()
     {
         $notes = Note::all();
-        return view('pages.notes.notes', ['notes'=>$notes]); 
+        return view('pages.notes.Notes', ['notes'=>$notes]); 
     }
 
     /**
