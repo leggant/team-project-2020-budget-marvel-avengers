@@ -13,6 +13,11 @@ class Upload extends Model
     protected $fillable = [
         'studentName', 
         'uploadURL', 
-        'description'
+        'description',
+        'student_id'
     ];
+
+    public function students(){
+        return $this->belongsTo(Student::class, 'student_id');
+    }
 }
