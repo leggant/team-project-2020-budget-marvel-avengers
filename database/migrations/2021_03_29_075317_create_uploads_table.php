@@ -19,6 +19,8 @@ class CreateUploadsTable extends Migration
             $table->string('studentName');
             $table->string('uploadURL');
             $table->longText('description')->nullable();
+            $table->unsignedBigInteger('student_id');
+            $table->foreign('student_id')->references('id')->on('students');
             $table->timestamps();
         });
     }
