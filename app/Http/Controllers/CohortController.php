@@ -16,6 +16,7 @@ class CohortController extends Controller
     {
         $cohort = Cohort::all();
         return view('pages/cohort.cohort',['cohort' => $cohort]);
+        //return $cohort;
     }
        /**
      * Show the form for creating a new resource.
