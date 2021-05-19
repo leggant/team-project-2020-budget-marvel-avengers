@@ -92,15 +92,41 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  position: relative;
 }
 .home .hero {
   overflow: hidden;
 }
-.home .owl-carousel .item img {
-  display: block;
-  width: 100%;
-  max-height: 500px;
-  border-radius: 20px;
+.home .login-form {
+  background: rgba(0, 19, 38, 0.25);
+  backdrop-filter: blur(4.5px);
+  -webkit-backdrop-filter: blur(4.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37), 20px 20px 50px #005babbe, -30px -30px 60px #005bab5e, -30px -30px 60px #16324b;
+  position: absolute;
+  height: 60%;
+  width: 50%;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  border-radius: 2rem;
+  transform: translate(-80%, -50%);
+}
+.home .login-form .login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+}
+.home .login-form .login label {
+  font-weight: 600;
+  font-family: "Montserrat" sans-serif;
+  font-size: 1.5rem;
+  color: #ffffff;
 }
 .home .owl-carousel .item img {
   display: block;

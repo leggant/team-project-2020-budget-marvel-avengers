@@ -1,0 +1,78 @@
+/* -------------------------------------------------------------------------- */
+
+
+/*                           HOME PAGE SLIDER STYLES                          */
+
+
+/* -------------------------------------------------------------------------- */
+
+.home {
+    height: max-content;
+    overflow: hidden;
+    width: 60vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    .hero {
+        overflow: hidden;
+    }
+    .login-form {
+        background: rgba( 0, 19, 38, 0.25);
+        backdrop-filter: blur(4.5px);
+        -webkit-backdrop-filter: blur( 4.5px);
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18);
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37), 20px 20px 50px #005babbe, -30px -30px 60px #005bab5e, -30px -30px 60px #16324b;
+        position: absolute;
+        height: 60%;
+        width: 50%;
+        top: 50%;
+        left: 50%;
+        z-index: 10;
+        border-radius: 2rem;
+        transform: translate(-80%, -50%);
+        .login {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 80%;
+            height: 100%;
+            margin: 0 auto;
+            label {
+                font-weight: 600;
+                font-family: 'Montserrat' sans-serif;
+                font-size: 1.5rem;
+                color: #ffffff;
+            }
+        }
+    }
+    .owl-carousel .item img {
+        display: block;
+        object-fit: cover;
+        object-position: center center;
+        height: 60vh;
+        border-radius: 20px;
+    }
+    .owl-theme {
+        .owl-prev,
+        .owl-next {
+            position: absolute;
+            transform: translateY(50%);
+            top: 50%;
+            span {
+                font-size: 5.125rem;
+                font-weight: 900;
+                z-index: 20;
+            }
+        }
+        .owl-prev {
+            left: 20px;
+        }
+        .owl-next {
+            right: 20px;
+        }
+    }
+}
