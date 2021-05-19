@@ -1,3 +1,4 @@
+
 <!-- Cohort screen-->
 @extends('layouts.app')
 @section('title')
@@ -24,14 +25,23 @@
 
             
             <tbody>
-                @foreach ($cohort as $cohorts)
-                    <tr class="c-row">
-                        <td>{{ $cohorts->name }}</td>
-                        <td>{{ $cohorts->paper }}</td>
-                        <td>{{ $cohorts->cohort }}</td>
+                <div id="wrapper"></div>
+                
+                @for($i= 0; $i < 7, $i++);
+                    <tr>
+                        <form id="cohort-screen" method="get" action="">
+                            <td>
+                                <div id="studio-paper">Studio 1 </div>
+                            </td>
+                            <td>
+                                <input type="text" id = "students" class="cohort-students" placeholder="Enter Students" name="students" >  
+                            </td>
+                            <td>
+                                <button type="submit-cohort" type="submit">Edit</button>
+                            </td>
+                        </form>
                     </tr>
-                    </tr>
-                @endforeach
+                @endfor 
             </tbody>
         </table>
    
