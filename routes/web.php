@@ -5,8 +5,10 @@ use App\Http\Controllers\PagesController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\NotesController;
 use App\Http\Controllers\EvidenceUploadController;
+use App\Http\Controllers\StudentProfile;
 
 Route::get('/', [PagesController::class, 'homepage'])->name('pages.index');
 Route::resource('students', StudentController::class);
 Route::resource('uploads', EvidenceUploadController::class);
 Route::resource('notes', NotesController::class);
+Route::resource('student', StudentProfile::class);

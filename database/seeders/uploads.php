@@ -7,7 +7,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
 
-class AlbumSeeder extends Seeder
+class uploads extends Seeder
 {
     /**
      * Run the database seeds.
@@ -17,7 +17,7 @@ class AlbumSeeder extends Seeder
     public function run()
     {
         $json_file = File::get('database/data/upload.json');
-        DB::table('students')->delete();
+        DB::table('uploads')->delete();
         $data = json_decode($json_file);
         foreach ($data as $obj) {
             Upload::create(array(
