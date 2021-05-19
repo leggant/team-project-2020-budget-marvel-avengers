@@ -18,7 +18,7 @@
             <li class="navbar-item"><a href="/uploads" class="navbar-link">Upload Evidence</a></li>
         </li>
         <li class="nav-item">
-            <a href="/cohort" class="navbar-link">Cohort</a></li>
+            <li class="navbar-item"><a href="/cohort" class="navbar-link">Cohort</a></li>
         </li>
     </ul>
     <div class="hamburger">

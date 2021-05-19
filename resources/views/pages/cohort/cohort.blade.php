@@ -1,15 +1,12 @@
 <!-- Cohort screen-->
-<!-- These lines pull the header from the partials-->
 @extends('layouts.app')
 @section('title')
     Studio Management Portal | Cohort
 @endsection
 <!-- Form begins-->
 @section('content')
-<section>
-    <header>
-        <h1>Cohort Assignment</h1>
-    </header>
+<section class='cohort-screen'>
+    <h1>Cohort Assignment</h1>
     <form id="cohort-form" action="{{ route('cohorts.store')}}" method='POST'>
         @csrf
         <fieldset id="cohort-select">

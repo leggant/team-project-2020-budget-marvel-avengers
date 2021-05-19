@@ -14,7 +14,6 @@ class Cohort extends Model
     protected $fillable = [
         'name',
         'paper', 
-        'cohort', 
-        'github'
+        'cohort'
     ];
 }

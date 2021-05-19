@@ -15,7 +15,7 @@ class CohortController extends Controller
     public function index()
     {
         $cohort = Cohort::all();
-        return view('pages.cohort.cohort',['cohort' => $cohort]);
+        return view('pages/cohort.cohort',['cohort' => $cohort]);
     }
        /**
      * Show the form for creating a new resource.
@@ -24,7 +24,7 @@ class CohortController extends Controller
      */
     public function create()
     {
-        // return view('pages.cohort.cohort_select');
+         //return view('pages/cohort.cohort');
     }
      /**
      * Store a newly created resource in storage.
@@ -34,16 +34,9 @@ class CohortController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'name' => 'required',
-            'paper' => 'required',
-            'cohort' => 'required'
-        ]);
-
         Cohort::create($request->all());
-        return redirect('cohorts');
-        //     // ->with('success','Cohort successfully created');
-        // ;
+        return redirect('cohort')
+        ;
     }
 
     /**

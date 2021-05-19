@@ -11,4 +11,4 @@ Route::get('/', [PagesController::class, 'homepage'])->name('pages.index');
 Route::resource('students', StudentController::class);
 Route::resource('uploads', EvidenceUploadController::class);
 Route::resource('notes', NotesController::class);
-Route::resource('cohort', CohortController::class);
+Route::resource('cohorts', CohortController::class);
