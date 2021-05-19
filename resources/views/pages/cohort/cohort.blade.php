@@ -23,18 +23,18 @@
                 </tr>
             </thead>
 
-            
             <tbody>
                 <div id="wrapper"></div>
                 
-                @for($i= 0; $i < 7, $i++);
+                @for ($i = 1; $i <= 6; $i++)
                     <tr>
                         <form id="cohort-screen" method="get" action="">
                             <td>
-                                <div id="studio-paper">Studio 1 </div>
+                                <div id="studio-paper">Studio {{ $i }}</div>
                             </td>
                             <td>
-                                <input type="text" id = "students" class="cohort-students" placeholder="Enter Students" name="students" >  
+                                <input type="text" id = "students" class="cohort-students" placeholder="Enter Students" name="students" > 
+                                <textarea id="cohort-input" name="w3review" rows="4" cols="50"></textarea>
                             </td>
                             <td>
                                 <button type="submit-cohort" type="submit">Edit</button>

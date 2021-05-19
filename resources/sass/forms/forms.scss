@@ -110,6 +110,10 @@ input[type="url"] {
         font-size: 1.6rem;
     }
 }
+#cohort-input{
+    min-height: 100px  !important;
+    max-height: 1000px  !important;
+}
 
 /* -------------------------------------------------------------------------- */
 /*                            EVIDENCE FORM STYLES                            */
