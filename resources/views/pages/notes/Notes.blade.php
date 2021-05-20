@@ -12,7 +12,7 @@ Studio Management Portal | Notes
         <div class="form-col">
             <div class="input-group">
                 <label for="student_name">Student Name:</label>
-                <input id="student_name" name="student_name" type="text" spellcheck="false" maxlength="255"
+                <select id="student_name" name="student_name" type="text" spellcheck="false"
                     placeholder="Student Name">
             </div>
         </div>
@@ -26,6 +26,7 @@ Studio Management Portal | Notes
             </div>
         </div>
     </form>
+    <!--
     <div class="form-col">
         <h3>Student Notes</h3>
         <div class="tbl-header">
@@ -68,6 +69,6 @@ Studio Management Portal | Notes
                     @endforeach
                 </tbody>
             </table>
-        </div>
+        </div> -->
 </section>
 @endsection
