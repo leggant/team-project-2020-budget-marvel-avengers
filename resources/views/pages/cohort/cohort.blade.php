@@ -8,6 +8,13 @@
 @section('content')
 <section class='cohort-screen'>
     <h1>Cohort Assignment</h1>
+
+    <div class='cohort-row'>
+        <button type='submit'><</button>
+        <h2>Current Cohort</h2>
+        <button type='submit'>></button>
+    </div>
+
     <form id="cohort-form" action="{{ route('cohorts.store')}}" method='POST'>
         @csrf
         <fieldset id="cohort-select">
@@ -19,7 +26,7 @@
                 <tr class="c-header-row">
                 <th scope="col">Paper</th>
                 <th scope="col">Students</th>
-                <th scope="col">Edit</th>
+                <th scope="col">Submit</th>
                 </tr>
             </thead>
 
@@ -33,11 +40,12 @@
                                 <div id="studio-paper">Studio {{ $i }}</div>
                             </td>
                             <td>
-                                <input type="text" id = "students" class="cohort-students" placeholder="Enter Students" name="students" > 
-                                <textarea id="cohort-input" name="w3review" rows="4" cols="50"></textarea>
+                                {{-- <input type="text" id = "students" class="cohort-students" placeholder="Enter Students" name="students" >  --}}
+                                <textarea id="cohort-input" name="cohort-review" rows="4" cols="50"></textarea>
                             </td>
                             <td>
-                                <button type="submit-cohort" type="submit">Edit</button>
+                                <div><button class="submit-btn" type="submit">Edit</button></div>
+                                <div><button class="submit-btn" type="submit">Submit</button></div>
                             </td>
                         </form>
                     </tr>
