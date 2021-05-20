@@ -9,11 +9,16 @@
 <section class='cohort-screen'>
     <h1>Cohort Assignment</h1>
 
-    <div class='cohort-row'>
-        <button type='submit'><</button>
-        <h2>Current Cohort</h2>
-        <button type='submit'>></button>
-    </div>
+        <form>
+            <select>
+                <option value="">--- Select Cohort ---</option>
+                    @foreach ($cohort as $key => $value)
+                    <option value="{{ $key }}">{{ $value->names}}</option>
+                    @endforeach
+                </select>
+ 
+            
+        </form>
 
     <form id="cohort-form" action="{{ route('cohorts.store')}}" method='POST'>
         @csrf
@@ -40,12 +45,15 @@
                                 <div id="studio-paper">Studio {{ $i }}</div>
                             </td>
                             <td>
-                                {{-- <input type="text" id = "students" class="cohort-students" placeholder="Enter Students" name="students" >  --}}
                                 <textarea id="cohort-input" name="cohort-review" rows="4" cols="50"></textarea>
                             </td>
                             <td>
-                                <div><button class="submit-btn" type="submit">Edit</button></div>
-                                <div><button class="submit-btn" type="submit">Submit</button></div>
+                                <form>
+                                    <button class="submit-btn" type="submit">Edit</button>
+                                </form>
+                                <form>
+                                    <button class="submit-btn" type="submit">Submit</button>
+                                </form>
                             </td>
                         </form>
                     </tr>

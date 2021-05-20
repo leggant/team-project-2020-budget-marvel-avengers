@@ -59,7 +59,7 @@ class CohortController extends Controller
      */
     public function edit(Cohort $cohort)
     {
-        //
+        return view('pages/cohort_edit', compact('cohort'));
     }
      /**
      * Update the specified resource in storage.
