@@ -19,8 +19,7 @@ class CreateCohortsTable extends Migration
             $table->id('id');
             $table->longText('names');
             $table->string('paper');
-            $table->string('semester');
-            $table->string('year');
+            $table->string('cohort');
             $table->timestamps();
         });
     }

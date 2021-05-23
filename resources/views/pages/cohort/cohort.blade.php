@@ -44,15 +44,17 @@
                                 <div id="studio-paper">Studio {{ $i }}</div>
                             </td>
                             <td>
-                                <textarea id="cohort-input" name="cohort-review" rows="4" cols="50" readonly></textarea>
+                               
+                                <textarea id="cohort-input" readonly="readonly" name="cohort-review" rows="4" cols="50" ></textarea>
                             </td>
                             <td>
-                                <form>
-                                    <button class="submit-btn" type="submit" onclick='editScript()'>Edit</button>
+                            <form>
+                                <button class="submit-btn" type="button" onclick='ToggleReadOnlyState()'>Edit</button>
                                     <script type="text/javascript">
-                                        function editScript(){
-                                            document.getElementById("cohort-input").readonly = false;
-                                        }
+                                        function ToggleReadOnlyState () {
+                                        var textarea = document.getElementById ("cohort-input");
+                                        textarea.readOnly = !textarea.readOnly;
+                                    }
                                     </script>
                                 </form>
                                 <form>

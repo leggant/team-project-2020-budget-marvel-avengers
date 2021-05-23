@@ -36,8 +36,7 @@ class CohortController extends Controller
     public function store(Request $request)
     {
         Cohort::create($request->all());
-        return redirect('cohort')
-        ;
+        return redirect('cohort');
     }
 
     /**
@@ -73,8 +72,7 @@ class CohortController extends Controller
         $request->validate([
             'names' => 'required',
             'paper' => 'required',
-            'semester' => 'required',
-            'year' => 'required',
+            'cohort' => 'required'
         ]);
 
         $cohort->update($request->all());
