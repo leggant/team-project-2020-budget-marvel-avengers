@@ -48,7 +48,7 @@ class CohortController extends Controller
      */
     public function show(Cohort $cohort)
     {
-        //return view('pages.cohort.cohort_select')
+        //
     }
 
     /**
@@ -71,9 +71,10 @@ class CohortController extends Controller
     public function update(Request $request, Cohort $cohort)
     {
         $request->validate([
-            'name' => 'required',
+            'names' => 'required',
             'paper' => 'required',
-            'cohort' => 'required'
+            'semester' => 'required',
+            'year' => 'required',
         ]);
 
         $cohort->update($request->all());
@@ -89,6 +90,11 @@ class CohortController extends Controller
      */
     public function destroy(Cohort $cohort)
     {
-        //
+        $cohorts = Cohort::query();
+        if ($cohorts->where('id', $id)->exists()) {
+            $cohort= $cohorts->find($id);
+            $cohort->delete();
+            return redirect('cohorts');
+        }
     }
 }

@@ -1,4 +1,3 @@
-
 <!-- Cohort screen-->
 @extends('layouts.app')
 @section('title')
@@ -45,11 +44,16 @@
                                 <div id="studio-paper">Studio {{ $i }}</div>
                             </td>
                             <td>
-                                <textarea id="cohort-input" name="cohort-review" rows="4" cols="50"></textarea>
+                                <textarea id="cohort-input" name="cohort-review" rows="4" cols="50" readonly></textarea>
                             </td>
                             <td>
                                 <form>
-                                    <button class="submit-btn" type="submit">Edit</button>
+                                    <button class="submit-btn" type="submit" onclick='editScript()'>Edit</button>
+                                    <script type="text/javascript">
+                                        function editScript(){
+                                            document.getElementById("cohort-input").readonly = false;
+                                        }
+                                    </script>
                                 </form>
                                 <form>
                                     <button class="submit-btn" type="submit">Submit</button>
