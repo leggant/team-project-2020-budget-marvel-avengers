@@ -17,8 +17,8 @@ class NotesController extends Controller
     {
         
         $student=Student::all();
-        // return $student;
-        return view('pages.notes.Notes', ['student'=>$student]); 
+        //return $student;
+        return view('pages.notes.Notes', ['student'=>$student]);
     }
 
     /**
