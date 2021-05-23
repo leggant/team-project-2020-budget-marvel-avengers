@@ -19,7 +19,7 @@ use App\Http\Controllers\StudentProfile;
 */
 
 Route::get('/', function () {
-    return view('views.pages.index');
+    return view('pages.index');
 });
 
 Auth::routes();
