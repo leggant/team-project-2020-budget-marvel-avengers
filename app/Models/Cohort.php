@@ -14,10 +14,6 @@ class Cohort extends Model
     protected $fillable = [
         'names',
         'paper', 
-        'cohort',
-        'student_id'
+        'cohort'
     ];
-    public function students(){
-        return $this->belongsTo(Student::class, 'student_id');
-    }
 }

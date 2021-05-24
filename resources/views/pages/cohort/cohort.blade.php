@@ -12,7 +12,7 @@
             <select>
                 <option value="">--- Select Cohort ---</option>
                     @foreach ($cohort as $key => $value)
-                    <option value="{{ $key }}">{{ $value->names}}</option>
+                    <option value="{{ $key }}">{{ $value->cohort}}</option>
                     @endforeach
                 </select>
  
@@ -36,24 +36,23 @@
 
             <tbody>
                 <div id="wrapper"></div>
-                
-                @for ($i = 1; $i <= 6; $i++)
+                @foreach ($cohort as $key => $value)
+              
                     <tr>
-                        <form id="cohort-screen" method="get" action="">
+                        <form id="cohort-screenx" method="get" action="">
                             <td>
-                                <div id="studio-paper">Studio {{ $i }}</div>
+                                <div id="studio-paper">Studio 1</div>
                             </td>
                             <td>
-                               
-                                <textarea id="cohort-input" readonly="readonly" name="cohort-review" rows="4" cols="50" ></textarea>
+                                <textarea id="cohort-input2" readonly="readonly" name="cohort-review" rows="4" cols="50" >{{ $value->names}}</textarea>
                             </td>
                             <td>
                             <form>
                                 <button class="submit-btn" type="button" onclick='ToggleReadOnlyState()'>Edit</button>
                                     <script type="text/javascript">
                                         function ToggleReadOnlyState () {
-                                        var textarea = document.getElementById ("cohort-input");
-                                        textarea.readOnly = !textarea.readOnly;
+                                        var textarea2 = document.getElementById ("cohort-input2");
+                                        textarea2.readOnly = !textarea2.readOnly;
                                     }
                                     </script>
                                 </form>
@@ -61,9 +60,125 @@
                                     <button class="submit-btn" type="submit">Submit</button>
                                 </form>
                             </td>
-                        </form>
-                    </tr>
-                @endfor 
+                            </tr>
+                            <tr>
+                                <form id="cohort-screenx" method="get" action="">
+                                    <td>
+                                        <div id="studio-paper">Studio 2</div>
+                                    </td>
+                                    <td>
+                                        <textarea id="cohort-input1" readonly="readonly" name="cohort-review1" rows="4" cols="50" >{{ $value->names}}</textarea>
+                                    </td>
+                                    <td>
+                                    <form>
+                                        <button class="submit-btn1" type="button" onclick='ToggleReadOnlyState1()'>Edit</button>
+                                            <script type="text/javascript">
+                                                function ToggleReadOnlyState1 () {
+                                                var textarea1 = document.getElementById ("cohort-input1");
+                                                textarea1.readOnly = !textarea1.readOnly;
+                                            }
+                                            </script>
+                                        </form>
+                                        <form>
+                                            <button class="submit-btn" type="submit">Submit</button>
+                                        </form>
+                                    </td>
+                                    </tr>
+                                    <tr>
+                                        <form id="cohort-screenx" method="get" action="">
+                                            <td>
+                                                <div id="studio-paper">Studio 3</div>
+                                            </td>
+                                            <td>
+                                                <textarea id="cohort-input1" readonly="readonly" name="cohort-review1" rows="4" cols="50" >{{ $value->names}}</textarea>
+                                            </td>
+                                            <td>
+                                            <form>
+                                                <button class="submit-btn1" type="button" onclick='ToggleReadOnlyState1()'>Edit</button>
+                                                    <script type="text/javascript">
+                                                        function ToggleReadOnlyState1 () {
+                                                        var textarea1 = document.getElementById ("cohort-input1");
+                                                        textarea1.readOnly = !textarea1.readOnly;
+                                                    }
+                                                    </script>
+                                                </form>
+                                                <form>
+                                                    <button class="submit-btn" type="submit">Submit</button>
+                                                </form>
+                                            </td>
+                                            </tr>
+                                            <tr>
+                                                <form id="cohort-screenx" method="get" action="">
+                                                    <td>
+                                                        <div id="studio-paper">Studio 4</div>
+                                                    </td>
+                                                    <td>
+                                                        <textarea id="cohort-input1" readonly="readonly" name="cohort-review1" rows="4" cols="50" >{{ $value->names}}</textarea>
+                                                    </td>
+                                                    <td>
+                                                    <form>
+                                                        <button class="submit-btn1" type="button" onclick='ToggleReadOnlyState1()'>Edit</button>
+                                                            <script type="text/javascript">
+                                                                function ToggleReadOnlyState1 () {
+                                                                var textarea1 = document.getElementById ("cohort-input1");
+                                                                textarea1.readOnly = !textarea1.readOnly;
+                                                            }
+                                                            </script>
+                                                        </form>
+                                                        <form>
+                                                            <button class="submit-btn" type="submit">Submit</button>
+                                                        </form>
+                                                    </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <form id="cohort-screenx" method="get" action="">
+                                                            <td>
+                                                                <div id="studio-paper">Studio 5</div>
+                                                            </td>
+                                                            <td>
+                                                                <textarea id="cohort-input1" readonly="readonly" name="cohort-review1" rows="4" cols="50" >{{ $value->names}}</textarea>
+                                                            </td>
+                                                            <td>
+                                                            <form>
+                                                                <button class="submit-btn1" type="button" onclick='ToggleReadOnlyState1()'>Edit</button>
+                                                                    <script type="text/javascript">
+                                                                        function ToggleReadOnlyState1 () {
+                                                                        var textarea1 = document.getElementById ("cohort-input1");
+                                                                        textarea1.readOnly = !textarea1.readOnly;
+                                                                    }
+                                                                    </script>
+                                                                </form>
+                                                                <form>
+                                                                    <button class="submit-btn" type="submit">Submit</button>
+                                                                </form>
+                                                            </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <form id="cohort-screenx" method="get" action="">
+                                                                    <td>
+                                                                        <div id="studio-paper">Studio 6</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <textarea id="cohort-input1" readonly="readonly" name="cohort-review1" rows="4" cols="50" >{{ $value->names}}</textarea>
+                                                                    </td>
+                                                                    <td>
+                                                                    <form>
+                                                                        <button class="submit-btn1" type="button" onclick='ToggleReadOnlyState1()'>Edit</button>
+                                                                            <script type="text/javascript">
+                                                                                function ToggleReadOnlyState1 () {
+                                                                                var textarea1 = document.getElementById ("cohort-input1");
+                                                                                textarea1.readOnly = !textarea1.readOnly;
+                                                                            }
+                                                                            </script>
+                                                                        </form>
+                                                                        <form>
+                                                                            <button class="submit-btn" type="submit">Submit</button>
+                                                                        </form>
+                                                                    </td>
+                                                                    </tr>
+                              
+                            @endforeach
+
             </tbody>
         </table>
    
