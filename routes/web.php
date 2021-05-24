@@ -19,7 +19,7 @@ use App\Http\Controllers\StudentProfile;
 */
 
 Route::get('/', function () {
-    return view('pages.index');
+    return view('auth.login');
 });
 
 Auth::routes();
@@ -29,4 +29,4 @@ Route::resource('uploads', EvidenceUploadController::class);
 Route::resource('notes', NotesController::class);
 Route::resource('student', StudentProfile::class);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [PagesController::class, 'index']);
