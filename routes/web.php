@@ -29,4 +29,5 @@ Route::resource('uploads', EvidenceUploadController::class);
 Route::resource('notes', NotesController::class);
 Route::resource('student', StudentProfile::class);
 
-Route::get('/home', [PagesController::class, 'index']);
+Route::get('/', [PagesController::class, 'index'])->middleware('auth');
+Route::get('/user/register', [PagesController::class, 'register'])->middleware('auth');
