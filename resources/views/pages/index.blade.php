@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-<h1>Logged In</h1>
 <div class="hero home">
     <div class="homepage-carousel">
         <div class="owl-carousel owl-theme">
