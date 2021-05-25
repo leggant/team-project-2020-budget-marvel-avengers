@@ -21,13 +21,11 @@ use App\Http\Controllers\StudentProfile;
 Route::get('/', function () {
     return view('auth.login');
 });
-
 Auth::routes();
 //Route::get('/', [PagesController::class, 'homepage'])->name('pages.index');
 Route::resource('students', StudentController::class);
 Route::resource('uploads', EvidenceUploadController::class);
 Route::resource('notes', NotesController::class);
 Route::resource('student', StudentProfile::class);
-
 Route::get('/', [PagesController::class, 'index'])->middleware('auth');
 Route::get('/user/register', [PagesController::class, 'register'])->middleware('auth');
