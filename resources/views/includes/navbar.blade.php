@@ -13,15 +13,24 @@
         <ul class="navbar-nav ml-auto nav-menu">
             <!-- Authentication Links -->
             @guest
-                {{-- @if (Route::has('login'))
+                {{-- @if (Route::has('register'))
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                     </li>
                 @endif --}}
-
-                @if (Route::has('register'))
+                {{-- @if (Route::has('login'))
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                </li>
+                @endif --}}
+                @if (Request::is('login'))
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                </li>
+                @endif
+                @if (Request::is('register'))
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                        <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                     </li>
                 @endif
             @endguest
