@@ -22,7 +22,6 @@ Route::get('/', function () {
     return view('auth.login');
 });
 Auth::routes();
-//Route::get('/', [PagesController::class, 'homepage'])->name('pages.index');
 Route::resource('students', StudentController::class);
 Route::resource('uploads', EvidenceUploadController::class);
 Route::resource('notes', NotesController::class);
