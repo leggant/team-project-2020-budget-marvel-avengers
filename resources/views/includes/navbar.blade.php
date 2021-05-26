@@ -5,24 +5,9 @@
         </div>
     </a>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <!-- Left Side Of Navbar -->
-        {{-- <ul class="navbar-nav mr-auto">
-            
-        </ul> --}}
-        <!-- Right Side Of Navbar -->
         <ul class="navbar-nav ml-auto nav-menu">
             <!-- Authentication Links -->
             @guest
-                {{-- @if (Route::has('register'))
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                    </li>
-                @endif --}}
-                {{-- @if (Route::has('login'))
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                </li>
-                @endif --}}
                 @if (Request::is('login'))
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
