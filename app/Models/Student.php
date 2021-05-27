@@ -19,4 +19,11 @@ class Student extends Model
         'student_email',
     ];
     protected $hidden = ['created_at', 'updated_at'];
+
+    public function uploads(){
+        return $this->hasMany(Upload::class);
+    }
+    public function notes(){
+        return $this->hasMany(Note::class);
+    }
 }

@@ -51,15 +51,21 @@
 <div class="tbl-content">
     <table cellpadding="0" cellspacing="0" cellborder="0">
       <tbody>
+          
     @foreach ($student as $user)
+   
+       
     <tr>
-    <td>{{ $user->studentID }}</td>
-    <td>{{ $user->first_name }}</td>
-    <td>{{ $user->last_name }}</td>
-    <td>{{ $user->student_email }}</td>
-    <td>{{ $user->github_username}}</td>
+    
+    <td><a href="{{ route('student.show',$user->id) }}">{{ $user->studentID }}</a></td>
+    <td><a href="{{ route('student.show',$user->id) }}">{{ $user->first_name }}</a></td>
+    <td><a href="{{ route('student.show',$user->id) }}">{{ $user->last_name }}</a></td>
+    <td><a href="{{ route('student.show',$user->id) }}">{{ $user->student_email }}</a></td>
+    <td><a href="{{ route('student.show',$user->id) }}">{{ $user->github_username}}</a</td>
+
+</div>
         <td>
-            <a href="{{ route('students.edit',$user->id) }}"><button class="btn btn-edit">Edit</button></a>  
+            <a href="{{ route('students.edit',$user->id) }}"><button class="btn btn-edit">Edit</button> 
             <form  onsubmit="return confirm('Do you really want to delete this student?');" action="{{ route('students.destroy',$user->id) }}" method="POST">      
                 @csrf
                 @method('DELETE')      
