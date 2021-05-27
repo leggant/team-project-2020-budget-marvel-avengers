@@ -24,7 +24,7 @@ class CohortController extends Controller
     public function index()
     {
         $cohort = Cohort::all();
-        return view('pages/cohort.cohort',['cohort' => $cohort]);
+        return view('pages/cohort.cohorts',['cohort' => $cohort]);
         //return $cohort;
     }
        /**
@@ -45,7 +45,7 @@ class CohortController extends Controller
     public function store(Request $request)
     {
         Cohort::create($request->all());
-        return redirect('cohort');
+        return redirect('cohorts');
     }
 
     /**
@@ -67,7 +67,7 @@ class CohortController extends Controller
      */
     public function edit(Cohort $cohort)
     {
-        return view('pages/cohort_edit', compact('cohort'));
+        return view('pages/cohort_edit', compact('cohorts'));
     }
      /**
      * Update the specified resource in storage.
