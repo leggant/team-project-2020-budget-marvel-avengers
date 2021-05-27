@@ -1,10 +1,437 @@
-[{"id":1,"name":"Zack","paper":"Zoovu","student_id":1,"semester":1,"year":2005},
-{"id":2,"name":"Bern","paper":"Roodel","student_id":2,"semester":2,"year":2001},
-{"id":3,"name":"Alasdair","paper":"Oyoyo","student_id":3,"semester":3,"year":2008},
-{"id":4,"name":"Sheridan","paper":"Brainlounge","student_id":4,"semester":4,"year":2005},
-{"id":5,"name":"Aubrey","paper":"Flipstorm","student_id":5,"semester":5,"year":1992},
-{"id":6,"name":"Werner","paper":"Camimbo","student_id":6,"semester":6,"year":2007},
-{"id":7,"name":"Albert","paper":"Ailane","student_id":7,"semester":7,"year":2010},
-{"id":8,"name":"Yves","paper":"Thoughtmix","student_id":8,"semester":8,"year":1988},
-{"id":9,"name":"Worden","paper":"Thoughtstorm","student_id":9,"semester":9,"year":2009},
-{"id":10,"name":"Munroe","paper":"Devshare","student_id":10,"semester":10,"year":1987}]
+[
+    {
+        "name": "Colby",
+        "paper": "Studio 1",
+        "cohort": "Semester 1 2021"
+    },
+    {
+        "name": "Ayanna",
+        "paper": "Studio 2",
+        "cohort": "Semester 1 2021"
+    },
+    {
+        "name": "Remedios",
+        "paper": "Studio 3",
+        "cohort": "Semester 1 2021"
+    },
+    {
+        "name": "Harding",
+        "paper": "Studio 4",
+        "cohort": "Semester 1 2021"
+    },
+    {
+        "name": "Nadine",
+        "paper": "Studio 5",
+        "cohort": "Semester 1 2021"
+    },
+    {
+        "name": "Maryam",
+        "paper": "Studio 6",
+        "cohort": "Semester 1 2021"
+    },
+    {
+        "name": "Hyatt",
+        "paper": "Studio 1",
+        "cohort": "Semester 1 2021"
+    },
+    {
+        "name": "Latifah",
+        "paper": "Studio 1",
+        "cohort": "Semester 1 2021"
+    },
+    {
+        "name": "Geoffrey",
+        "paper": "Studio 2",
+        "cohort": "Semester 1 2021"
+    },
+    {
+        "name": "Isaiah",
+        "paper": "Studio 2",
+        "cohort": "Semester 1 2021"
+    },
+    {
+        "name": "Quinlan",
+        "paper": "Studio 2",
+        "cohort": "Semester 1 2021"
+    },
+    {
+        "name": "Micah",
+        "paper": "Studio 3",
+        "cohort": "Semester 1 2021"
+    },
+    {
+        "name": "Eric",
+        "paper": "Studio 3",
+        "cohort": "Semester 1 2021"
+    },
+    {
+        "name": "Valentine",
+        "paper": "Studio 3",
+        "cohort": "Semester 1 2021"
+    },
+    {
+        "name": "Ori",
+        "paper": "Studio 4",
+        "cohort": "Semester 1 2021"
+    },
+    {
+        "name": "Kermit",
+        "paper": "Studio 4",
+        "cohort": "Semester 1 2021"
+    },
+    {
+        "name": "Rashad",
+        "paper": "Studio 4",
+        "cohort": "Semester 1 2021"
+    },
+    {
+        "name": "Cole",
+        "paper": "Studio 5",
+        "cohort": "Semester 1 2021"
+    },
+    {
+        "name": "Trevor",
+        "paper": "Studio 5",
+        "cohort": "Semester 1 2021"
+    },
+    {
+        "name": "Delilah",
+        "paper": "Studio 5",
+        "cohort": "Semester 1 2021"
+    },
+    {
+        "name": "Nayda",
+        "paper": "Studio 6",
+        "cohort": "Semester 1 2021"
+    },
+    {
+        "name": "Kelsey",
+        "paper": "Studio 6",
+        "cohort": "Semester 1 2021"
+    },
+    {
+        "name": "Amber",
+        "paper": "Studio 6",
+        "cohort": "Semester 1 2021"
+    },
+    {
+        "name": "Nell",
+        "paper": "Studio 1",
+        "cohort": "Semester 2 2020"
+    },
+    {
+        "name": "Kyra",
+        "paper": "Studio 1",
+        "cohort": "Semester 2 2020"
+    },
+    {
+        "name": "Omar",
+        "paper": "Studio 1",
+        "cohort": "Semester 2 2020"
+    },
+    {
+        "name": "Blaine",
+        "paper": "Studio 2",
+        "cohort": "Semester 2 2020"
+    },
+    {
+        "name": "Oleg",
+        "paper": "Studio 2",
+        "cohort": "Semester 2 2020"
+    },
+    {
+        "name": "Carla",
+        "paper": "Studio 2",
+        "cohort": "Semester 2 2020"
+    },
+    {
+        "name": "Brenna",
+        "paper": "Studio 2",
+        "cohort": "Semester 2 2020"
+    },
+    {
+        "name": "Armando",
+        "paper": "Studio 3",
+        "cohort": "Semester 2 2020"
+    },
+    {
+        "name": "Kelly",
+        "paper": "Studio 3",
+        "cohort": "Semester 2 2020"
+    },
+    {
+        "name": "Gary",
+        "paper": "Studio 3",
+        "cohort": "Semester 2 2020"
+    },
+    {
+        "name": "Imelda",
+        "paper": "Studio 4",
+        "cohort": "Semester 2 2020"
+    },
+    {
+        "name": "Madonna",
+        "paper": "Studio 4",
+        "cohort": "Semester 2 2020"
+    },
+    {
+        "name": "Hayley",
+        "paper": "Studio 4",
+        "cohort": "Semester 2 2020"
+    },
+    {
+        "name": "Yasir",
+        "paper": "Studio 4",
+        "cohort": "Semester 2 2020"
+    },
+    {
+        "name": "Nomlanga",
+        "paper": "Studio 5",
+        "cohort": "Semester 2 2020"
+    },
+    {
+        "name": "Kitra",
+        "paper": "Studio 5",
+        "cohort": "Semester 2 2020"
+    },
+    {
+        "name": "Neville",
+        "paper": "Studio 5",
+        "cohort": "Semester 2 2020"
+    },
+    {
+        "name": "David",
+        "paper": "Studio 5",
+        "cohort": "Semester 2 2020"
+    },
+    {
+        "name": "Jamal",
+        "paper": "Studio 6",
+        "cohort": "Semester 2 2020"
+    },
+    {
+        "name": "Ivy",
+        "paper": "Studio 6",
+        "cohort": "Semester 2 2020"
+    },
+    {
+        "name": "August",
+        "paper": "Studio 6",
+        "cohort": "Semester 2 2020"
+    },
+    {
+        "name": "Emerald",
+        "paper": "Studio 1",
+        "cohort": "Semester 1 2020"
+    },
+    {
+        "name": "Blake",
+        "paper": "Studio 1",
+        "cohort": "Semester 1 2020"
+    },
+    {
+        "name": "Wade",
+        "paper": "Studio 1",
+        "cohort": "Semester 1 2020"
+    },
+    {
+        "name": "Anne",
+        "paper": "Studio 1",
+        "cohort": "Semester 1 2020"
+    },
+    {
+        "name": "Gareth",
+        "paper": "Studio 1",
+        "cohort": "Semester 1 2020"
+    },
+    {
+        "name": "Martha",
+        "paper": "Studio 2",
+        "cohort": "Semester 1 2020"
+    },
+    {
+        "name": "Giselle",
+        "paper": "Studio 2",
+        "cohort": "Semester 1 2020"
+    },
+    {
+        "name": "Scarlet",
+        "paper": "Studio 2",
+        "cohort": "Semester 1 2020"
+    },
+    {
+        "name": "Chaney",
+        "paper": "Studio 2",
+        "cohort": "Semester 1 2020"
+    },
+    {
+        "name": "Zena",
+        "paper": "Studio 3",
+        "cohort": "Semester 1 2020"
+    },
+    {
+        "name": "Barry",
+        "paper": "Studio 3",
+        "cohort": "Semester 1 2020"
+    },
+    {
+        "name": "Kieran",
+        "paper": "Studio 3",
+        "cohort": "Semester 1 2020"
+    },
+    {
+        "name": "Jelani",
+        "paper": "Studio 3",
+        "cohort": "Semester 1 2020"
+    },
+    {
+        "name": "Aristotle",
+        "paper": "Studio 3",
+        "cohort": "Semester 1 2020"
+    },
+    {
+        "name": "Conan",
+        "paper": "Studio 4",
+        "cohort": "Semester 1 2020"
+    },
+    {
+        "name": "Macon",
+        "paper": "Studio 4",
+        "cohort": "Semester 1 2020"
+    },
+    {
+        "name": "Jonah",
+        "paper": "Studio 4",
+        "cohort": "Semester 1 2020"
+    },
+    {
+        "name": "Coby",
+        "paper": "Studio 5",
+        "cohort": "Semester 1 2020"
+    },
+    {
+        "name": "Shaeleigh",
+        "paper": "Studio 5",
+        "cohort": "Semester 1 2020"
+    },
+    {
+        "name": "Ursa",
+        "paper": "Studio 5",
+        "cohort": "Semester 1 2020"
+    },
+    {
+        "name": "Christine",
+        "paper": "Studio 6",
+        "cohort": "Semester 1 2020"
+    },
+    {
+        "name": "Eden",
+        "paper": "Studio 6",
+        "cohort": "Semester 1 2020"
+    },
+    {
+        "name": "Addison",
+        "paper": "Studio 6",
+        "cohort": "Semester 1 2020"
+    },
+    {
+        "name": "Maxine",
+        "paper": "Studio 6",
+        "cohort": "Semester 1 2020"
+    },
+    {
+        "name": "Zephania",
+        "paper": "Studio 6",
+        "cohort": "Semester 1 2020"
+    },
+    {
+        "name": "Petra",
+        "paper": "Studio 6",
+        "cohort": "Semester 1 2020"
+    },
+    {
+        "name": "Declan",
+        "paper": "Studio 1",
+        "cohort": "Semester 2 2019"
+    },
+    {
+        "name": "Blaze",
+        "paper": "Studio 1",
+        "cohort": "Semester 2 2019"
+    },
+    {
+        "name": "Lucas",
+        "paper": "Studio 1",
+        "cohort": "Semester 2 2019"
+    },
+    {
+        "name": "Nicole",
+        "paper": "Studio 1",
+        "cohort": "Semester 2 2019"
+    },
+    {
+        "name": "Callum",
+        "paper": "Studio 2",
+        "cohort": "Semester 2 2019"
+    },
+    {
+        "name": "Illiana",
+        "paper": "Studio 2",
+        "cohort": "Semester 2 2019"
+    },
+    {
+        "name": "Stone",
+        "paper": "Studio 2",
+        "cohort": "Semester 2 2019"
+    },
+    {
+        "name": "Regina",
+        "paper": "Studio 2",
+        "cohort": "Semester 2 2019"
+    },
+    {
+        "name": "Aline",
+        "paper": "Studio 3",
+        "cohort": "Semester 2 2019"
+    },
+    {
+        "name": "Quinn",
+        "paper": "Studio 4",
+        "cohort": "Semester 2 2019"
+    },
+    {
+        "name": "Leroy",
+        "paper": "Studio 4",
+        "cohort": "Semester 2 2019"
+    },
+    {
+        "name": "Nissim",
+        "paper": "Studio 4",
+        "cohort": "Semester 2 2019"
+    },
+    {
+        "name": "Idona",
+        "paper": "Studio 5",
+        "cohort": "Semester 2 2019"
+    },
+    {
+        "name": "Rhea",
+        "paper": "Studio 5",
+        "cohort": "Semester 2 2019"
+    },
+    {
+        "name": "Hu",
+        "paper": "Studio 5",
+        "cohort": "Semester 2 2019"
+    },
+    {
+        "name": "Sydney",
+        "paper": "Studio 6",
+        "cohort": "Semester 2 2019"
+    },
+    {
+        "name": "Dara",
+        "paper": "Studio 6",
+        "cohort": "Semester 2 2019"
+    }
+]

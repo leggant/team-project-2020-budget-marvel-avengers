@@ -186,6 +186,14 @@ button {
   right: 20px;
 }
 
+.cohort-row {
+  padding-top: 1rem;
+  display: flex;
+  width: 40%;
+  justify-content: space-evenly;
+  margin: 0 auto;
+}
+
 /* STYLES SPECIFIC TO FOOTER  */
 .footer {
   padding-top: 2rem;
@@ -488,6 +496,10 @@ input[type=checkbox] {
 }
 #cohort-select #cohortSelect {
   font-size: 1.6rem;
+}
+
+#cohort-input {
+  min-height: max-content;
 }
 
 /* -------------------------------------------------------------------------- */
