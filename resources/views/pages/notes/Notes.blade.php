@@ -15,23 +15,17 @@ Studio Management Portal | Notes
                 <select id="student_name" name="student_name" required>
                 <option value="">--- Select Name ---</option>
                     @foreach ($student as $key => $value)
-                    <option value="{{ $key }} "> {{ $value->student_id }} {{ $value->first_name}} {{ $value->last_name}}</option>
+                    <option value="{{ $value->StudentID }} {{ $value->student_name }}"> {{ $value->first_name}} {{ $value->last_name}}</option>
                     @endforeach
                 </select>
             </div>
         </div>
+        
         <div class="form-col">
             <div class="input-group">
                 <label for="note">Notes:</label>
                 <textarea id="note" name="note" spellcheck="true" placeholder="Enter notes here"></textarea>
             </div>
-
-            <div class="input-group">
-            <label for="student_id">studentID:</label>
-        </div>
-
-      <!-- <input type="text" id="student_id" name="student_id" value="{{ $value->student_id }}"> -->
-
             <div class="input-group">
                 <input id="saveForm" name="saveForm" type="submit" value="Submit" class="submit-btn">
             </div>
