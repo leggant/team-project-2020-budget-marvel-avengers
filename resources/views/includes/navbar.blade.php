@@ -20,7 +20,7 @@
                 @endif
             @endguest
             @auth
-                <li class="nav-item dropdown">
+                <li class="nav-item">
                     <a id="navbarDropdown" class="nav-link" href="#"
                         aria-haspopup="true" aria-expanded="false" v-pre>
                         {{ Auth::user()->name }}
