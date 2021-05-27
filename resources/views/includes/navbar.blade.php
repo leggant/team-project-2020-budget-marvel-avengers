@@ -5,7 +5,7 @@
         </div>
     </a>
     <div id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto nav-menu">
+        <ul class="nav-menu">
             <!-- Authentication Links -->
             @guest
                 @if (Request::is('login'))
