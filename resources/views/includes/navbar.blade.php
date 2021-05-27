@@ -4,7 +4,7 @@
             <img src="/images/logo.jpg">
         </div>
     </a>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto nav-menu">
             <!-- Authentication Links -->
             @guest
