@@ -499,8 +499,7 @@ input[type=checkbox] {
 }
 
 #cohort-input {
-  min-height: 100px !important;
-  max-height: 1000px !important;
+  min-height: max-content;
 }
 
 /* -------------------------------------------------------------------------- */
