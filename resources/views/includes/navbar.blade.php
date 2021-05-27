@@ -36,7 +36,7 @@
                     <a href="/uploads" class="navbar-link">Upload Evidence</a>
                 </li>
                 <li class="nav-item">
-                    <a href="/cohort" class="navbar-link">Cohort</a>
+                    <a href="/cohorts" class="navbar-link">Cohort</a>
                 </li>
                 <li class="nav-item">
                     <a class="navbar-link" href="{{ route('logout') }}" onclick="event.preventDefault();
