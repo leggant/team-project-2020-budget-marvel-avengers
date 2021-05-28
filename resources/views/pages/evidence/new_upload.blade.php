@@ -21,7 +21,7 @@ Studio Management Portal | Evidence
         <div>
             <div class="input-group">
                 <label for="studentName">Student Name</label>
-                <select id="studentName" name="studentName">
+                <select id="studentName" name="student_id">
                     <option>Select Student....</option>
                     <option value="student-1">Student One</option>
                     <option value="student-2">Student Two</option>

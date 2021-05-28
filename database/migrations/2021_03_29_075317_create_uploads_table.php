@@ -16,7 +16,6 @@ class CreateUploadsTable extends Migration
     {
         Schema::create('uploads', function (Blueprint $table) {
             $table->id('id');
-            $table->string('studentName');
             $table->string('uploadURL');
             $table->longText('description')->nullable();
             $table->unsignedBigInteger('student_id');
