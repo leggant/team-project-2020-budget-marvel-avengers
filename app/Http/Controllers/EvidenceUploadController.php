@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Upload;
+use App\Models\Student;
 use Illuminate\Http\Request;
 
 class EvidenceUploadController extends Controller
@@ -23,8 +24,8 @@ class EvidenceUploadController extends Controller
      */
     public function index()
     {
-        $uploads = Upload::all();
-        return view('pages.evidence.new_upload', ['uploads' => $uploads]);
+        $uploads = Student::with('uploads')->get();
+        return view('pages.evidence.new_upload')->with(compact('uploads'));
     }
 
     /**
