@@ -15,10 +15,8 @@ class NotesController extends Controller
      */
     public function index()
     {
-        
-        $student=Student::all();
-        //return $student;
-        return view('pages.notes.Notes', ['student'=>$student]);
+        $students = Student::with('notes')->get();
+        return view('pages.notes.Notes')->with(compact('students'));
     }
 
     /**

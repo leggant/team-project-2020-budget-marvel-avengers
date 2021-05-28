@@ -12,15 +12,14 @@ Studio Management Portal | Notes
         <div class="form-col">
             <div class="input-group">
                 <label for="student_name">Student Name:</label>
-                <select id="student_name" name="student_name" required>
+                <select id="student_name" name="student_id" required>
                 <option value="">--- Select Name ---</option>
-                    @foreach ($student as $key => $value)
-                    <option value="{{ $value->StudentID }} {{ $value->student_name }}"> {{ $value->first_name}} {{ $value->last_name}}</option>
-                    @endforeach
+                @foreach($students as $student)
+                <option value="{{ $student->id }}">{{ $student->first_name }}</option>     
+                @endforeach
                 </select>
             </div>
         </div>
-        
         <div class="form-col">
             <div class="input-group">
                 <label for="note">Notes:</label>
