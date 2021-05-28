@@ -51,6 +51,10 @@ input[type="file"] {
 input[type="url"] {
     width: 100%;
 }
+input[type="checkbox"] {
+    width: min-content;
+    cursor: pointer;
+}
 .submit-btn {
     width: 10.3em;
     height: 2.6em;
@@ -151,9 +155,6 @@ form#evidence {
         display: flex;
         flex-direction: column;
     }
-}
-.submit-btn {
-    margin: 20px auto;
 }
 
 .student-section {

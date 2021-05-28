@@ -21,12 +21,11 @@ Studio Management Portal | Evidence
         <div>
             <div class="input-group">
                 <label for="studentName">Student Name</label>
-                <select id="studentName" name="studentName">
+                <select id="studentName" name="student_id">
                     <option>Select Student....</option>
-                    <option value="student-1">Student One</option>
-                    <option value="student-2">Student Two</option>
-                    <option value="student-3">Student Three</option>
-                    <option value="student-4">Student Four</option>
+                    @foreach($uploads as $student)
+                    <option value="{{ $student->id }}">{{ $student->first_name }}</option>     
+                    @endforeach
                 </select>
                 <!-- <input type="text" id="studentName" class="form-control" placeholder="Enter Student Name" name="studentName"> -->
             </div>
