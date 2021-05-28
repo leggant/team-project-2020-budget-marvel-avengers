@@ -27,7 +27,6 @@ Studio Management Portal | Evidence
                     <option value="{{ $student->id }}">{{ $student->first_name }}</option>     
                     @endforeach
                 </select>
-
                 <!-- <input type="text" id="studentName" class="form-control" placeholder="Enter Student Name" name="studentName"> -->
             </div>
             <div class="input-group">
