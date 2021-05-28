@@ -1,13 +1,5 @@
-@extends('layouts.app')
+@extends('errors::minimal')
 
-@section('title')
-    Studio Management Portal | Error 404
-@endsection
-
-@section('content')
-<section id="404">
-    <header>
-        <h1>{{ $exception->getMessage() }}</h1>
-    </header>
-</section>
-@endsection
+@section('title', __('Not Found'))
+@section('code', '404')
+@section('message', __('Not Found'))

@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 
 class PagesController extends Controller
 {
-
     /**
      * Show the application login.
      *
@@ -24,6 +23,6 @@ class PagesController extends Controller
      */
     public function register()
     {
-        return view('auth.register');
+        return view('auth.register')->middleware('auth');
     }
 }
