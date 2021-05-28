@@ -13,7 +13,7 @@ Studio Management Portal | Notes
             <div class="input-group">
                 <label for="student_name">Student Name:</label>
                 <select id="student_name" name="student_id" required>
-                <option value="">--- Select Name ---</option>
+                <option>--- Select Name ---</option>
                 @foreach($students as $student)
                 <option value="{{ $student->id }}">{{ $student->first_name }}</option>     
                 @endforeach
