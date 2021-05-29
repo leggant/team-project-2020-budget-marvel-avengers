@@ -536,6 +536,16 @@ form#evidence .form-col {
 /* -------------------------------------------------------------------------- */
 /*                              NOTES FORM STYLES                             */
 /* -------------------------------------------------------------------------- */
+.student-name-select {
+  margin: 0;
+  outline: none;
+  font-size: 1rem;
+  padding: 0.8rem;
+  border: 1.2px solid #005aab;
+  border-radius: 20px;
+  width: 300px;
+}
+
 @media only screen and (max-width: 340px) {
   .footer .col {
     width: 100%;

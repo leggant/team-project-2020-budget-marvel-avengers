@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Note;
+use App\Models\Student;
 use Illuminate\Http\Request;
 
 class NotesController extends Controller
@@ -23,9 +24,8 @@ class NotesController extends Controller
      */
     public function index()
     {
-        
-        $notes = Note::all();
-        return view('pages.notes.Notes', ['notes'=>$notes]); 
+        $students = Student::with('notes')->get();
+        return view('pages.notes.Notes')->with(compact('students'));
     }
 
     /**

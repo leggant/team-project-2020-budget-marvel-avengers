@@ -21,7 +21,6 @@ class notes extends Seeder
         $data = json_decode($json_file);
         foreach ($data as $obj) {
             Note::create(array(
-                'student_name' => $obj->student_name,
                 'note' => $obj->note,
                 'student_id' => $obj->student_id,
             ));

@@ -14,7 +14,6 @@ class CreateNotesTable extends Migration
     {
         Schema::create('notes', function (Blueprint $table) {
             $table->id('id');
-            $table->string('student_name');
             $table->text('note');
             $table->unsignedBigInteger('student_id');
             $table->foreign('student_id')->references('id')->on('students');
