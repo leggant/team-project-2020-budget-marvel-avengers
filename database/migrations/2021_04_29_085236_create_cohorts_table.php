@@ -17,9 +17,9 @@ class CreateCohortsTable extends Migration
     {
         Schema::create('cohorts', function (Blueprint $table) {
             $table->id('id');
-            $table->longText('name');
-            $table->string('paper');
-            $table->string('cohort');
+            $table->longText('students');
+            $table->string('studiopaper');
+            $table->string('semester');
             $table->timestamps();
         });
     }

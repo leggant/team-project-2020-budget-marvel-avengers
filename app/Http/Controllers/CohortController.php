@@ -23,8 +23,9 @@ class CohortController extends Controller
      */
     public function index()
     {
-        $cohort = Cohort::all();
+        $cohort = Cohort::get();
         return view('pages/cohort.cohort',['cohort' => $cohort]);
+        
         //return $cohort;
     }
        /**

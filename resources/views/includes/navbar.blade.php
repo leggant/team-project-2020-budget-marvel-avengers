@@ -33,7 +33,7 @@
                     <a href="/uploads" class="navbar-link">Upload Evidence</a>
                 </li>
                 <li class="nav-item">
-                    <a href="/cohorts" class="navbar-link">Cohort</a>
+                    <a href="/cohort" class="navbar-link">Cohort</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }} New User</a>

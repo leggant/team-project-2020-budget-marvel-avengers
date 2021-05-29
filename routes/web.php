@@ -34,7 +34,7 @@ Route::resource('students', StudentController::class);
 Route::resource('uploads', EvidenceUploadController::class);
 Route::resource('notes', NotesController::class);
 Route::resource('student', StudentProfile::class);
-Route::resource('cohorts', CohortController::class);
+Route::resource('cohort', CohortController::class);
 Route::get('/', [PagesController::class, 'index'])->middleware('auth');
 //Route::get('/admin/register', [PagesController::class, 'register'])->middleware('auth');
 

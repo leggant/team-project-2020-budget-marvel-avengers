@@ -13,15 +13,21 @@
 
 <div class=temp></div>
 <div class=temp></div>
-
+<h3>Notes</h3>
+<ul>
 @foreach ($student->notes as $user)
-<div class=temp>Notes: {{$user->note}}</div>
+<li class=temp>{{$user->note}} {{$user->updated_at->format('d-m-Y')}}</li>
 @endforeach
+</ul>
 
+<h3 class=temp>Upload URL</h3>
+<ul>
 @foreach ($student->uploads as $user)
-<div class=temp>Upload URL: {{ $user->uploadURL }}</div>
-<div class=temp>Description: {{ $user->description }}</div>
+<li class=temp>
+    <a href="{{ $user->uploadURL }}" target="_blank">{{ $user->description }} {{$user->updated_at->format('d-m-Y')}}</a>
+</li>
 @endforeach
+</ul>
 
 
 </section>

@@ -12,8 +12,8 @@ class Cohort extends Model
     protected $table = 'cohorts';
     protected $primaryKey = 'id';
     protected $fillable = [
-        'name',
-        'paper', 
-        'cohort'
+        'students',
+        'semester', 
+        'studiopaper'
     ];
 }
