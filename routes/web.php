@@ -22,11 +22,23 @@ use App\Http\Controllers\CohortController;
 Route::get('/', function () {
     return view('auth.login');
 });
-Auth::routes();
+Auth::routes([
+    'login' => true,
+    'logout' => true,
+    'register' => true,
+    'reset' => true,
+    'confirm' => true,
+    'verify' => false
+]);
 Route::resource('students', StudentController::class);
 Route::resource('uploads', EvidenceUploadController::class);
 Route::resource('notes', NotesController::class);
 Route::resource('student', StudentProfile::class);
 Route::resource('cohorts', CohortController::class);
 Route::get('/', [PagesController::class, 'index'])->middleware('auth');
-Route::get('/user/register', [PagesController::class, 'register'])->middleware('auth');
+//Route::get('/admin/register', [PagesController::class, 'register'])->middleware('auth');
+
+// will return logged in user to home if they enter a url that does not exist.
+Route::fallback(function () {
+    return redirect('/')->with('status', 'Error, Page Not Found');
+});
