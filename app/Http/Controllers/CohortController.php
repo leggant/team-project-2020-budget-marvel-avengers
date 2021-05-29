@@ -98,8 +98,8 @@ class CohortController extends Controller
     public function destroy(Cohort $cohort)
     {
         $cohorts = Cohort::query();
-        if ($cohorts->where('id', $id)->exists()) {
-            $cohort= $cohorts->find($id);
+        if ($cohorts->where('id', $cohort)->exists()) {
+            $cohort= $cohorts->find($cohort);
             $cohort->delete();
             return redirect('cohorts');
         }
