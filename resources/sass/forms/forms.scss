@@ -21,7 +21,7 @@ textarea {
 textarea {
     outline: none;
     height: 60px;
-    max-height: 70px;
+    max-height: 150px;
     padding: 0.5rem;
     resize: vertical;
 }
@@ -118,6 +118,19 @@ input[type="checkbox"] {
     width: 500px;
     height: 600px;
 }
+
+.cohort-screen{
+    padding:0px !important;
+}
+
+.createCohort{
+    padding: 4rem 4rem;
+}
+
+#note2{
+    margin-top:10px;
+}
+
 /* -------------------------------------------------------------------------- */
 /*                            EVIDENCE FORM STYLES                            */
 /* -------------------------------------------------------------------------- */

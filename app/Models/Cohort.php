@@ -12,8 +12,11 @@ class Cohort extends Model
     protected $table = 'cohorts';
     protected $primaryKey = 'id';
     protected $fillable = [
-        'students',
-        'semester', 
-        'studiopaper'
+        'name',
+
     ];
+
+    public function semesters(){
+        return $this->hasMany(Semester::class);
+    }
 }
