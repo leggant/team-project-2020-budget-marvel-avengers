@@ -3,105 +3,53 @@
 namespace App\Http\Controllers;
 
 use App\Models\Cohort;
+use App\Models\Semester;
 use Illuminate\Http\Request;
 
 class CohortController extends Controller
 {
-     /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
+
     public function __construct()
     {
         $this->middleware('auth');
     }
-   /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
-        $cohort = Cohort::get();
-        return view('pages/cohort.cohort', ['cohort' => $cohort]);
-        //return $cohort;
+        $cohort = Cohort::all();
+        $semesters = Cohort::with('semesters')->get();
+        return view('pages/cohort.cohort')->with(compact('cohort', 'semesters'));
     }
-       /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function create()
     {
-         //return view('pages/cohort.cohort');
+        //
     }
-     /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+
     public function store(Request $request)
     {
         Cohort::create($request->all());
         return redirect('cohort');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Cohort  $cohort
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Cohort $cohort)
+    public function show(Semester $id)
     {
-        //
+        $semester = Cohort::with('semesters')->find($id);
+        return view('pages/cohort.cohort')->with(compact('semester'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Cohort  $cohort
-     * @return \Illuminate\Http\Response
-     */
     public function edit(Cohort $cohort)
     {
         return view('pages/cohort_edit', compact('cohort'));
     }
-     /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Cohort  $cohort
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Cohort $cohort)
+
+    public function update(Request $request, $id)
     {
-        $request->validate([
-            'students' => 'required',
-            'studiopaper' => 'required',
-            'semester' => 'required'
-        ]);
-
-        $cohort->update($request->all());
-
-        return redirect()->route('cohorts')
-            ->with('success', 'Cohort updated successfully');
+        //
     }
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Cohort  $cohort
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Cohort $cohort)
+
+    public function destroy($id)
     {
-        $cohorts = Cohort::query();
-        if ($cohorts->where('id', $cohort)->exists()) {
-            $cohort= $cohorts->find($cohort);
-            $cohort->delete();
-            return redirect('cohorts');
-        }
+        //
     }
 }

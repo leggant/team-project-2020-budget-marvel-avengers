@@ -1,12 +1,13 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PagesController;
-use App\Http\Controllers\StudentController;
-use App\Http\Controllers\NotesController;
-use App\Http\Controllers\EvidenceUploadController;
-use App\Http\Controllers\StudentProfile;
 use App\Http\Controllers\CohortController;
+use App\Http\Controllers\EvidenceUploadController;
+use App\Http\Controllers\NotesController;
+use App\Http\Controllers\PagesController;
+use App\Http\Controllers\SemesterController;
+use App\Http\Controllers\StudentController;
+use App\Http\Controllers\StudentProfile;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +18,7 @@ use App\Http\Controllers\CohortController;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
+ */
 
 Route::get('/', function () {
     return view('auth.login');
@@ -28,13 +29,14 @@ Auth::routes([
     'register' => true,
     'reset' => true,
     'confirm' => true,
-    'verify' => false
+    'verify' => false,
 ]);
 Route::resource('students', StudentController::class);
 Route::resource('uploads', EvidenceUploadController::class);
 Route::resource('notes', NotesController::class);
 Route::resource('student', StudentProfile::class);
 Route::resource('cohort', CohortController::class);
+Route::resource('semesters', SemesterController::class);
 Route::get('/', [PagesController::class, 'index'])->middleware('auth');
 //Route::get('/admin/register', [PagesController::class, 'register'])->middleware('auth');
 
