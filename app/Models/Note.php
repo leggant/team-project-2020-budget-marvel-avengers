@@ -12,7 +12,10 @@ class Note extends Model
     protected $table = 'notes';
     protected $primaryKey = 'id';
     protected $fillable = [
-        'student_name', 
-        'note'
+        'note',
+        'student_id'
     ];
+    public function students(){
+        return $this->belongsTo(Student::class, 'student_id');
+    }
 }

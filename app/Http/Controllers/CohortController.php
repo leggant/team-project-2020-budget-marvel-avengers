@@ -3,22 +3,53 @@
 namespace App\Http\Controllers;
 
 use App\Models\Cohort;
+use App\Models\Semester;
 use Illuminate\Http\Request;
 
 class CohortController extends Controller
 {
-    public function createCohort(Request $request) {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
     }
 
-    public function updateCohort(Request $request, $id) {
+    public function index()
+    {
+        $cohort = Cohort::all();
+        $semesters = Cohort::with('semesters')->get();
+        return view('pages/cohort.cohort')->with(compact('cohort', 'semesters'));
     }
 
-    public function deleteCohort($id) {
+    public function create()
+    {
+        //
     }
 
-    public function getAllCohorts() {
+    public function store(Request $request)
+    {
+        Cohort::create($request->all());
+        return redirect('cohort');
     }
-    
-    public function getCohort($id) {
+
+    public function show(Semester $id)
+    {
+        $semester = Cohort::with('semesters')->find($id);
+        return view('pages/cohort.cohort')->with(compact('semester'));
+    }
+
+    public function edit(Cohort $cohort)
+    {
+        return view('pages/cohort_edit', compact('cohort'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        //
+    }
+
+    public function destroy($id)
+    {
+        //
     }
 }

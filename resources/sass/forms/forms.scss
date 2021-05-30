@@ -21,7 +21,7 @@ textarea {
 textarea {
     outline: none;
     height: 60px;
-    max-height: 70px;
+    max-height: 150px;
     padding: 0.5rem;
     resize: vertical;
 }
@@ -50,6 +50,10 @@ input[type="file"] {
 }
 input[type="url"] {
     width: 100%;
+}
+input[type="checkbox"] {
+    width: min-content;
+    cursor: pointer;
 }
 .submit-btn {
     width: 10.3em;
@@ -110,6 +114,22 @@ input[type="url"] {
         font-size: 1.6rem;
     }
 }
+.cohort-show {
+    width: 500px;
+    height: 600px;
+}
+
+.cohort-screen{
+    padding:0px !important;
+}
+
+.createCohort{
+    padding: 4rem 4rem;
+}
+
+#note2{
+    margin-top:10px;
+}
 
 /* -------------------------------------------------------------------------- */
 /*                            EVIDENCE FORM STYLES                            */
@@ -152,9 +172,6 @@ form#evidence {
         flex-direction: column;
     }
 }
-.submit-btn {
-    margin: 20px auto;
-}
 
 .student-section {
     height: 100vh;
@@ -164,3 +181,13 @@ form#evidence {
 /* -------------------------------------------------------------------------- */
 /*                              NOTES FORM STYLES                             */
 /* -------------------------------------------------------------------------- */
+
+.student-name-select {
+    margin: 0;
+    outline: none;
+    font-size: 1rem;
+    padding: 0.8rem;
+    border: 1.2px solid $OPblue;
+    border-radius: 20px;
+    width: 300px;
+}

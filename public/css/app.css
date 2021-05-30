@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500;600;700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500;600;700;900&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap);
 * {
   margin: 0;
@@ -92,15 +92,71 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  position: relative;
 }
 .home .hero {
   overflow: hidden;
 }
-.home .owl-carousel .item img {
-  display: block;
+.home .login-form {
+  background: rgba(0, 19, 38, 0.25);
+  backdrop-filter: blur(4.5px);
+  -webkit-backdrop-filter: blur(4.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37), 20px 20px 50px #005babbe, -30px -30px 60px #005bab5e, -30px -30px 60px #16324b;
+  position: absolute;
+  height: min-height;
+  width: 50%;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  border-radius: 2rem;
+  transform: translate(-80%, -50%);
+  padding: 1.5rem 0;
+}
+.home .login-form .login {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+}
+.home .login-form .login .error {
+  display: inline-block;
+  padding: 0.8rem;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
+  text-align: center;
+  color: #91c441;
+  font-weight: 900;
+  margin: 1rem auto 0 auto;
+  background: rgba(38, 0, 25, 0.589);
+  -webkit-backdrop-filter: blur(10.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(102, 1, 1, 0.486);
+}
+.home .login-form .login label {
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #ffffff;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.home .login-form .login .remember {
+  margin-top: 1.5rem;
   width: 100%;
-  max-height: 500px;
-  border-radius: 20px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.home .login-form .login .remember a {
+  color: #ffffff;
 }
 .home .owl-carousel .item img {
   display: block;
@@ -235,15 +291,17 @@ button {
   justify-content: space-between;
   align-items: center;
   margin-right: 2rem;
+  font-weight: 600;
 }
 
 .nav-item {
   margin-left: 3rem;
 }
 
-.navbar-link {
+.navbar-link,
+.nav-link {
+  font-family: "Montserrat", sans-serif;
   font-size: 1rem;
-  font-weight: 400;
   color: #e1e5eb;
   position: relative;
   display: inline-block;
@@ -329,7 +387,7 @@ textarea {
 textarea {
   outline: none;
   height: 60px;
-  max-height: 70px;
+  max-height: 150px;
   padding: 0.5rem;
   resize: vertical;
 }
@@ -362,6 +420,13 @@ input[type=file] {
 
 input[type=url] {
   width: 100%;
+}
+
+input[type=checkbox] {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  cursor: pointer;
 }
 
 .submit-btn {
@@ -425,6 +490,23 @@ input[type=url] {
   font-size: 1.6rem;
 }
 
+.cohort-show {
+  width: 500px;
+  height: 600px;
+}
+
+.cohort-screen {
+  padding: 0px !important;
+}
+
+.createCohort {
+  padding: 4rem 4rem;
+}
+
+#note2 {
+  margin-top: 10px;
+}
+
 /* -------------------------------------------------------------------------- */
 /*                            EVIDENCE FORM STYLES                            */
 /* -------------------------------------------------------------------------- */
@@ -463,10 +545,6 @@ form#evidence .form-col {
   flex-direction: column;
 }
 
-.submit-btn {
-  margin: 20px auto;
-}
-
 .student-section {
   height: 100vh;
   padding: 4rem 0 !important;
@@ -475,6 +553,16 @@ form#evidence .form-col {
 /* -------------------------------------------------------------------------- */
 /*                              NOTES FORM STYLES                             */
 /* -------------------------------------------------------------------------- */
+.student-name-select {
+  margin: 0;
+  outline: none;
+  font-size: 1rem;
+  padding: 0.8rem;
+  border: 1.2px solid #005aab;
+  border-radius: 20px;
+  width: 300px;
+}
+
 @media only screen and (max-width: 340px) {
   .footer .col {
     width: 100%;
@@ -581,12 +669,6 @@ select {
 
   .social h1 {
     margin: 0px;
-  }
-}
-@media (min-width: 1200px) {
-  form > div > label,
-legend {
-    text-align: right;
   }
 }
 @media only screen and (min-width: 1280px) {
