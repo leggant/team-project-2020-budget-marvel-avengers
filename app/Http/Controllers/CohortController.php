@@ -79,9 +79,9 @@ class CohortController extends Controller
     public function update(Request $request, Cohort $cohort)
     {
         $request->validate([
-            'names' => 'required',
-            'paper' => 'required',
-            'cohort' => 'required'
+            'students' => 'required',
+            'studiopaper' => 'required',
+            'semester' => 'required'
         ]);
 
         $cohort->update($request->all());
