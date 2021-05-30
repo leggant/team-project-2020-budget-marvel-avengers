@@ -50,7 +50,7 @@
                 @endforeach
             </select>
             @foreach ($cohort as $key => $value)
-            <textarea id="students" name="students" rows="4" cols="50">{{ $value->students }}</textarea>
+                <textarea id="students" name="students" rows="4" cols="50">{{ $value->students }}</textarea>
             @endforeach
             <button type="submit">Submit</button>
         </form>
