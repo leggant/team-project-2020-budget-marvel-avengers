@@ -50,6 +50,11 @@ class CohortController extends Controller
 
     public function destroy($id)
     {
-        //
+        $cohorts = Cohort::query();
+        if($cohorts->where('id', $id)->exists()){
+            $cohort = $cohorts->find($id);
+            $cohort->delete();
+            return redirect('cohort');
+        }
     }
 }

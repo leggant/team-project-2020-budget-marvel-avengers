@@ -56,6 +56,13 @@
                     @foreach ($cohort as $key)
                         <tr>
                             <td><a href="{{ route('semesters.show', $key->id) }}">{{ $key->name }}</a></td>
+                            <td>
+                                <form  onsubmit="return confirm('Do you really want to delete this cohort?');" action="{{ route('students.destroy',$key->id) }}" method="POST">      
+                                    @csrf
+                                    @method('DELETE')      
+                                    <button class="btn btn-delete" type="submit" class="">Delete</button>
+                                </form>
+                            </td>
                         </tr>
                     @endforeach
                 </tbody>
