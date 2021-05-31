@@ -18,23 +18,24 @@
             <div class="login-form">
                 <form method="POST" action="{{ route('register') }}" class="login">
                     @csrf
-                    <label for="name">{{ __('Name') }}</label>
-                    <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name"
-                        value="{{ old('name') }}" required autocomplete="name" autofocus>
-                    @error('name')
-                        <span class="invalid-feedback error" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                    @enderror
-
-                    <label for="email" class="">{{ __('E-Mail Address') }}</label>
-                    <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email"
-                        value="{{ old('email') }}" required autocomplete="email">
-                    @error('email')
-                        <span class="invalid-feedback error" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                    @enderror
+                    <div class="form-col">
+                        <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name"
+                            value="{{ old('name') }}" required autocomplete="name" autofocus placeholder="Enter Users Name">
+                        @error('name')
+                            <span class="invalid-feedback error" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+    
+                        {{-- <label for="email" class="">{{ __('E-Mail Address') }}</label> --}}
+                        <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email"
+                            value="{{ old('email') }}" required autocomplete="email" placeholder="studio@op.ac.nz">
+                        @error('email')
+                            <span class="invalid-feedback error" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+                    </div>
 
                     <label for="password">{{ __('Password') }}</label>
                     <input id="password" type="password" class="form-control @error('password') is-invalid @enderror"
