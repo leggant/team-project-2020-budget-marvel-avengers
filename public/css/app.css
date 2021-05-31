@@ -201,6 +201,9 @@ button {
 }
 
 .footer .col {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   padding: 0px 20px 20px 20px;
 }
 
@@ -217,9 +220,11 @@ button {
   letter-spacing: 0.25em;
 }
 
-.footer .col p {
-  font-size: 15px;
+.footer p, .footer a, .footer address p {
+  font-size: 0.9rem;
   color: #aecf4b;
+  white-space: nowrap;
+  font-style: normal;
 }
 
 .footer .col ul {
@@ -240,9 +245,9 @@ button {
   -moz-transition: 0.2s;
 }
 
-.social ul li {
+.social > ul li {
   display: inline-block;
-  padding-right: 5px !important;
+  margin-right: 5px;
 }
 
 .footer .col ul li:hover {
@@ -257,20 +262,20 @@ button {
   justify-content: space-between;
   align-items: center;
   background-color: #11121c;
-  padding: 1rem 1.5rem;
+  padding: 1.5rem 1.5rem;
+}
+.navbar div {
+  display: flex;
+  justify-content: space-between;
 }
 
-.logo-image {
-  width: 46px;
-  height: 46px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin-top: -6px;
-}
-
-.logo-image img {
-  width: 46px;
-  height: 46px;
+.logo-image .navbar-brand img {
+  z-index: 100;
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  top: 1rem;
+  left: 1rem;
 }
 
 .hamburger {
@@ -318,12 +323,6 @@ button {
 
 .navbar-link:hover {
   background-position: 0 100%;
-}
-
-.nav-logo {
-  font-size: 2.1rem;
-  font-weight: 500;
-  color: #482ff7;
 }
 
 table {
