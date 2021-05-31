@@ -12,23 +12,19 @@
         </div>
         <form action="{{ route('cohort.store') }}" method="POST">
             <div class="input-group">
-                <input list="years" name="years">
-                <datalist id="years">
-                    <option value="2018">
-                    <option value="2019">
-                    <option value="2020">
-                    <option value="2021">
-                    <option value="2022">
-                    <option value="2023">
-                </datalist>
-                <input id="selectSemester1" name="radioForm" type="radio" value="Semester 1" class="radio">
-                <label for="selectSemester1">Semester 1 </label>
-                <input id="selectSemester2" name="radioForm" type="radio" value="Semester 2" class="radio">
-                <label for="selectSemester2">Semester 2 </label>
+                {{-- <input list="years" name="year"> --}}
+                <select id="student_name" name="year" required>
+                    <option value="2019 Semester 1">2019 Semester 1
+                    <option value="2019 Semester 2">2019 Semester 2
+                    <option value="2020 Semester 1">2020 Semester 1
+                    <option value="2020 Semester 2">2020 Semester 2
+                    <option value="2021 Semester 1">2021 Semester 1
+                    <option value="2021 Semester 2">2021 Semester 2
+                    </select>
             </div>
             @csrf
             <div class="input-group">
-                <input id="saveForm" name="saveForm" type="submit" value="Submit" class="submit-btn">
+                <input id="saveForm" name="" type="submit" value="Submit" class="submit-btn">
             </div>
             </div>
         </form>
@@ -42,7 +38,7 @@
                             <select id="student_name" name="cohort_id" required>
                                 <option>--- Select Cohort ---</option>
                                 @foreach ($cohort as $value)
-                                    <option value="{{ $value->id }}">{{ $value->name }}</option>
+                                    <option value="{{ $value->id }}">{{ $value->year }}</option>
                                 @endforeach
                             </select>
                             <textarea id="note2" name="students" placeholder="Enter students name ✍🏻"></textarea>
@@ -127,7 +123,7 @@
                 <tbody>
                     @foreach ($cohort as $key)
                         <tr>
-                            <td><a href="{{ route('semesters.show', $key->id) }}">{{ $key->name }}</a></td>
+                            <td><a href="{{ route('semesters.show', $key->id) }}">{{ $key->year }}</a></td>
                             <td>
                                 <form onsubmit="return confirm('Do you really want to delete this cohort?');"
                                     action="{{ route('students.destroy', $key->id) }}" method="POST">
