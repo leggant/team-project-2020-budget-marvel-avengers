@@ -13,7 +13,8 @@ class Cohort extends Model
     protected $primaryKey = 'id';
     protected $fillable = [
         'name',
-
+        'year',
+        'semester'
     ];
 
     public function semesters(){

@@ -9,46 +9,111 @@
 
         <div class="createCohort">
             <h1>Create Cohort</h1>
-            <form action="{{ route('cohort.store') }}" method="POST">
         </div>
-        <div class="input-group">
-            <input id="selectSemester1" name="radioForm" type="radio" value="Semester 1" class="radio">
-            <label for="selectSemester1">Semester 1 </label>
-            
-            <input id="selectSemester2" name="radioForm" type="radio" value="Semester 2" class="radio">
-            <label for="selectSemester2">Semester 2 </label>
-        </div>
-        @csrf
-        <div class="form-col">
+        <form action="{{ route('cohort.store') }}" method="POST">
             <div class="input-group">
-                <textarea id="note" name="name" spellcheck="true" placeholder="Enter Cohort name ✍🏻"></textarea>
+                <input list="years" name="years">
+                <datalist id="years">
+                    <option value="2018">
+                    <option value="2019">
+                    <option value="2020">
+                    <option value="2021">
+                    <option value="2022">
+                    <option value="2023">
+                </datalist>
+                <input id="selectSemester1" name="radioForm" type="radio" value="Semester 1" class="radio">
+                <label for="selectSemester1">Semester 1 </label>
+                <input id="selectSemester2" name="radioForm" type="radio" value="Semester 2" class="radio">
+                <label for="selectSemester2">Semester 2 </label>
             </div>
+            @csrf
             <div class="input-group">
                 <input id="saveForm" name="saveForm" type="submit" value="Submit" class="submit-btn">
             </div>
-        </div>
-        </form>
-        <h1>Add students</h1>
-        <form action="{{ route('semesters.store') }}" method="POST">
-            @csrf
-            <div class="form-col">
-                <div class="input-group">
-                    <select id="student_name" name="cohort_id" required>
-                        <option>--- Select Cohort ---</option>
-                        @foreach ($cohort as $value)
-                            <option value="{{ $value->id }}">{{ $value->name }}</option>
-                        @endforeach
-                    </select>
-                    <textarea id="note2" name="students" placeholder="Enter students name ✍🏻"></textarea>
-                </div>
-                <div class="input-group">
-                    <input id="saveForm" name="saveForm" type="submit" value="Submit" class="submit-btn">
-                </div>
             </div>
         </form>
-
-        </div>
-
+        <table id="cohort-paper">
+            <tr>
+                <form action="{{ route('semesters.store') }}" method="POST">
+                    <h1>Studio 1</h1>
+                    @csrf
+                    <div class="form-col">
+                        <div class="input-group">
+                            <select id="student_name" name="cohort_id" required>
+                                <option>--- Select Cohort ---</option>
+                                @foreach ($cohort as $value)
+                                    <option value="{{ $value->id }}">{{ $value->name }}</option>
+                                @endforeach
+                            </select>
+                            <textarea id="note2" name="students" placeholder="Enter students name ✍🏻"></textarea>
+                        </div>
+                        <div class="input-group">
+                            <input id="saveForm" name="saveForm" type="submit" value="Submit" class="submit-btn">
+                        </div>
+                    </div>
+                </form>
+            </tr>
+            <tr>
+                <form action="{{ route('semesters.store') }}" method="POST">
+                    <h1>Studio 2</h1>
+                    @csrf
+                    <div class="form-col">
+                        <div class="input-group">
+                            <select id="student_name" name="cohort_id" required>
+                                <option>--- Select Cohort ---</option>
+                                @foreach ($cohort as $value)
+                                    <option value="{{ $value->id }}">{{ $value->name }}</option>
+                                @endforeach
+                            </select>
+                            <textarea id="note2" name="students" placeholder="Enter students name ✍🏻"></textarea>
+                        </div>
+                        <div class="input-group">
+                            <input id="saveForm" name="saveForm" type="submit" value="Submit" class="submit-btn">
+                        </div>
+                    </div>
+                </form>
+            </tr>
+            <tr>
+                <form action="{{ route('semesters.store') }}" method="POST">
+                    <h1>Studio 3</h1>
+                    @csrf
+                    <div class="form-col">
+                        <div class="input-group">
+                            <select id="student_name" name="cohort_id" required>
+                                <option>--- Select Cohort ---</option>
+                                @foreach ($cohort as $value)
+                                    <option value="{{ $value->id }}">{{ $value->name }}</option>
+                                @endforeach
+                            </select>
+                            <textarea id="note2" name="students" placeholder="Enter students name ✍🏻"></textarea>
+                        </div>
+                        <div class="input-group">
+                            <input id="saveForm" name="saveForm" type="submit" value="Submit" class="submit-btn">
+                        </div>
+                    </div>
+                </form>
+            </tr>
+            <tr>
+                <form action="{{ route('semesters.store') }}" method="POST">
+                    <h1>Studio 4</h1>
+                    @csrf
+                    <div class="form-col">
+                        <div class="input-group">
+                            <select id="student_name" name="cohort_id" required>
+                                <option>--- Select Cohort ---</option>
+                                @foreach ($cohort as $value)
+                                    <option value="{{ $value->id }}">{{ $value->name }}</option>
+                                @endforeach
+                            </select>
+                            <textarea id="note2" name="students" placeholder="Enter students name ✍🏻"></textarea>
+                        </div>
+                        <div class="input-group">
+                            <input id="saveForm" name="saveForm" type="submit" value="Submit" class="submit-btn">
+                        </div>
+                    </div>
+                </form>
+            </tr>
+        </table>
         <table cellpadding="0" cellspacing="0" cellborder="0">
             <thead>
                 <tr>
