@@ -24,7 +24,7 @@ jQuery(document).ready(function ($) {
         center: true,
         margin: 10,
         autoplay: true,
-        autoplayTimeout: 2000,
+        autoplayTimeout: 10000,
         autoplayHoverPause: true,
         nav: true,
         items: 1,
