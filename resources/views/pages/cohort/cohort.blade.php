@@ -12,14 +12,20 @@
         </div>
         <form action="{{ route('cohort.store') }}" method="POST">
             <div class="input-group">
-                {{-- <input list="years" name="year"> --}}
+
+                <div class="form-col">
+                    <label for="semester1">Semester 1</label>
+                        <input type="radio" name="semester" id="semester" value="Semester 1" checked>
+                    <label for="semester2">Semester 2</label>
+                        <input type="radio" name="semester" id="semester" value="Semester 2">
+                    </div>
                 <select id="student_name" name="year" required>
-                    <option value="2019 Semester 1">2019 Semester 1
-                    <option value="2019 Semester 2">2019 Semester 2
-                    <option value="2020 Semester 1">2020 Semester 1
-                    <option value="2020 Semester 2">2020 Semester 2
-                    <option value="2021 Semester 1">2021 Semester 1
-                    <option value="2021 Semester 2">2021 Semester 2
+                    <option value="2018">2018
+                    <option value="2019">2019
+                    <option value="2020">2020
+                    <option value="2021">2021
+                    <option value="2022">2022
+                    <option value="2023">2023
                     </select>
             </div>
             @csrf
@@ -49,7 +55,7 @@
                     </div>
                 </form>
             </tr>
-            <tr>
+            {{-- <tr>
                 <form action="{{ route('semesters.store') }}" method="POST">
                     <h1>Studio 2</h1>
                     @csrf
@@ -108,7 +114,7 @@
                         </div>
                     </div>
                 </form>
-            </tr>
+            </tr> --}}
         </table>
         <table cellpadding="0" cellspacing="0" cellborder="0">
             <thead>
@@ -122,17 +128,17 @@
             <table cellpadding="0" cellspacing="0" cellborder="0">
                 <tbody>
                     @foreach ($cohort as $key)
-                        <tr>
-                            <td><a href="{{ route('semesters.show', $key->id) }}">{{ $key->year }}</a></td>
-                            <td>
-                                <form onsubmit="return confirm('Do you really want to delete this cohort?');"
-                                    action="{{ route('students.destroy', $key->id) }}" method="POST">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button class="btn btn-delete" type="submit" class="">Delete</button>
-                                </form>
-                            </td>
-                        </tr>
+                            <tr>
+                                <td><a href="{{ route('semesters.show', $key->id) }}">{{ $key->year }} {{$key->semester}}</a></td>
+                                <td>
+                                    <form onsubmit="return confirm('Do you really want to delete this cohort?');"
+                                        action="{{ route('students.destroy', $key->id) }}" method="POST">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button class="btn btn-delete" type="submit" class="">Delete</button>
+                                    </form>
+                                </td>
+                            </tr>
                     @endforeach
                 </tbody>
             </table>
