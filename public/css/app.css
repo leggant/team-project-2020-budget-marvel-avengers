@@ -482,12 +482,31 @@ input[type=checkbox] {
 /* -------------------------------------------------------------------------- */
 /*                             COHORT FORM STYLES                             */
 /* -------------------------------------------------------------------------- */
-#cohort-select {
-  border: 1px;
-  padding: 10px;
+.cohorts {
+  display: flex;
+  flex-direction: column;
 }
-#cohort-select #cohortSelect {
-  font-size: 1.6rem;
+.cohorts form {
+  justify-content: space-between;
+  align-items: center;
+}
+.cohorts form .input-group {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+}
+.cohorts form .input-group label {
+  white-space: nowrap;
+  margin: 0;
+}
+.cohorts form .input-group label input {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin-left: 0.5rem;
+}
+.cohorts .cohort-form {
+  margin: 0 0 2rem 0;
 }
 
 .cohort-show {
@@ -495,16 +514,8 @@ input[type=checkbox] {
   height: 600px;
 }
 
-.cohort-screen {
-  padding: 0px !important;
-}
-
 .createCohort {
   padding: 4rem 4rem;
-}
-
-#note2 {
-  margin-top: 10px;
 }
 
 /* -------------------------------------------------------------------------- */

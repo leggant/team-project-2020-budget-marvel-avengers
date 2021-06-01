@@ -3,100 +3,85 @@
 @section('title')
     Studio Management Portal | Cohort
 @endsection
-<!-- Form begins-->
 @section('content')
-    <section class='cohort-screen'>
-
-        <div class="createCohort">
+    <section class="cohorts">
+        <header>
             <h1>Create Cohort</h1>
-        </div>
-        <form action="{{ route('cohort.store') }}" method="POST">
-            <div class="input-group">
-
-                <div class="form-col">
-                    <label for="semester1">Semester 1</label>
-                    <input type="radio" name="semester" id="semester" value="Semester 1" checked>
-                    <label for="semester2">Semester 2</label>
-                    <input type="radio" name="semester" id="semester" value="Semester 2">
+        </header>
+        <form action="{{ route('cohort.store') }}" method="POST" class="cohort-form">
+            @csrf
+                <div class="input-group">
+                    <label for="semester1">Semester 1
+                    <input type="radio" name="semester" id="semester1" value="Semester 1" checked></label>
                 </div>
-                <select id="student_name" name="year" required>
-                    <option value="2018">2018</option>
-                    <option value="2019">2019</option>
+                <div class="input-group">
+                    <label for="semester2">Semester 2
+                    <input type="radio" name="semester" id="semester2" value="Semester 2"></label>
+                </div>
+                <select id="student_name" name="year" required class="cohort-select">
                     <option value="2020">2020</option>
                     <option value="2021">2021</option>
                     <option value="2022">2022</option>
                     <option value="2023">2023</option>
                 </select>
-            </div>
-            @csrf
-            <div class="input-group">
                 <input id="saveForm" name="" type="submit" value="Submit" class="submit-btn">
-            </div>
-            </div>
         </form>
-        <table id="cohort-paper">
+        <table>
             <tr>
                 <form action="{{ route('semesters.store') }}" method="POST">
-                    <h1>Studio 1</h1>
+                    <h1>Studio Paper Cohorts</h1>
                     @csrf
                     <div class="form-col">
-                        <div class="form-col">
-                            <label for="semester1">studio 1</label>
-                            <input type="radio" name="studio" id="studio" value="studio 1" checked>
-                            <label for="semester2">studio 2</label>
-                            <input type="radio" name="studio" id="studio" value="studio 2">
-                            <label for="semester2">studio 3</label>
-                            <input type="radio" name="studio" id="studio" value="studio 3">
-                            <label for="semester2">studio 4</label>
-                            <input type="radio" name="studio" id="studio" value="studio 4">
-                        </div>
-
-                        <div class="input-group">
-                            <select id="student_name" name="cohort_id" required>
-                                <option>--- Select Cohort ---</option>
-                                @foreach ($cohort as $value)
-                                    <option value="{{ $value->id }}">{{ $value->year }}</option>
-                                @endforeach
-                            </select>
-                            <textarea id="note2" name="students" placeholder="Enter students name ✍🏻"></textarea>
-                        </div>
-                        <div class="input-group">
-                            <input id="saveForm" name="saveForm" type="submit" value="Submit" class="submit-btn">
-                        </div>
+                        <label for="studio1">Studio 1</label>
+                        <input type="radio" name="studio" id="studio1" value="Studio 1" checked>
+                        <label for="studio2">Studio 2</label>
+                        <input type="radio" name="studio" id="studio2" value="Studio 2">
+                        <label for="studio3">Studio 3</label>
+                        <input type="radio" name="studio" id="studio3" value="Studio 3">
+                        <label for="studio4">Studio 4</label>
+                        <input type="radio" name="studio" id="studio4" value="Studio 4">
+                    </div>
+                    <div class="input-group">
+                        <select id="student_name" name="cohort_id" required>
+                            <option>--- Select Cohort ---</option>
+                            @foreach ($cohort as $value)
+                                <option value="{{ $value->id }}">{{ $value->year }}</option>
+                            @endforeach
+                        </select>
+                        <textarea id="note2" name="students" placeholder="Enter students name ✍🏻"></textarea>
+                    </div>
+                    <div class="input-group">
+                        <input id="saveForm" name="saveForm" type="submit" value="Submit" class="submit-btn">
                     </div>
                 </form>
             </tr>
-
         </table>
         <table cellpadding="0" cellspacing="0" cellborder="0">
-            <thead>
+            <thead class="">
                 <tr>
                     <th>List of Cohorts 📜</th>
                 </tr>
             </thead>
+            <tbody>
+                @foreach ($cohort as $key)
+                    <tr>
+                        <td>
+                            <a href="{{ route('semesters.show', $key->id) }}">
+                                {{ $key->year }}
+                                {{ $key->semester }}
+                            </a>
+                        </td>
+                        <td>
+                            <form onsubmit="return confirm('Do you really want to delete this cohort?');"
+                                action="{{ route('students.destroy', $key->id) }}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button class="btn btn-delete" type="submit" class="">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                @endforeach
+            </tbody>
         </table>
-
-        <div class="tbl-content">
-            <table cellpadding="0" cellspacing="0" cellborder="0">
-                <tbody>
-                    @foreach ($cohort as $key)
-                        <tr>
-                            <td><a href="{{ route('semesters.show', $key->id) }}">{{ $key->year }}
-                                    {{ $key->semester }}</a></td>
-                            <td>
-            
-                                <form onsubmit="return confirm('Do you really want to delete this cohort?');"
-                                    action="{{ route('students.destroy', $key->id) }}" method="POST">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button class="btn btn-delete" type="submit" class="">Delete</button>
-                                </form>
-                            </td>
-                        </tr>
-                            @endforeach
-                            
-                    
-                </tbody>
-            </table>
     </section>
 @endsection
