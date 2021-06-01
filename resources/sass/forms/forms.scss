@@ -110,8 +110,22 @@ input[type="checkbox"] {
     display: flex;
     flex-direction: column;
     form {
-        justify-content: space-between;
+        width: max-content;
         align-items: center;
+        justify-content: space-between;
+        select {
+            width: max-content;
+            margin-right: 1rem;
+        }
+        .form-col {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            margin: 0 1rem 0 0;
+            textarea {
+                display: block;
+            }
+        }
         .input-group {
             display: flex;
             flex-direction: row;
@@ -121,7 +135,7 @@ input[type="checkbox"] {
                 margin: 0;
                 input {
                     width: max-content;
-                    margin-left: .5rem;
+                    margin-right: 1rem;
                 }
             }
         }

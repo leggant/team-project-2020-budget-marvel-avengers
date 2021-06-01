@@ -487,8 +487,26 @@ input[type=checkbox] {
   flex-direction: column;
 }
 .cohorts form {
-  justify-content: space-between;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   align-items: center;
+  justify-content: space-between;
+}
+.cohorts form select {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin-right: 1rem;
+}
+.cohorts form .form-col {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 0 1rem 0 0;
+}
+.cohorts form .form-col textarea {
+  display: block;
 }
 .cohorts form .input-group {
   display: flex;
@@ -503,7 +521,7 @@ input[type=checkbox] {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  margin-left: 0.5rem;
+  margin-right: 1rem;
 }
 .cohorts .cohort-form {
   margin: 0 0 2rem 0;
