@@ -13,7 +13,7 @@ class Semester extends Model
     protected $fillable = [
         'students',
         'cohort_id',
-        // 'semester'
+        'studio'
     ];
 
     public function cohort(){
