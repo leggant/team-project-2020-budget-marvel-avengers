@@ -20,12 +20,12 @@
                         <input type="radio" name="semester" id="semester" value="Semester 2">
                     </div>
                 <select id="student_name" name="year" required>
-                    <option value="2018">2018
-                    <option value="2019">2019
-                    <option value="2020">2020
-                    <option value="2021">2021
-                    <option value="2022">2022
-                    <option value="2023">2023
+                    <option value="2018">2018</option>
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                    <option value="2021">2021</option>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
                     </select>
             </div>
             @csrf
