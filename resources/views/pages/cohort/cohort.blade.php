@@ -58,7 +58,7 @@
                             <select id="student_name" name="cohort_id" required>
                                 <option>--- Select Cohort ---</option>
                                 @foreach ($cohort as $value)
-                                    <option value="{{ $value->id }}">{{ $value->name }}</option>
+                                    <option value="{{ $value->id }}">{{ $value->year }}</option>
                                 @endforeach
                             </select>
                             <textarea id="note2" name="students" placeholder="Enter students name ✍🏻"></textarea>
@@ -78,7 +78,7 @@
                             <select id="student_name" name="cohort_id" required>
                                 <option>--- Select Cohort ---</option>
                                 @foreach ($cohort as $value)
-                                    <option value="{{ $value->id }}">{{ $value->name }}</option>
+                                    <option value="{{ $value->id }}">{{ $value->year }}</option>
                                 @endforeach
                             </select>
                             <textarea id="note2" name="students" placeholder="Enter students name ✍🏻"></textarea>
@@ -98,7 +98,7 @@
                             <select id="student_name" name="cohort_id" required>
                                 <option>--- Select Cohort ---</option>
                                 @foreach ($cohort as $value)
-                                    <option value="{{ $value->id }}">{{ $value->name }}</option>
+                                    <option value="{{ $value->id }}">{{ $value->year }}</option>
                                 @endforeach
                             </select>
                             <textarea id="note2" name="students" placeholder="Enter students name ✍🏻"></textarea>
