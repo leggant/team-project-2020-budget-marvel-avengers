@@ -5,7 +5,7 @@
 <!-- Form begins-->
 @section('content')
     <section>
-        <h1>Students</h1>
+        <h1>Students in {{$cohort->year}}</h1>
         @foreach ($cohort->semesters as $value)
             <p>{{ $value->students }}</p>
         @endforeach
