@@ -386,6 +386,9 @@ table .title {
 /* -------------------------------------------------------------------------- */
 form {
   display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 input,
@@ -396,17 +399,15 @@ textarea {
   font-size: 1rem;
   padding: 0.8rem;
   border: 1.2px solid #005aab;
-  max-width: 500px;
   border-radius: 20px;
-  width: 100%;
 }
 
 textarea {
   outline: none;
   height: 60px;
-  max-height: 150px;
   padding: 0.5rem;
   resize: vertical;
+  white-space: pre-wrap;
 }
 
 label {
