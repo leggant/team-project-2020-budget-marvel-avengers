@@ -30,6 +30,7 @@ body {
   padding-bottom: 2rem;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 .container section {
   height: 100%;
