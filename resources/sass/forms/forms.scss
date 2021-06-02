@@ -101,6 +101,12 @@ input[type="checkbox"] {
     background-color: #135da7;
     color: white;
 }
+.btn-show {
+    background-color: $OPgreen;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    font-family: 'Montserrat', 'san-serif';
+}
 
 /* -------------------------------------------------------------------------- */
 /*                             COHORT FORM STYLES                             */

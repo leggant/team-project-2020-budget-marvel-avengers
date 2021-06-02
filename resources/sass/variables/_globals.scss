@@ -27,17 +27,20 @@ body {
 //main container
 .container {
     margin: 0 auto;
-    min-height: min-content;
+    min-height: fit-content;
     padding-top: 2rem;
     padding-bottom: 2rem;
+    display: flex;
+    flex-direction: row;
     //sections wrapping content
     section {
-        width: max-content;
-        min-width: 60vw;
-        max-width: 1200px;
         height: 100%;
+        width: 45vw;
+        min-width: min-content;
+        max-width: max-content;
+
         padding: 4rem 4rem;
-        margin: 0 auto;
+        margin: 0 2rem;
         background-image: linear-gradient( to right bottom, #0e5ba5, #3169b1, #4777bd, #5b85ca, #6e94d6, #58a1e1, #3aaee9, #00bbec, #00c6d7, #00ccb0, #5fcd80, #a3c853);
         border-radius: 20px;
         box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
@@ -46,6 +49,7 @@ body {
         header {
             margin-bottom: 1.5rem;
         }
+        
     }
 }
 

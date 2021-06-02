@@ -3,77 +3,95 @@
     Studio Management Portal | Student Details
 @endsection
 @section('content')
-    <div class="section-columns">
-        <section>
-            <h1>Students</h1>
-            <form class="student-form" action="{{ route('students.store') }}" method="POST">
-                @csrf
-                <div class="form-col">
-                    <div class="input-group">
-                        <input type="text" name="first_name" placeholder="Student First Name">
-                        <input type="text" name="last_name" placeholder="Student Last Name">
-                        <input type="text" name="studentID" placeholder="Student ID">
-                        <input type="text" name="github_username" placeholder="GitHub Username">
-                        <input type="email" name="student_email" placeholder="student@student.op.ac.nz">
-                    </div>
-                    <button class="submit-btn" type="submit">Submit</button>
+    <section>
+        <h1>Add New Student</h1>
+        <form class="student-form" action="{{ route('students.store') }}" method="POST">
+            @csrf
+            <div class="form-col">
+                <div class="input-group">
+                    <input type="text" name="first_name" placeholder="Student First Name">
+                    <input type="text" name="last_name" placeholder="Student Last Name">
+                    <input type="text" name="studentID" placeholder="Student ID">
+                    <input type="text" name="github_username" placeholder="GitHub Username">
+                    <input type="email" name="student_email" placeholder="student@student.op.ac.nz">
                 </div>
-            </form>
-        </section>
-        <section class="student-section">
-            @foreach ($student as $new)
+                <button class="submit-btn" type="submit">Submit</button>
+            </div>
+        </form>
+    </section>
+    <section>
+        <h1>Students</h1>
+        @foreach ($student as $new)
             <article class="student-card">
-                <h2><a href="mailto:{{ $new->student_email }}" >{{ $new->first_name }} {{ $new->last_name }}</a></h2>
+                <p><a href="{{ route('student.show', $new->id) }}" title="Students ID# {{ $new->studentID }}">{{ $new->first_name }} {{ $new->last_name }}</a></p>
+                <p><a href="mailto:{{ $new->student_email }}">Email</a></p>
+                <p>Github: {{ $new->github_username }}</p>
+                <div class="actions">
+                    <form action="{{ route('student.show', $new->id) }}" method="GET">
+                        @csrf
+                        <button class="btn btn-show" type="submit">Show</button>
+                    </form>
+                    <form action="{{ route('students.edit', $new->id) }}" method="GET">
+                        @csrf
+                        @method('POST')
+                        <button class="btn btn-edit" type="submit">Edit</button>
+                    </form>
+                    <form onsubmit="return confirm('Do you really want to delete this student?');"
+                        action="{{ route('students.destroy', $new->id) }}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button class="btn btn-delete" type="submit">Delete</button>
+                    </form>
+                </div>
             </article>
-            @endforeach
-            <article class="student-table">
-                <table cellpadding="0" cellspacing="0" cellborder="0">
-                    <thead>
-                        <tr>
-                            <th>Student ID</th>
-                            <th>First name</th>
-                            <th>Last name</th>
-                            <th>Student email</th>
-                            <th>Github username</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach ($student as $user)
-                            <tr>
-                                <td>
-                                    <a href="{{ route('student.show', $user->id) }}">{{ $user->studentID }}</a>
-                                </td>
-                                <td>
-                                    <a href="{{ route('student.show', $user->id) }}">{{ $user->first_name }}</a>
-                                </td>
-                                <td>
-                                    <a href="{{ route('student.show', $user->id) }}">{{ $user->last_name }}</a>
-                                </td>
-                                <td>
-                                    <a href="{{ route('student.show', $user->id) }}">{{ $user->student_email }}</a>
-                                </td>
-                                <td>
-                                    <a href="{{ route('student.show', $user->id) }}">{{ $user->github_username }}</a>
-                                </td>
-                                <td class="actions">
-                                    <form action="{{ route('students.edit', $user->id) }}" method="GET">
-                                        @csrf
-                                        @method('POST')
-                                        <button class="btn btn-edit" type="submit" class="">Edit</button>
-                                    </form>
-                                    <form onsubmit="return confirm('Do you really want to delete this student?');"
-                                        action="{{ route('students.destroy', $user->id) }}" method="POST">
-                                        @csrf
-                                        @method('DELETE')
-                                        <button class="btn btn-delete" type="submit" class="">Delete</button>
-                                    </form>
-                                </td>
-                            </tr>
-                        @endforeach
-                    </tbody>
-                </table>
-            </article>
-        </section>
-    </div>
+        @endforeach
+        {{-- <article class="student-table">
+            <table cellpadding="0" cellspacing="0" cellborder="0">
+                <thead>
+                    <tr>
+                        <th>Student ID</th>
+                        <th>First name</th>
+                        <th>Last name</th>
+                        <th>Student email</th>
+                        <th>Github username</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($student as $user)
+                        <tr> --}}
+                            {{-- <td>
+                                <a href="{{ route('student.show', $user->id) }}">{{ $user->studentID }}</a>
+                            </td>
+                            <td>
+                                <a href="{{ route('student.show', $user->id) }}">{{ $user->first_name }}</a>
+                            </td>
+                            <td>
+                                <a href="{{ route('student.show', $user->id) }}">{{ $user->last_name }}</a>
+                            </td>
+                            <td>
+                                <a href="{{ route('student.show', $user->id) }}">{{ $user->student_email }}</a>
+                            </td>
+                            <td>
+                                <a href="{{ route('student.show', $user->id) }}">{{ $user->github_username }}</a>
+                            </td> --}}
+                            {{-- <td class="actions">
+                                <form action="{{ route('students.edit', $user->id) }}" method="GET">
+                                    @csrf
+                                    @method('POST')
+                                    <button class="btn btn-edit" type="submit" class="">Edit</button>
+                                </form>
+                                <form onsubmit="return confirm('Do you really want to delete this student?');"
+                                    action="{{ route('students.destroy', $user->id) }}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button class="btn btn-delete" type="submit" class="">Delete</button>
+                                </form>
+                            </td> --}}
+                        {{-- </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </article> --}}
+    </section>
 @endsection

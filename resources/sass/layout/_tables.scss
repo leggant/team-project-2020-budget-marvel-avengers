@@ -41,6 +41,7 @@ table {
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-around;
+  margin-left: 1rem;
   .btn {
     padding: 0 .5rem;
     margin: 0;
@@ -51,4 +52,12 @@ table {
 .tbl-content{
   height:300px;
   overflow-x:auto;
+}
+.student-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-bottom: .8rem;
+  border-bottom: 1px solid #000;
+  justify-content: space-between;
 }
