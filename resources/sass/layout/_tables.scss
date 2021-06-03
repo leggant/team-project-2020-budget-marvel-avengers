@@ -36,11 +36,12 @@ table {
 }
 .actions {
   min-width: max-content;
+  width: 100%;
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
   align-items: flex-start;
-  justify-content: space-around;
+  justify-content: flex-end;
   margin-left: 1rem;
   .btn {
     padding: 0 .5rem;
@@ -55,9 +56,23 @@ table {
 }
 .student-card {
   display: flex;
+  width: 100%;
   flex-wrap: wrap;
   align-items: center;
   padding-bottom: .8rem;
   border-bottom: 1px solid #000;
   justify-content: space-between;
+  p {
+    padding: 1rem 0;
+    color: #fff;
+    a {
+      color: #fff;
+      &::before {
+        color: $OPgreen;
+        display: inline-block;
+        content: 'ℹ️';
+        margin-right: .5rem;
+      }
+    }
+  }
 }

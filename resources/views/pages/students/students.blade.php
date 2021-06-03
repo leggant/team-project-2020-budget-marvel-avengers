@@ -21,23 +21,23 @@
     </section>
     <section>
         <h1>Students</h1>
-        @foreach ($student as $new)
+        @foreach ($student as $xstudent)
             <article class="student-card">
-                <p><a href="{{ route('student.show', $new->id) }}" title="Students ID# {{ $new->studentID }}">{{ $new->first_name }} {{ $new->last_name }}</a></p>
-                <p><a href="mailto:{{ $new->student_email }}">Email</a></p>
-                <p>Github: {{ $new->github_username }}</p>
+                <p><a href="{{ route('student.show', $xstudent->id) }}" title="Students ID# {{ $xstudent->studentID }}">{{ $xstudent->first_name }} {{ $xstudent->last_name }}</a></p>
+                <p><a href="mailto:{{ $xstudent->student_email }}">Email</a></p>
+                <p>Github: {{ $xstudent->github_username }}</p>
                 <div class="actions">
-                    <form action="{{ route('student.show', $new->id) }}" method="GET">
+                    <form action="{{ route('student.show', $xstudent->id) }}" method="GET">
                         @csrf
                         <button class="btn btn-show" type="submit">Show</button>
                     </form>
-                    <form action="{{ route('students.edit', $new->id) }}" method="GET">
+                    <form action="{{ route('students.edit', $xstudent->id) }}" method="GET">
                         @csrf
                         @method('POST')
                         <button class="btn btn-edit" type="submit">Edit</button>
                     </form>
                     <form onsubmit="return confirm('Do you really want to delete this student?');"
-                        action="{{ route('students.destroy', $new->id) }}" method="POST">
+                        action="{{ route('students.destroy', $xstudent->id) }}" method="POST">
                         @csrf
                         @method('DELETE')
                         <button class="btn btn-delete" type="submit">Delete</button>
@@ -45,53 +45,5 @@
                 </div>
             </article>
         @endforeach
-        {{-- <article class="student-table">
-            <table cellpadding="0" cellspacing="0" cellborder="0">
-                <thead>
-                    <tr>
-                        <th>Student ID</th>
-                        <th>First name</th>
-                        <th>Last name</th>
-                        <th>Student email</th>
-                        <th>Github username</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach ($student as $user)
-                        <tr> --}}
-                            {{-- <td>
-                                <a href="{{ route('student.show', $user->id) }}">{{ $user->studentID }}</a>
-                            </td>
-                            <td>
-                                <a href="{{ route('student.show', $user->id) }}">{{ $user->first_name }}</a>
-                            </td>
-                            <td>
-                                <a href="{{ route('student.show', $user->id) }}">{{ $user->last_name }}</a>
-                            </td>
-                            <td>
-                                <a href="{{ route('student.show', $user->id) }}">{{ $user->student_email }}</a>
-                            </td>
-                            <td>
-                                <a href="{{ route('student.show', $user->id) }}">{{ $user->github_username }}</a>
-                            </td> --}}
-                            {{-- <td class="actions">
-                                <form action="{{ route('students.edit', $user->id) }}" method="GET">
-                                    @csrf
-                                    @method('POST')
-                                    <button class="btn btn-edit" type="submit" class="">Edit</button>
-                                </form>
-                                <form onsubmit="return confirm('Do you really want to delete this student?');"
-                                    action="{{ route('students.destroy', $user->id) }}" method="POST">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button class="btn btn-delete" type="submit" class="">Delete</button>
-                                </form>
-                            </td> --}}
-                        {{-- </tr>
-                    @endforeach
-                </tbody>
-            </table>
-        </article> --}}
     </section>
 @endsection
