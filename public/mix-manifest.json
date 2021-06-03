@@ -1,5 +1,6 @@
 {
     "/js/app.js": "/js/app.js",
     "/js/owl.carousel.min.js": "/js/owl.carousel.min.js",
+    "/js/owl.plugin.js": "/js/owl.plugin.js",
     "/css/app.css": "/css/app.css"
 }
