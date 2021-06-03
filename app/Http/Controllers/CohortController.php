@@ -40,7 +40,7 @@ class CohortController extends Controller
 
     public function edit(Cohort $cohort)
     {
-        return view('pages/cohort_edit', compact('cohort'));
+        return view('pages.cohort.cohort_edit', compact('cohort'));
     }
 
     public function update(Request $request, $id)

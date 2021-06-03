@@ -61,7 +61,7 @@
     <td><a href="{{ route('student.show',$user->id) }}">{{ $user->first_name }}</a></td>
     <td><a href="{{ route('student.show',$user->id) }}">{{ $user->last_name }}</a></td>
     <td><a href="{{ route('student.show',$user->id) }}">{{ $user->student_email }}</a></td>
-    <td><a href="{{ route('student.show',$user->id) }}">{{ $user->github_username}}</a</td>
+    <td><a href="{{ route('student.show',$user->id) }}">{{ $user->github_username}}</a></td>
 
 </div>
         <td>
