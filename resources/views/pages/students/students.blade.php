@@ -12,13 +12,13 @@
         @csrf
        
             <label for="first_name">First name:</label>
-            <input  class="form-styling"  type="text" id="first_name" name="first_name">
+            <input  class="form-styling"  type="text" id="first_name" name="first_name" required>
      
             <label for="last_name">Last name:</label>
-            <input  class="form-styling" type="text" id="last_name" name="last_name">
+            <input  class="form-styling" type="text" id="last_name" name="last_name"required>
      
             <label for="studentID">Student id:</label>
-            <input  class="form-styling" type="text" id="studentID" name="studentID">
+            <input  class="form-styling" type="text" id="studentID" name="studentID"required>
      
             <label for="github_username">GitHub username:</label>
             <input  class="form-styling" type="text" id="github_username" name="github_username">
