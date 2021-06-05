@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    Studio Management Portal | Edit
+    Studio Management Portal | {{ $upload->studentName }} Edit Upload
 @endsection
 
 @section('content')
@@ -22,17 +22,17 @@
             <div class="form-col">
                 <div class="input-group">
                     <label for="studentName">Student Name</label>
-                    <input type="text" id="studentName" class="form-control" placeholder="Enter Student Name" name="studentName" value="{{ $upload->studentName }}">
+                    <input type="text" id="studentName" class="form-control" placeholder="Enter Student Name" name="studentName" value="{{ $upload->studentName }}" required>
                 </div>
                 <div class="input-group">
                     <label for="description">Link Description: </label>
-                    <textarea name="description" id="description" placeholder="Enter a description....">{{ $upload->description }}</textarea>
+                    <textarea name="description" id="description" placeholder="Enter a description...." required>{{ $upload->description }}</textarea>
                 </div>
             </div>
             <div class="form-col">
                 <div class="input-group">
                     <label for="fileurl">Document URL</label>
-                    <input type="url" id="fileurl" class="form-control" placeholder="Enter URL....." name="uploadURL" value="{{ $upload->uploadURL }}">
+                    <input type="url" id="fileurl" class="form-control" placeholder="Enter URL....." name="uploadURL" value="{{ $upload->uploadURL }}" required>
                 </div>
                 <button class="submit-btn" type="submit">Update</button>
             </div>
