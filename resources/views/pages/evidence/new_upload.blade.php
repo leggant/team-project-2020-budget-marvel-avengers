@@ -14,27 +14,29 @@
                 <h4>{{ session('status') }}</h4>
             </div>
         @endif
-        <!-- <div class="form-col"> -->
         <h3>Insert New Record</h3>
         <form action="{{ route('uploads.store') }}" method="POST">
             @csrf
-            <div class="form-col">
+            <div>
                 <div class="input-group">
                     <label for="studentName">Student Name</label>
-                    <select id="studentName" name="student_id">
+                    <select id="studentName" name="student_id" required>
                         <option>Select Student....</option>
                         @foreach ($uploads as $student)
                             <option value="{{ $student->id }}">{{ $student->first_name }}</option>
                         @endforeach
                     </select>
-                    <!-- <input type="text" id="studentName" class="form-control" placeholder="Enter Student Name" name="studentName"> -->
                 </div>
                 <div class="input-group">
                     <label for="fileurl">Document URL</label>
-                    <input type="url" id="fileurl" class="form-control" placeholder="Enter URL....." name="uploadURL">
+                    <input type="url" id="fileurl" class="form-control" placeholder="Enter URL....." name="uploadURL"
+                        required>
                 </div>
+            </div>
+            <div>
                 <div class="input-group">
-                    <textarea name="description" id="description" placeholder="Enter a description...."></textarea>
+                    <label for="description">Link Description: </label>
+                    <textarea name="description" id="description" placeholder="Enter a description...." required></textarea>
                 </div>
                 <div class="input-group">
                     <button class="submit-btn" type="submit">Save URL</button>

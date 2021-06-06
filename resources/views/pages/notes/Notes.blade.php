@@ -22,7 +22,8 @@ Studio Management Portal | Notes
         </div>
         <div class="form-col">
             <div class="input-group">
-                <textarea id="note" name="note" spellcheck="true" placeholder="Enter notes here"></textarea>
+                <label for="note">Notes:</label>
+                <textarea id="note" name="note" spellcheck="true" placeholder="Enter notes here" required></textarea>
             </div>
             <div class="input-group">
                 <input id="saveForm" name="saveForm" type="submit" value="Submit" class="submit-btn">
