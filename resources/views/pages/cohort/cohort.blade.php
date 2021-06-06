@@ -60,7 +60,7 @@
                         <option value="{{ $value->id }}">{{ $value->year }}</option>
                     @endforeach
                 </select>
-                <textarea id="student-names" name="students" placeholder="Enter students name ✍🏻"></textarea>
+                <textarea id="student-names" name="students" placeholder="Enter student names ✍🏻"></textarea>
             </div>
             <input id="saveForm" name="saveForm" type="submit" value="Submit" class="submit-btn">
         </form>
@@ -81,7 +81,7 @@
                         </td>
                         <td>
                             <form onsubmit="return confirm('Do you really want to delete this cohort?');"
-                                action="{{ route('students.destroy', $key->id) }}" method="POST">
+                                action="{{ route('cohort.destroy', $key->id) }}" method="POST">
                                 @csrf
                                 @method('DELETE')
                                 <button class="btn btn-delete" type="submit" class="">Delete</button>

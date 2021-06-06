@@ -479,12 +479,49 @@ input[type=checkbox] {
 /* -------------------------------------------------------------------------- */
 /*                             COHORT FORM STYLES                             */
 /* -------------------------------------------------------------------------- */
-#cohort-select {
-  border: 1px;
-  padding: 10px;
+.cohorts {
+  display: flex;
+  flex-direction: column;
 }
-#cohort-select #cohortSelect {
-  font-size: 1.6rem;
+.cohorts form {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  align-items: center;
+  justify-content: space-between;
+}
+.cohorts form select {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin-right: 1rem;
+}
+.cohorts form .form-col {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 0 1rem 0 0;
+}
+.cohorts form .form-col textarea {
+  display: block;
+}
+.cohorts form .input-group {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+}
+.cohorts form .input-group label {
+  white-space: nowrap;
+  margin: 0;
+}
+.cohorts form .input-group label input {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin-right: 1rem;
+}
+.cohorts .cohort-form {
+  margin: 0 0 2rem 0;
 }
 
 .cohort-show {
@@ -492,16 +529,8 @@ input[type=checkbox] {
   height: 600px;
 }
 
-.cohort-screen {
-  padding: 0px !important;
-}
-
 .createCohort {
   padding: 4rem 4rem;
-}
-
-#note2 {
-  margin-top: 10px;
 }
 
 /* -------------------------------------------------------------------------- */
