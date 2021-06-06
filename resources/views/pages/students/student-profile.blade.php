@@ -21,7 +21,7 @@
 <form action="{{route('notes.destroy', $user->id)}}" method="post">
                             @csrf 
                             @method('delete')
-                            <button class="delete" type="submit">Delete</button>
+  <button class="btn btn-delete" type="submit">Delete</button>
                         </form>
 @endforeach
 </ul>
