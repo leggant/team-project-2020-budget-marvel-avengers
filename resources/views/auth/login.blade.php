@@ -15,8 +15,8 @@
             <div class="item"><img src="/images/slideshow/img-1.jpg" alt=""></div>
             <div class="item"><img src="/images/slideshow/img-2.jpg" alt=""></div>
         </div>
-        <div class="login-form">
-            <form method="POST" action="{{ route('login') }}" class="login">
+        <div class="auth-form">
+            <form method="POST" action="{{ route('login') }}" class="auth login">
                 @csrf
                 <label for="email">{{ __('E-Mail Address') }}</label>
                 <input id="email" type="email" class="@error('email') is-invalid @enderror" name="email"
