@@ -3,21 +3,14 @@
     Studio Management Portal | Student Details
 @endsection
 @section('content')
-    <section class="student-section">
+    <section>
         <h1>{{ $student->first_name }} {{ $student->last_name }} </h1>
         <div class=temp>studentID: {{ $student->studentID }}</div>
         <div class=temp>GitHub: {{ $student->github_username }}</div>
         <div class=temp>Email: {{ $student->student_email }}</div>
-        <div class=temp></div>
-        <div class=temp></div>
-        <h3>Notes</h3>
-        <ul>
-            @foreach ($student->notes as $user)
-                <li class=temp>{{ $user->note }} {{ $user->updated_at->format('d-m-Y') }}</li>
-            @endforeach
-        </ul>
-
-        <h3 class=temp>Upload URL</h3>
+    </section>
+    <section>
+        <h1>{{ $student->first_name }} Links</h1>
         <ul>
             @foreach ($student->uploads as $user)
                 <li class=temp>
