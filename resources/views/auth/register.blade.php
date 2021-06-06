@@ -18,7 +18,6 @@
             <div class="auth-form">
                 <form method="POST" action="{{ route('register') }}" class="auth register">
                     @csrf
-
                     <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name"
                         value="{{ old('name') }}" required autocomplete="name" autofocus placeholder="Enter Users Name">
                     @error('name')
@@ -35,7 +34,6 @@
                             <strong>{{ $message }}</strong>
                         </span>
                     @enderror
-
                     <div class="form-col passwords">
                         <div>
                             <label for="password">{{ __('Password') }}</label>
