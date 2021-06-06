@@ -1,4 +1,4 @@
-// number count for stats, using jQuery animate
+// number count for stats
 
 $('.counting').each(function() {
   var $this = $(this),
@@ -7,19 +7,16 @@ $('.counting').each(function() {
   $({ countNum: $this.text()}).animate({
     countNum: countTo
   },
-
   {
-
-    duration: 1000,
+    duration: 1500,
     easing:'linear',
     step: function() {
       $this.text(Math.floor(this.countNum));
     },
     complete: function() {
       $this.text(this.countNum);
-      //alert('finished');
+      
     }
-
   });  
   
 

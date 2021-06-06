@@ -1,7 +1,7 @@
 <nav class="navbar">
     <div class="logo-image">
         <a class="navbar-brand" href="{{ url('/') }}">
-            <img src="/images/logo.jpg">
+            <img src="images/otago-svg-bl.svg">
         </a>
     </div>
         <ul class="nav-menu">

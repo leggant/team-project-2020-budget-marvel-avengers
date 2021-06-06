@@ -86,65 +86,6 @@ button {
   cursor: pointer;
 }
 
-.cards-list {
-  z-index: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-.card {
-  margin: 15px auto;
-  width: 120px;
-  height: 120px;
-  border-radius: 40px;
-  cursor: pointer;
-  transition: 0.4s;
-  background-color: #001326;
-}
-
-.card .card_image {
-  width: inherit;
-  height: inherit;
-  border-radius: 40px;
-}
-
-.card .card_image img {
-  width: inherit;
-  height: inherit;
-  border-radius: 40px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.card .card_title {
-  text-align: center;
-  border-radius: 0px 0px 40px 40px;
-  font-weight: bold;
-  font-size: 20px;
-  margin-top: -90px;
-  height: 50px;
-}
-
-.card:hover {
-  transform: scale(0.9, 0.9);
-}
-
-.title-white {
-  color: white;
-}
-
-.title-black {
-  color: black;
-}
-
-@media all and (max-width: 500px) {
-  .card-list {
-    /* On small screens, we are no longer using row direction but column */
-    flex-direction: column;
-  }
-}
 /* -------------------------------------------------------------------------- */
 /*                           HOME PAGE SLIDER STYLES                          */
 /* -------------------------------------------------------------------------- */
@@ -159,6 +100,9 @@ button {
   flex-direction: column;
   justify-content: space-around;
   position: relative;
+  /* -------------------------------------------------------------------------- */
+  /*                           HOME PAGE TILES STYLES                          */
+  /* -------------------------------------------------------------------------- */
 }
 .home .hero {
   overflow: hidden;
@@ -193,6 +137,59 @@ button {
 .home .home .owl-carousel .item img {
   border-radius: 50px;
 }
+.home .owl-carousel .owl-nav button.owl-next, .home .owl-carousel .owl-nav button.owl-prev, .home .owl-carousel button.owl-dot {
+  margin-top: -80px;
+}
+.home .cards-list {
+  z-index: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.home .card {
+  margin: 15px auto;
+  width: 120px;
+  height: 120px;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.home .card .card_image {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+}
+.home .card .card_image img {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.home .card .card_title {
+  text-align: center;
+  border-radius: 0px 0px 40px 40px;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: -90px;
+  height: 50px;
+}
+.home .card:hover {
+  transform: scale(0.9, 0.9);
+}
+.home .title-white {
+  color: #aecf4b;
+}
+.home .title-black {
+  color: black;
+}
+@media all and (max-width: 500px) {
+  .home .card-list {
+    /* On small screens, we are no longer using row direction but column */
+    flex-direction: column;
+  }
+}
 
 /* STYLES SPECIFIC TO FOOTER  */
 .footer {
@@ -202,6 +199,7 @@ button {
   display: flex;
   flex-direction: column;
   align-content: space-between;
+  bottom: 0rem;
 }
 
 .footer-info {
@@ -281,8 +279,9 @@ button {
   z-index: 100;
   position: absolute;
   width: 80px;
-  height: 80px;
-  top: 1rem;
+  max-width: 100%;
+  height: auto;
+  top: 0rem;
   left: 1rem;
 }
 
