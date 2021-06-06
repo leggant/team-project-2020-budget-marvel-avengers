@@ -47,7 +47,7 @@ class NotesController extends Controller
     public function store(Request $request)
     {
         Note::create($request->all());
-        return redirect('notes');
+        return redirect("students");
     }
 
     /**
@@ -79,15 +79,15 @@ class NotesController extends Controller
      * @param  \App\Models\Note  $note
      * @return \Illuminate\Http\Response
      */
-    public function update($id, Request $request)
+    public function update( $id,Request $request)
     {
+        
         $notes = Note::query();
         if ($notes->where('id', $id)->exists()) {
             $note = $notes->find($id);
-            $note->student_name = is_null($request->student_name) ? $note->student_name : $request->student_name;
             $note->note = is_null($request->note) ? $note->note : $request->note;
             $note->save();
-            return redirect('notes');
+            return redirect("students");
     }
 }
 
@@ -103,7 +103,7 @@ class NotesController extends Controller
         if($notes->where('id', $id)->exists()) {
             $note = $notes->find($id);
             $note->delete($id);
-            return redirect('notes');
+            return redirect("students");
         }
     }
 }
