@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500;600;700;900&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap);
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -23,21 +24,26 @@ body {
 
 .container {
   margin: 0 auto;
-  min-height: -webkit-min-content;
-  min-height: -moz-min-content;
-  min-height: min-content;
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
   padding-top: 2rem;
   padding-bottom: 2rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 .container section {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  min-width: 60vw;
-  max-width: 1200px;
   height: 100%;
+  width: 45vw;
+  min-width: -webkit-min-content;
+  min-width: -moz-min-content;
+  min-width: min-content;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
   padding: 4rem 4rem;
-  margin: 0 auto;
+  margin: 0 2rem;
   background-image: linear-gradient(to right bottom, #0e5ba5, #3169b1, #4777bd, #5b85ca, #6e94d6, #58a1e1, #3aaee9, #00bbec, #00c6d7, #00ccb0, #5fcd80, #a3c853);
   border-radius: 20px;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
@@ -51,6 +57,7 @@ body {
 h1 {
   font-size: 3rem;
   font-weight: 700;
+  text-transform: capitalize;
 }
 
 h2,
@@ -201,6 +208,9 @@ button {
 }
 
 .footer .col {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   padding: 0px 20px 20px 20px;
 }
 
@@ -217,9 +227,11 @@ button {
   letter-spacing: 0.25em;
 }
 
-.footer .col p {
-  font-size: 15px;
+.footer p, .footer a, .footer address p {
+  font-size: 0.9rem;
   color: #aecf4b;
+  white-space: nowrap;
+  font-style: normal;
 }
 
 .footer .col ul {
@@ -240,9 +252,9 @@ button {
   -moz-transition: 0.2s;
 }
 
-.social ul li {
+.social > ul li {
   display: inline-block;
-  padding-right: 5px !important;
+  margin-right: 5px;
 }
 
 .footer .col ul li:hover {
@@ -257,20 +269,20 @@ button {
   justify-content: space-between;
   align-items: center;
   background-color: #11121c;
-  padding: 1rem 1.5rem;
+  padding: 1.5rem 1.5rem;
+}
+.navbar div {
+  display: flex;
+  justify-content: space-between;
 }
 
-.logo-image {
-  width: 46px;
-  height: 46px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin-top: -6px;
-}
-
-.logo-image img {
-  width: 46px;
-  height: 46px;
+.logo-image .navbar-brand img {
+  z-index: 100;
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  top: 1rem;
+  left: 1rem;
 }
 
 .hamburger {
@@ -320,12 +332,6 @@ button {
   background-position: 0 100%;
 }
 
-.nav-logo {
-  font-size: 2.1rem;
-  font-weight: 500;
-  color: #482ff7;
-}
-
 table {
   width: 100%;
   padding-top: 2rem;
@@ -348,6 +354,9 @@ table td {
   text-align: left;
   border-bottom: solid 1px rgba(255, 255, 255, 0.1);
 }
+table td a {
+  color: white;
+}
 table th {
   padding: 20px 8px;
   font-weight: 500;
@@ -359,9 +368,49 @@ table .title {
   text-transform: uppercase;
 }
 
+.actions {
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-end;
+  margin-left: 1rem;
+}
+.actions .btn {
+  padding: 0 0.5rem;
+  margin: 0;
+}
+
 .tbl-content {
   height: 300px;
   overflow-x: auto;
+}
+
+.student-card {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid #000;
+  justify-content: space-between;
+}
+.student-card p {
+  padding: 1rem 0;
+  color: #fff;
+}
+.student-card p a {
+  color: #fff;
+}
+.student-card p a::before {
+  color: #91c441;
+  display: inline-block;
+  content: "ℹ️";
+  margin-right: 0.5rem;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -369,27 +418,29 @@ table .title {
 /* -------------------------------------------------------------------------- */
 form {
   display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 input,
 select,
 textarea {
-  margin: 0;
+  margin: 0.5rem 0.5rem 0 0;
   outline: none;
   font-size: 1rem;
   padding: 0.8rem;
   border: 1.2px solid #005aab;
-  max-width: 500px;
   border-radius: 20px;
-  width: 100%;
 }
 
 textarea {
+  width: 100%;
   outline: none;
   height: 60px;
-  max-height: 150px;
   padding: 0.5rem;
   resize: vertical;
+  white-space: pre-wrap;
 }
 
 label {
@@ -404,7 +455,6 @@ label {
   justify-content: flex-start;
   align-items: baseline;
   flex-wrap: wrap;
-  margin: 0.8rem;
 }
 
 .input-group textarea#description {
@@ -444,6 +494,7 @@ input[type=checkbox] {
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.2s ease 0s;
   cursor: pointer;
+  margin: 1rem 0;
 }
 
 .submit-btn:hover {
@@ -477,6 +528,13 @@ input[type=checkbox] {
 .btn-edit {
   background-color: #135da7;
   color: white;
+}
+
+.btn-show {
+  background-color: #91c441;
+  color: black;
+  font-weight: 600;
+  font-family: "Montserrat", "san-serif";
 }
 
 /* -------------------------------------------------------------------------- */

@@ -44,13 +44,15 @@
                         <input type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
                     </label>
                 </div>
-                <div class="remember">
+                {{-- The Password has been commented out until we are certain that it will not be needed --}}
+                {{-- In future it might be best to copy this to the Wiki so that the next developer team can use it --}}
+                {{-- <div class="remember">
                     @if (Route::has('password.request'))
                         <a href="{{ route('password.request') }}">
                             {{ __('Forgot Your Password?') }}
                         </a>
                     @endif
-                </div>
+                </div> --}}
             </form>
         </div>
     </div>
