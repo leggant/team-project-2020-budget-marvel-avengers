@@ -41,7 +41,21 @@ body {
         max-width: max-content;
         padding: 4rem 4rem;
         margin: 0 2rem;
-        background-image: linear-gradient( to right bottom, #0e5ba5, #3169b1, #4777bd, #5b85ca, #6e94d6, #58a1e1, #3aaee9, #00bbec, #00c6d7, #00ccb0, #5fcd80, #a3c853);
+        background-image: linear-gradient(
+            to right bottom,
+            #0e5ba5,
+            #3169b1,
+            #4777bd,
+            #5b85ca,
+            #6e94d6,
+            #58a1e1,
+            #3aaee9,
+            #00bbec,
+            #00c6d7,
+            #00ccb0,
+            #5fcd80,
+            #a3c853
+        );
         border-radius: 20px;
         box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
         color: white;
@@ -49,7 +63,6 @@ body {
         header {
             margin-bottom: 1.5rem;
         }
-        
     }
 }
 
@@ -88,42 +101,66 @@ button {
 
 
 
-
-
-
-.posts {
-  
+.cards-list {
+    z-index: 0;
+    width: 100%;
     display: flex;
-    flex-flow: row wrap;
-    
-    .post {
-      
-      background: white;
-      margin: 10px;
-      height: 100px;
-      width: calc( (100% / 3) - 20px );
-      padding: 10px;
-      
-    }
-    
-    .feature {
-      
-      width: calc( ( ( 100% / 3 ) * 2) - 20px );
-      
-    }
-    
+    justify-content: space-around;
+    flex-wrap: wrap;
   }
   
-  @media (max-width: 480px) {
-    
-    .posts {
-      
-      .post {
-        width: 100%;
-      }
-      
-    }
-    
+  .card {
+    margin: 15px auto;
+    width: 120px;
+    height: 120px;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: 0.4s;
+    background-color: #001326;
   }
+  
+  .card .card_image {
+    width: inherit;
+    height: inherit;
+    border-radius: 40px;
+  }
+  
+  .card .card_image img {
+    width: inherit;
+    height: inherit;
+    border-radius: 40px;
+    object-fit: cover;
+  }
+  
+  .card .card_title {
+    text-align: center;
+    border-radius: 0px 0px 40px 40px;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: -90px;
+    height: 50px;
+  }
+  
+  .card:hover {
+    transform: scale(0.9, 0.9);
+  }
+  
+  .title-white {
+    color: white;
+  }
+  
+  .title-black {
+    color: black;
+  }
+  
+  @media all and (max-width: 500px) {
+    .card-list {
+      /* On small screens, we are no longer using row direction but column */
+      flex-direction: column;
+    }
+  } 
 
-  @import '../layout/homepage'
+
+
+
+@import "../layout/homepage";

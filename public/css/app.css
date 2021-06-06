@@ -86,24 +86,63 @@ button {
   cursor: pointer;
 }
 
-.posts {
+.cards-list {
+  z-index: 0;
+  width: 100%;
   display: flex;
-  flex-flow: row wrap;
-}
-.posts .post {
-  background: white;
-  margin: 10px;
-  height: 100px;
-  width: calc( (100% / 3) - 20px );
-  padding: 10px;
-}
-.posts .feature {
-  width: calc( ( ( 100% / 3 ) * 2) - 20px );
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
-@media (max-width: 480px) {
-  .posts .post {
-    width: 100%;
+.card {
+  margin: 15px auto;
+  width: 120px;
+  height: 120px;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: 0.4s;
+  background-color: #001326;
+}
+
+.card .card_image {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+}
+
+.card .card_image img {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.card .card_title {
+  text-align: center;
+  border-radius: 0px 0px 40px 40px;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: -90px;
+  height: 50px;
+}
+
+.card:hover {
+  transform: scale(0.9, 0.9);
+}
+
+.title-white {
+  color: white;
+}
+
+.title-black {
+  color: black;
+}
+
+@media all and (max-width: 500px) {
+  .card-list {
+    /* On small screens, we are no longer using row direction but column */
+    flex-direction: column;
   }
 }
 /* -------------------------------------------------------------------------- */
@@ -150,6 +189,9 @@ button {
 }
 .home .owl-theme .owl-next {
   right: 20px;
+}
+.home .home .owl-carousel .item img {
+  border-radius: 50px;
 }
 
 /* STYLES SPECIFIC TO FOOTER  */
