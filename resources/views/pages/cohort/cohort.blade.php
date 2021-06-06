@@ -60,7 +60,7 @@
                         <option value="{{ $value->id }}">{{ $value->year }}</option>
                     @endforeach
                 </select>
-                <textarea id="student-names" name="students" placeholder="Enter students name ✍🏻"></textarea>
+                <textarea id="student-names" name="students" placeholder="Enter student names ✍🏻"></textarea>
             </div>
             <input id="saveForm" name="saveForm" type="submit" value="Submit" class="submit-btn">
         </form>
