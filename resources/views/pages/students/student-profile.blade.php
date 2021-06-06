@@ -17,7 +17,7 @@
 <ul>
 @foreach ($student->notes as $user)
 <li class=temp>{{$user->note}} {{$user->updated_at->format('d-m-Y')}}</li>
-<button><a class="update" href="{{ route('notes.edit', $user->id)}}">Update</a></button>
+<button class="btn btn-edit"><a  href="{{ route('notes.edit', $user->id)}}">Update</a></button>
 <form action="{{route('notes.destroy', $user->id)}}" method="post">
                             @csrf 
                             @method('delete')
