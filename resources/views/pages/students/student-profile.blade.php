@@ -5,12 +5,9 @@
 @section('content')
     <section class="student-section">
         <h1>{{ $student->first_name }} {{ $student->last_name }} </h1>
-
-
         <div class=temp>studentID: {{ $student->studentID }}</div>
         <div class=temp>GitHub: {{ $student->github_username }}</div>
         <div class=temp>Email: {{ $student->student_email }}</div>
-
         <div class=temp></div>
         <div class=temp></div>
         <h3>Notes</h3>
@@ -29,7 +26,13 @@
                 </li>
             @endforeach
         </ul>
-
-
+    </section>
+    <section>
+        <h1>{{ $student->first_name }} Notes</h1>
+        <ul>
+            @foreach ($student->notes as $user)
+                <li class=temp>{{ $user->note }} {{ $user->updated_at->format('d-m-Y') }}</li>
+            @endforeach
+        </ul>
     </section>
 @endsection

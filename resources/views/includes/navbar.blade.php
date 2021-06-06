@@ -1,10 +1,9 @@
 <nav class="navbar">
-    <a class="navbar-brand" href="{{ url('/') }}">
-        <div class="logo-image">
+    <div class="logo-image">
+        <a class="navbar-brand" href="{{ url('/') }}">
             <img src="/images/logo.jpg">
-        </div>
-    </a>
-    <div id="navbarSupportedContent">
+        </a>
+    </div>
         <ul class="nav-menu">
             <!-- Authentication Links -->
             @auth

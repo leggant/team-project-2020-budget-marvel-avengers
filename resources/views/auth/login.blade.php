@@ -15,8 +15,8 @@
             <div class="item"><img src="/images/slideshow/img-1.jpg" alt=""></div>
             <div class="item"><img src="/images/slideshow/img-2.jpg" alt=""></div>
         </div>
-        <div class="login-form">
-            <form method="POST" action="{{ route('login') }}" class="login">
+        <div class="auth-form">
+            <form method="POST" action="{{ route('login') }}" class="auth login">
                 @csrf
                 <label for="email">{{ __('E-Mail Address') }}</label>
                 <input id="email" type="email" class="@error('email') is-invalid @enderror" name="email"
@@ -44,31 +44,17 @@
                         <input type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
                     </label>
                 </div>
-                <div class="remember">
+                {{-- The Password has been commented out until we are certain that it will not be needed --}}
+                {{-- In future it might be best to copy this to the Wiki so that the next developer team can use it --}}
+                {{-- <div class="remember">
                     @if (Route::has('password.request'))
                         <a href="{{ route('password.request') }}">
                             {{ __('Forgot Your Password?') }}
                         </a>
                     @endif
-                </div>
+                </div> --}}
             </form>
         </div>
     </div>
 </div>
-<script>
-    jQuery(document).ready(function($) {
-        $('.owl-carousel').owlCarousel({
-            loop: true,
-            center: true,
-            margin: 10,
-            autoplay: true,
-            autoplayTimeout: 2000,
-            autoplayHoverPause: true,
-            nav: true,
-            items: 1,
-            dots: false,
-        })
-    })
-
-</script>
 @endsection
