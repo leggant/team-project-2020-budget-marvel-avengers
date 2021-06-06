@@ -86,4 +86,44 @@ button {
     cursor: pointer;
 }
 
-@import '../layout/homepage'
+
+
+
+
+
+.posts {
+  
+    display: flex;
+    flex-flow: row wrap;
+    
+    .post {
+      
+      background: white;
+      margin: 10px;
+      height: 100px;
+      width: calc( (100% / 3) - 20px );
+      padding: 10px;
+      
+    }
+    
+    .feature {
+      
+      width: calc( ( ( 100% / 3 ) * 2) - 20px );
+      
+    }
+    
+  }
+  
+  @media (max-width: 480px) {
+    
+    .posts {
+      
+      .post {
+        width: 100%;
+      }
+      
+    }
+    
+  }
+
+  @import '../layout/homepage'
