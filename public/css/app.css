@@ -115,7 +115,7 @@ button {
   justify-content: space-around;
   position: relative;
   /* -------------------------------------------------------------------------- */
-  /*                           HOME PAGE TILES STYLES                          */
+  /*                           HOME PAGE TILE STYLES                          */
   /* -------------------------------------------------------------------------- */
 }
 .home .hero {
@@ -192,7 +192,7 @@ button {
 .home .card:hover {
   transform: scale(0.9, 0.9);
 }
-.home .title-white {
+.home .title-green {
   color: #aecf4b;
 }
 .home .title-black {

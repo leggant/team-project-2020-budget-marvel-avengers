@@ -1,5 +1,4 @@
-// number count for stats
-
+// count stats 
 $('.counting').each(function() {
   var $this = $(this),
       countTo = $this.attr('data-count');
@@ -8,7 +7,7 @@ $('.counting').each(function() {
     countNum: countTo
   },
   {
-    duration: 1500,
+    duration: 1000,
     easing:'linear',
     step: function() {
       $this.text(Math.floor(this.countNum));
