@@ -45,7 +45,7 @@ class CohortController extends Controller
 
     public function update(Request $request, $id)
     {
-        //
+        
     }
 
     public function destroy($id)
