@@ -21,8 +21,9 @@
     </section>
     <section>
         <h1>Students</h1>
+        <div class="scroll">
         @foreach ($student as $xstudent)
-            <article class="student-card">
+            <article class="student-card ">
                 <p><a href="{{ route('student.show', $xstudent->id) }}" title="Students ID# {{ $xstudent->studentID }}">{{ $xstudent->first_name }} {{ $xstudent->last_name }}</a></p>
                 <p><a href="mailto:{{ $xstudent->student_email }}">Email</a></p>
                 <p>Github: {{ $xstudent->github_username }}</p>
@@ -45,5 +46,6 @@
                 </div>
             </article>
         @endforeach
+        </div>
     </section>
 @endsection
