@@ -9,11 +9,11 @@
             @csrf
             <div class="form-col">
                 <div class="input-group">
-                    <input type="text" name="first_name" placeholder="Student First Name">
-                    <input type="text" name="last_name" placeholder="Student Last Name">
-                    <input type="text" name="studentID" placeholder="Student ID">
+                    <input type="text" name="first_name" placeholder="Student First Name" required>
+                    <input type="text" name="last_name" placeholder="Student Last Name" required>
+                    <input type="text" name="studentID" placeholder="Student ID" required>
                     <input type="text" name="github_username" placeholder="GitHub Username">
-                    <input type="email" name="student_email" placeholder="student@student.op.ac.nz">
+                    <input type="email" name="student_email" placeholder="student@student.op.ac.nz" >
                 </div>
                 <button class="submit-btn" type="submit">Submit</button>
             </div>
