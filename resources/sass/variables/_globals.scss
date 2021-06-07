@@ -3,6 +3,7 @@
 $body-bg: #001326;
 $OPblue: #005aab;
 $OPgreen: #91c441;
+
 * {
     margin: 0;
     padding: 0;
@@ -27,13 +28,14 @@ body {
 //main container
 .container {
     margin: 10px auto;
-    margin-bottom:100px ;
+    margin-bottom: 100px;
     min-height: fit-content;
     padding-top: 2rem;
     padding-bottom: 2rem;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+
     //sections wrapping content
     section {
         height: 100%;
@@ -42,25 +44,24 @@ body {
         max-width: max-content;
         padding: 4rem 4rem;
         margin: 0 2rem;
-        background-image: linear-gradient(
-            to right bottom,
-            #0e5ba5,
-            #3169b1,
-            #4777bd,
-            #5b85ca,
-            #6e94d6,
-            #58a1e1,
-            #3aaee9,
-            #00bbec,
-            #00c6d7,
-            #00ccb0,
-            #5fcd80,
-            #a3c853
-        );
+        background-image: linear-gradient(to right bottom,
+                #0e5ba5,
+                #3169b1,
+                #4777bd,
+                #5b85ca,
+                #6e94d6,
+                #58a1e1,
+                #3aaee9,
+                #00bbec,
+                #00c6d7,
+                #00ccb0,
+                #5fcd80,
+                #a3c853);
         border-radius: 20px;
         box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
         color: white;
         font-weight: 500;
+
         header {
             margin-bottom: 1.5rem;
         }
@@ -86,10 +87,12 @@ ul {
 
 a {
     display: inline-block;
+
     &:link,
     &:visited {
         text-decoration: none;
     }
+
     &:hover,
     a:active {
         text-decoration: underline;
@@ -99,18 +102,12 @@ a {
 button {
     cursor: pointer;
 }
+
 .scroll {
     width: 500px;
     height: 240px;
     overflow-x: hidden;
     overflow-y: auto;
-  }
-
-
-  *:focus,
-*:active {
-  outline: none !important;
-  -webkit-tap-highlight-color: transparent;
 }
 
 @import "../layout/homepage";

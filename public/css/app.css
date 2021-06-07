@@ -94,12 +94,6 @@ button {
   overflow-y: auto;
 }
 
-*:focus,
-*:active {
-  outline: none !important;
-  -webkit-tap-highlight-color: transparent;
-}
-
 /* -------------------------------------------------------------------------- */
 /*                           HOME PAGE SLIDER STYLES                          */
 /* -------------------------------------------------------------------------- */
@@ -128,7 +122,6 @@ button {
   -o-object-position: center center;
      object-position: center center;
   height: 60vh;
-  border-radius: 1px;
 }
 .home .owl-theme .owl-prev,
 .home .owl-theme .owl-next {
@@ -151,7 +144,9 @@ button {
 .home .home .owl-carousel .item img {
   border-radius: 50px;
 }
-.home .owl-carousel .owl-nav button.owl-next, .home .owl-carousel .owl-nav button.owl-prev, .home .owl-carousel button.owl-dot {
+.home .owl-carousel .owl-nav button.owl-next,
+.home .owl-carousel .owl-nav button.owl-prev,
+.home .owl-carousel button.owl-dot {
   margin-top: -80px;
 }
 .home .cards-list {
@@ -260,7 +255,6 @@ button {
   margin: 10px;
   width: 45px;
   height: 45px;
-  font-size: 25px !important;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -364,7 +358,7 @@ button {
   position: absolute;
   width: 80px;
   max-width: 100%;
-  height: auto;
+  max-height: 100px;
   top: 0rem;
   left: 1rem;
 }
