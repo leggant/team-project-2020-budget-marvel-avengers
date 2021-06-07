@@ -5,6 +5,7 @@
 <!-- Form begins-->
 @section('content')
     <section>
+        <h1>Edit Semesters</h1>
         <form action="{{ route('semesters.edit',$cohort->id) }}" method="POST" class="cohorts-form">
             @csrf
             @method('PUT')
@@ -31,13 +32,7 @@
                 </div>
             </div>
             <div>
-                {{-- <select id="student_name" name="cohort_id" required> --}}
-                    {{-- <option>--- Select Cohort ---</option> --}}
-                        {{-- @foreach ($cohort as $value)
-                            <option value="{{ $value->id }}">{{ $value->year }}</option>
-                        @endforeach --}}
-                {{-- </select> --}}
-                <textarea id="student-names" name="students" placeholder="Enter students name ✍🏻"></textarea>
+                <textarea id="student-names" name="students" placeholder="Enter student names ✍🏻"></textarea>
             </div>
             <input id="saveForm" name="saveForm" type="submit" value="Submit" class="submit-btn">
         </form>
