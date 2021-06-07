@@ -51,19 +51,19 @@
         <h1>Social</h1>
         <div class="wrapper">
             <div class="icon facebook">
-                <div class="tooltip">Facebook</div><a href="https://www.facebook.com/OtagoPoly">
+               <a href="https://www.facebook.com/OtagoPoly">
                     <span><i class="fab fa-facebook-f"></i></span>
             </div></a>
             <div class="icon instagram">
-                <div class="tooltip">Instagram</div><a href="https://www.instagram.com/otagopolytechnic/">
+               <a href="https://www.instagram.com/otagopolytechnic/">
                     <span><i class="fab fa-instagram"></i></span></a>
             </div>
             <div class="icon LinkedIn">
-                <div class="tooltip">LinkedIn</div><a href="https://www.linkedin.com/school/otagopolytechnic/">
+                <a href="https://www.linkedin.com/school/otagopolytechnic/">
                     <span> <i class="fab fa-linkedin"></i></i></span></a>
             </div>
             <div class="icon youtube">
-                <div class="tooltip">Youtube</div><a href="https://www.youtube.com/channel/UCRSet54nNLAiFTGvVT7b0-g">
+              <a href="https://www.youtube.com/channel/UCRSet54nNLAiFTGvVT7b0-g">
                     <span><i class="fab fa-youtube"></i></span></a>
             </div>
         </div>

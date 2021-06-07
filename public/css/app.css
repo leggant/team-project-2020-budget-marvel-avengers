@@ -193,12 +193,6 @@ button {
 .home .title-black {
   color: black;
 }
-@media all and (max-width: 500px) {
-  .home .card-list {
-    /* On small screens, we are no longer using row direction but column */
-    flex-direction: column;
-  }
-}
 
 /* STYLES SPECIFIC TO FOOTER  */
 .footer {
@@ -266,6 +260,7 @@ button {
 
 .wrapper .icon a {
   font-size: 30px;
+  color: #000;
 }
 
 .wrapper .tooltip {
@@ -927,5 +922,11 @@ select {
   .footer-info {
     width: 1200px;
     margin: 0 auto;
+  }
+}
+@media only screen and (min-width: 1280px) and (max-width: 500px) {
+  .card-list {
+    /* On small screens, we are no longer using row direction but column */
+    flex-direction: column;
   }
 }
