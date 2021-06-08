@@ -12,8 +12,9 @@ class CreateSemestersTable extends Migration
         Schema::create('semesters', function (Blueprint $table) {
             $table->id();
             $table->longText('students');
+            $table->string('studio');
             $table->unsignedBigInteger('cohort_id');
-            $table->foreign('cohort_id')->references('id')->on('cohorts');
+            $table->foreign('cohort_id')->references('id')->on('cohorts')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }

@@ -9,11 +9,11 @@
             @csrf
             <div class="form-col">
                 <div class="input-group">
-                    <input type="text" name="first_name" placeholder="Student First Name">
-                    <input type="text" name="last_name" placeholder="Student Last Name">
-                    <input type="text" name="studentID" placeholder="Student ID">
+                    <input type="text" name="first_name" placeholder="Student First Name" required>
+                    <input type="text" name="last_name" placeholder="Student Last Name" required>
+                    <input type="text" name="studentID" placeholder="Student ID" required>
                     <input type="text" name="github_username" placeholder="GitHub Username">
-                    <input type="email" name="student_email" placeholder="student@student.op.ac.nz">
+                    <input type="email" name="student_email" placeholder="student@student.op.ac.nz" >
                 </div>
                 <button class="submit-btn" type="submit">Submit</button>
             </div>
@@ -21,8 +21,9 @@
     </section>
     <section>
         <h1>Students</h1>
+        <div class="scroll">
         @foreach ($student as $xstudent)
-            <article class="student-card">
+            <article class="student-card ">
                 <p><a href="{{ route('student.show', $xstudent->id) }}" title="Students ID# {{ $xstudent->studentID }}">{{ $xstudent->first_name }} {{ $xstudent->last_name }}</a></p>
                 <p><a href="mailto:{{ $xstudent->student_email }}">Email</a></p>
                 <p>Github: {{ $xstudent->github_username }}</p>
@@ -45,5 +46,6 @@
                 </div>
             </article>
         @endforeach
+        </div>
     </section>
 @endsection

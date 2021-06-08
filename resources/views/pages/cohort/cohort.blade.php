@@ -70,7 +70,7 @@
                         </td>
                         <td>
                             <form onsubmit="return confirm('Do you really want to delete this cohort?');"
-                                action="{{ route('students.destroy', $key->id) }}" method="POST">
+                                action="{{ route('cohort.destroy', $key->id) }}" method="POST">
                                 @csrf
                                 @method('DELETE')
                                 <button class="btn btn-delete" type="submit" class="">Delete</button>
