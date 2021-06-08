@@ -1,5 +1,9 @@
 /* -------------------------------------------------------------------------- */
+
+
 /*                           HOME PAGE SLIDER STYLES                          */
+
+
 /* -------------------------------------------------------------------------- */
 
 .home {
@@ -39,44 +43,5 @@
         .owl-next {
             right: 20px;
         }
-    }
-    .home .owl-carousel .item img {
-        border-radius: 50px
-    }
-    .owl-carousel .owl-nav button.owl-next,
-    .owl-carousel .owl-nav button.owl-prev,
-    .owl-carousel button.owl-dot {
-        margin-top: -80px;
-    }
-
-    /* -------------------------------------------------------------------------- */
-    /*                           HOME PAGE TILE STYLES                            */
-    /* -------------------------------------------------------------------------- */
-
-    .cards-list {
-        z-index: 0;
-        width: 100%;
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        margin-bottom: 2rem;
-    }
-    .card {
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-        cursor: pointer;
-        transition: 0.4s;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: space-evenly;
-        background-color: rgba(0, 0, 0, 0.315);
-        color: aliceblue;
-        font-size: 1.5rem;
-    }
-    .card:hover {
-        transform: scale(0.9, 0.9);
-        color: #aecf4b;
     }
 }

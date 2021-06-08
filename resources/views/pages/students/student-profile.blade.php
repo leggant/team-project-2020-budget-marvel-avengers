@@ -5,15 +5,15 @@
 @section('content')
     <section>
         <h1>{{ $student->first_name }} {{ $student->last_name }} </h1>
-        <div>studentID: {{ $student->studentID }}</div>
-        <div>GitHub: {{ $student->github_username }}</div>
-        <div>Email: {{ $student->student_email }}</div>
+        <div class=temp>studentID: {{ $student->studentID }}</div>
+        <div class=temp>GitHub: {{ $student->github_username }}</div>
+        <div class=temp>Email: {{ $student->student_email }}</div>
     </section>
     <section>
         <h1>{{ $student->first_name }} Links</h1>
         <ul>
             @foreach ($student->uploads as $user)
-                <li>
+                <li class=temp>
                     <a href="{{ $user->uploadURL }}" target="_blank">{{ $user->description }}
                         {{ $user->updated_at->format('d-m-Y') }}</a>
                 </li>
@@ -24,7 +24,7 @@
         <h1>{{ $student->first_name }} Notes</h1>
         <ul>
             @foreach ($student->notes as $user)
-                <li>{{ $user->note }} {{ $user->updated_at->format('d-m-Y') }}</li>
+                <li class=temp>{{ $user->note }} {{ $user->updated_at->format('d-m-Y') }}</li>
             @endforeach
         </ul>
     </section>
