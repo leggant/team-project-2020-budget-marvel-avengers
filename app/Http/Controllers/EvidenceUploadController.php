@@ -47,7 +47,7 @@ class EvidenceUploadController extends Controller
     public function store(Request $request)
     {
         Upload::create($request->all());
-        return redirect('uploads');
+        return redirect('students');
     }
 
     /**
