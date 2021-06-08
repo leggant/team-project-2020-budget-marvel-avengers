@@ -108,27 +108,45 @@ input[type="checkbox"] {
     font-weight: 600;
     font-family: 'Montserrat', 'san-serif';
 }
-
 /* -------------------------------------------------------------------------- */
 /*                             COHORT FORM STYLES                             */
 /* -------------------------------------------------------------------------- */
-
-#cohort-select {
-    border: 1px;
-    padding: 10px;
-    #cohortSelect {
-        font-size: 1.6rem;
+.cohorts-form, .cohort-form {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    form {
+        width: 100%;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+        select {
+            width: max-content;
+        }
+        .form-col {
+            display: flex;
+            flex-direction: column;
+        }
+        .input-group {
+            margin: 0;
+            label {
+                white-space: nowrap;
+                margin: 0;
+                input {
+                    width: max-content;
+                    margin-right: 1rem;
+                }
+            }
+        }
     }
+}
+.cohorts-form {
+    width: 100%;
 }
 .cohort-show {
     width: 500px;
     height: 600px;
 }
-
-.cohort-screen{
-    padding:0px !important;
-}
-
 .createCohort{
     padding: 4rem 4rem;
 }
