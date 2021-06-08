@@ -33,7 +33,7 @@ class SemesterController extends Controller
 
     public function edit(Semester $semester)
     {
-        //
+        return view('pages.cohort.cohort_edit');
     }
 
     public function update(Request $request, Semester $semester)
