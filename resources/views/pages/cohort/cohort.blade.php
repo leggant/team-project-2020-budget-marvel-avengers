@@ -1,4 +1,3 @@
-<!-- Cohort screen-->
 @extends('layouts.app')
 @section('title')
     Studio Management Portal | Cohort
@@ -12,11 +11,9 @@
             @csrf
             <div class="input-group">
                 <label for="semester1">Semester 1
-                    <input type="radio" name="semester" id="semester1" value="Semester 1" checked></label>
-            </div>
-            <div class="input-group">
+                <input type="radio" name="semester" id="semester1" value="Semester 1" checked></label>
                 <label for="semester2">Semester 2
-                    <input type="radio" name="semester" id="semester2" value="Semester 2"></label>
+                <input type="radio" name="semester" id="semester2" value="Semester 2"></label>
             </div>
             <select id="student_name" name="year" required class="cohort-select">
                 <option value="2020">2020</option>
@@ -24,7 +21,7 @@
                 <option value="2022">2022</option>
                 <option value="2023">2023</option>
             </select>
-            <input id="saveForm" name="" type="submit" value="Submit" class="submit-btn">
+            <input id="saveForm" type="submit" value="Submit" class="submit-btn">
         </form>
         <header>
             <h1>Studio Paper Cohorts</h1>
@@ -32,28 +29,6 @@
         <form action="{{ route('semesters.store') }}" method="POST" class="cohorts-form">
             @csrf
             <div class="form-col">
-                <div class="input-group">
-                    <label for="studio1">Studio 1
-                        <input type="radio" name="studio" id="studio1" value="Studio 1" checked>
-                    </label>
-                </div>
-                <div class="input-group">
-                    <label for="studio2">Studio 2
-                        <input type="radio" name="studio" id="studio2" value="Studio 2">
-                    </label>
-                </div>
-                <div class="input-group">
-                    <label for="studio3">Studio 3
-                        <input type="radio" name="studio" id="studio3" value="Studio 3">
-                    </label>
-                </div>
-                <div class="input-group">
-                    <label for="studio4">Studio 4
-                        <input type="radio" name="studio" id="studio4" value="Studio 4">
-                    </label>
-                </div>
-            </div>
-            <div>
                 <select id="student_name" name="cohort_id" required>
                     <option>--- Select Cohort ---</option>
                     @foreach ($cohort as $value)
@@ -61,8 +36,22 @@
                     @endforeach
                 </select>
                 <textarea id="student-names" name="students" placeholder="Enter student names ✍🏻"></textarea>
+                <input type="submit" value="Submit" class="submit-btn">
             </div>
-            <input id="saveForm" name="saveForm" type="submit" value="Submit" class="submit-btn">
+            <div class="form-col">
+                <label for="studio1">Studio 1
+                    <input type="radio" name="studio" id="studio1" value="Studio 1" checked>
+                </label>
+                <label for="studio2">Studio 2
+                    <input type="radio" name="studio" id="studio2" value="Studio 2">
+                </label>
+                <label for="studio3">Studio 3
+                    <input type="radio" name="studio" id="studio3" value="Studio 3">
+                </label>
+                <label for="studio4">Studio 4
+                    <input type="radio" name="studio" id="studio4" value="Studio 4">
+                </label>
+            </div>
         </form>
         <table cellpadding="0" cellspacing="0" cellborder="0">
             <thead>
