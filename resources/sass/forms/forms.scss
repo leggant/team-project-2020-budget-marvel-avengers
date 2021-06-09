@@ -24,6 +24,7 @@ textarea {
     padding: 0.5rem;
     resize: vertical;
     white-space: pre-wrap;
+    min-height: 50px;
 }
 label {
     font-weight: 300;
@@ -108,33 +109,26 @@ input[type="checkbox"] {
     font-weight: 600;
     font-family: 'Montserrat', 'san-serif';
 }
-
 /* -------------------------------------------------------------------------- */
 /*                             COHORT FORM STYLES                             */
 /* -------------------------------------------------------------------------- */
-.cohorts {
+.cohorts-form, .cohort-form {
     display: flex;
     flex-direction: column;
+    width: max-content;
     form {
-        width: max-content;
-        align-items: center;
+        width: 100%;
         justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
         select {
             width: max-content;
-            margin-right: 1rem;
         }
         .form-col {
             display: flex;
-            align-items: flex-start;
-            justify-content: flex-start;
-            margin: 0 1rem 0 0;
-            textarea {
-                display: block;
-            }
+            flex-direction: column;
         }
         .input-group {
-            display: flex;
-            flex-direction: row;
             margin: 0;
             label {
                 white-space: nowrap;
@@ -146,15 +140,14 @@ input[type="checkbox"] {
             }
         }
     }
-    .cohort-form {
-        margin: 0 0 2rem 0;
-    }
+}
+.cohorts-form {
+    width: 100%;
 }
 .cohort-show {
     width: 500px;
     height: 600px;
 }
-
 .createCohort{
     padding: 4rem 4rem;
 }
