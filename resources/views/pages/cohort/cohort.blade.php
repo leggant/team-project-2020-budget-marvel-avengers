@@ -36,7 +36,7 @@
                     @endforeach
                 </select>
                 <textarea id="student-names" name="students" placeholder="Enter student names ✍🏻"></textarea>
-                <input id="saveForm" name="saveForm" type="submit" value="Submit" class="submit-btn">
+                <input type="submit" value="Submit" class="submit-btn">
             </div>
             <div class="form-col">
                 <label for="studio1">Studio 1
