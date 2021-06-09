@@ -109,7 +109,7 @@ button {
   justify-content: space-around;
   position: relative;
   /* -------------------------------------------------------------------------- */
-  /*                           HOME PAGE TILE STYLES                          */
+  /*                           HOME PAGE TILE STYLES                            */
   /* -------------------------------------------------------------------------- */
 }
 .home .hero {
@@ -155,43 +155,25 @@ button {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  margin-bottom: 2rem;
 }
 .home .card {
-  margin: 15px auto;
   width: 120px;
   height: 120px;
-  border-radius: 40px;
+  border-radius: 50%;
   cursor: pointer;
   transition: 0.4s;
-}
-.home .card .card_image {
-  width: inherit;
-  height: inherit;
-  border-radius: 40px;
-}
-.home .card .card_image img {
-  width: inherit;
-  height: inherit;
-  border-radius: 40px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.home .card .card_title {
-  text-align: center;
-  border-radius: 0px 0px 40px 40px;
-  font-weight: bold;
-  font-size: 20px;
-  margin-top: -90px;
-  height: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: rgba(0, 0, 0, 0.315);
+  color: aliceblue;
+  font-size: 1.5rem;
 }
 .home .card:hover {
   transform: scale(0.9, 0.9);
-}
-.home .title-green {
   color: #aecf4b;
-}
-.home .title-black {
-  color: black;
 }
 
 /* STYLES SPECIFIC TO FOOTER  */
