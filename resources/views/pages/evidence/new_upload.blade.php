@@ -23,7 +23,7 @@
                     <select id="studentName" name="student_id" required>
                         <option>Select Student....</option>
                         @foreach ($uploads as $student)
-                            <option value="{{ $student->id }}">{{ $student->first_name }}</option>
+                            <option value="{{ $student->id }}">{{ $student->first_name }} {{ $student->last_name }}</option>
                         @endforeach
                     </select>
                 </div>
