@@ -1,3 +1,4 @@
+
 <nav class="navbar">
     <div class="logo-image">
         <a class="navbar-brand" href="{{ url('/') }}">
