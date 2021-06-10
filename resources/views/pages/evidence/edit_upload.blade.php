@@ -21,10 +21,6 @@
             @method('PUT')
             <div class="form-col">
                 <div class="input-group">
-                    <label for="studentName">Student Name</label>
-                    <input type="text" id="studentName" class="form-control" placeholder="Enter Student Name" name="studentName" value="{{ $upload->studentName }}" required>
-                </div>
-                <div class="input-group">
                     <label for="description">Link Description: </label>
                     <textarea name="description" id="description" placeholder="Enter a description...." required>{{ $upload->description }}</textarea>
                 </div>
