@@ -16,7 +16,7 @@
             </div>
             <div class="input-col">
                 <input type="email" name="student_email" value="{{ $student->student_email }}" placeholder="Student Email">
-                <button class="submit-btn" type="submit">Submit</button>
+                <button class="submit-btn"  type="submit">Submit</button>
             </div>
         </form>
     @endsection

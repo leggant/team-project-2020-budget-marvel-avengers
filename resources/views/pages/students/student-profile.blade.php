@@ -15,7 +15,8 @@
             @foreach ($student->uploads as $user)
                 <li>
                     <a href="{{ $user->uploadURL }}" target="_blank">{{ $user->description }}
-                        {{ $user->updated_at->format('d-m-Y') }}</a>
+                    {{ $user->updated_at->format('d-m-Y') }}</a>
+                    <button class="btn btn-edit"><a href="{{ route('uploads.edit', $user->id) }}">Update</a></button>
                 </li>
             @endforeach
         </ul>

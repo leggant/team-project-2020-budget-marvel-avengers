@@ -16,7 +16,7 @@ class notes extends Seeder
      */
     public function run()
     {
-        $json_file = File::get('database/data/note.json');
+        $json_file = File::get('database/data/notes.json');
         DB::table('notes')->delete();
         $data = json_decode($json_file);
         foreach ($data as $obj) {
