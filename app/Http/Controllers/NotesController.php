@@ -47,7 +47,7 @@ class NotesController extends Controller
     public function store(Request $request)
     {
         Note::create($request->all());
-        return redirect("students");
+        return redirect('students');
     }
 
     /**
