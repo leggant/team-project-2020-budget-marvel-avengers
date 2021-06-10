@@ -87,7 +87,7 @@ class NotesController extends Controller
             $note = $notes->find($id);
             $note->note = is_null($request->note) ? $note->note : $request->note;
             $note->save();
-            return redirect("students");
+            return redirect('students');
     }
 }
 
