@@ -5,7 +5,7 @@
 @section('content')
     <section class="student-profile">
         <h1>{{ $student->first_name }} {{ $student->last_name }} </h1>
-        <div>studentID: {{ $student->studentID }}</div>
+        <div>Student #: {{ $student->studentID }}</div>
         <div>GitHub: {{ $student->github_username }}</div>
         <div>Email: {{ $student->student_email }}</div>
     </section>
@@ -25,7 +25,7 @@
         <h1>{{ $student->first_name }} Notes</h1>
         <ul>
             @foreach ($student->notes as $user)
-                <li class=temp>{{ $user->note }} {{ $user->updated_at->format('d-m-Y') }}</li>
+                <li>{{ $user->note }} {{ $user->updated_at->format('d-m-Y') }}</li>
                 <button class="btn btn-edit"><a href="{{ route('notes.edit', $user->id) }}">Update</a></button>
                 <form action="{{ route('notes.destroy', $user->id) }}" method="post">
                     @csrf
@@ -33,7 +33,6 @@
                     <button class="btn btn-delete" type="submit">Delete</button>
                 </form>
             @endforeach
-        </ul>
         </ul>
     </section>
 @endsection
