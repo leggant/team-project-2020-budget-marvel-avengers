@@ -79,7 +79,7 @@ class NotesController extends Controller
      * @param  \App\Models\Note  $note
      * @return \Illuminate\Http\Response
      */
-    public function update( $id,Request $request)
+    public function update($id, Request $request)
     {
         
         $notes = Note::query();
