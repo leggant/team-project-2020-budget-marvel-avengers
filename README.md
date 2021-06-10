@@ -1,35 +1,15 @@
-# Otago Polytechnic BIT Studio Management Portal
+Welcome to the Studio Management Project!
 
-<h2>Live Application</h2>
+Local Environment Installation (Laragon):
 
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
-
-
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
-
-<h2>GitHub</h2>
-<h2>Developers</h2>
-<p></p>
-
-
-## About Laravel
-
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-
+1. `git clone https://github.com/BIT-Studio-3/group-project-21-1-budget-marvel-avengers.git` into the laragon www directory
+2. Launch Laragon
+3. Run all
+4. Open Terminal in project root
+5. `cp .env.example .env`
+6. Open database management software and create a new database called "StudioManagement"
+7. `composer install`
+8. New terminal -> `npm i`
+9. New terminal -> `php artisan migrate:fresh`
+10. New terminal -> `php artisan tinker` then `DB::table('users')->insert(['name'=>'Admin','email'=>'admin@op.ac.nz','password'=>Hash::make('studioadmin')]);`
+11. Login using username: Admin password: studioadmin
