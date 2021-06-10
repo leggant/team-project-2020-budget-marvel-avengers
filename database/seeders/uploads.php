@@ -16,12 +16,11 @@ class uploads extends Seeder
      */
     public function run()
     {
-        $json_file = File::get('database/data/upload.json');
+        $json_file = File::get('database/data/uploads.json');
         DB::table('uploads')->delete();
         $data = json_decode($json_file);
         foreach ($data as $obj) {
             Upload::create(array(
-                'studentName' => $obj->studentName,
                 'uploadURL' => $obj->uploadURL,
                 'description' => $obj->description,
                 'student_id' => $obj->student_id,

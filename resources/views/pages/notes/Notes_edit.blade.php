@@ -10,13 +10,6 @@ Studio Management Portal | Notes Edit
         @method('PUT')
         <div class="form-col">
             <div class="input-group">
-                <label for="student_name">Student Name:</label>
-                <input id="student_name" name="student_name" type="text" spellcheck="false" maxlength="255"
-                    value="{{ $note->student_name }}" required>
-            </div>
-        </div>
-        <div class="form-col">
-            <div class="input-group">
                 <label for="note">Notes:</label>
                 <textarea id="note" name="note" spellcheck="true" required>{{ $note->note }}</textarea>
             </div>

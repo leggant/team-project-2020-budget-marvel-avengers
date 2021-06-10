@@ -16,16 +16,13 @@ class cohorts extends Seeder
      */
     public function run()
     {
-        $json_file = File::get('database/data/cohort.json');
+        $json_file = File::get('database/data/cohorts.json');
         DB::table('cohorts')->delete();
         $data = json_decode($json_file);
         foreach ($data as $obj) {
             Cohort::create(array(
-                'name' => $obj->name,
-                'paper' => $obj->paper,
-                'semester' => $obj->semester,
                 'year' => $obj->year,
-                'student_id' => $obj->student_id,
+                'semester' => $obj->semester,
             ));
         }
     }
