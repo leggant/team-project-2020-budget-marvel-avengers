@@ -103,7 +103,7 @@ class NotesController extends Controller
         if($notes->where('id', $id)->exists()) {
             $note = $notes->find($id);
             $note->delete($id);
-            return redirect("students");
+            return redirect('students');
         }
     }
 }
