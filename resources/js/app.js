@@ -2,7 +2,6 @@
 $(".counting").each(function () {
     var $this = $(this),
         countTo = $this.attr("data-count");
-
     $({ countNum: $this.text() }).animate(
         {
             countNum: countTo,
