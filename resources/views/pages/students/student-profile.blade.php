@@ -3,13 +3,14 @@
     Studio Management Portal | Student Details
 @endsection
 @section('content')
-    <section class="student-profile">
+<div class="student-profile"></div>
+    <section>
         <h1>{{ $student->first_name }} {{ $student->last_name }} </h1>
         <div>Student #: {{ $student->studentID }}</div>
         <div>GitHub: {{ $student->github_username }}</div>
         <div>Email: {{ $student->student_email }}</div>
     </section>
-    <section class="student-profile">
+    <section>
         <h1>{{ $student->first_name }} Links</h1>
         <ul>
             @foreach ($student->uploads as $user)
@@ -21,7 +22,7 @@
             @endforeach
         </ul>
     </section>
-    <section class="student-profile">
+    <section>
         <h1>{{ $student->first_name }} Notes</h1>
         <ul>
             @foreach ($student->notes as $user)

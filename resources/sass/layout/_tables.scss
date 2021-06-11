@@ -56,12 +56,13 @@ table {
 }
 .student-card {
   display: flex;
+  min-width: max-content;
   width: 100%;
   flex-wrap: wrap;
   align-items: center;
   padding-bottom: .8rem;
   border-bottom: 1px solid #000;
-  justify-content: space-between;
+  justify-content: flex-start;
   p {
     padding: 1rem 0;
     color: #fff;

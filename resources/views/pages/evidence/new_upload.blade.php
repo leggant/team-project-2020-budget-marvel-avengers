@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <section id="evidence">
+    <section>
         <header>
             <h1>File Location Data</h1>
         </header>
