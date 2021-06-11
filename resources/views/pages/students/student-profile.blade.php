@@ -3,7 +3,7 @@
     Studio Management Portal | Student Details
 @endsection
 @section('content')
-<div class="student-profile"></div>
+<div class="col-3">
     <section>
         <h1>{{ $student->first_name }} {{ $student->last_name }} </h1>
         <div>Student #: {{ $student->studentID }}</div>
@@ -36,4 +36,5 @@
             @endforeach
         </ul>
     </section>
+</div>
 @endsection
