@@ -82,7 +82,11 @@ button {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  height: 240px;
+  min-width: -webkit-min-content;
+  min-width: -moz-min-content;
+  min-width: min-content;
+  max-height: 70vh;
+  padding-right: 1rem;
   overflow-x: hidden;
   overflow-y: auto;
 }
