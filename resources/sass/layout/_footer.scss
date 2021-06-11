@@ -2,21 +2,20 @@
   /* STYLES SPECIFIC TO FOOTER  */
   .footer {
     padding-top: 2rem;
-    width: 100%;
     background-color:#11121c;
     display: flex;
     flex-direction: column;
-    align-content: space-between;
-    bottom:0rem;
   }
   .footer-info {
-    max-width: 1200px;
     margin: 0 auto;
     display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    gap:2.5rem;
   }
-  .footer .col {
-    width: max-content;
-    gap: 0 1.3rem 1.3rem 1.3rem;
+  .footer-info > * {
+    flex: 1 1 10em;
+    
   }
   .footer .col h1 {
     margin: 0;

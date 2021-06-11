@@ -67,7 +67,9 @@ body {
         }
     }
 }
-
+.container > * {
+    flex: 1 1 10em;
+}
 h1 {
     font-size: 3rem;
     font-weight: 700;
