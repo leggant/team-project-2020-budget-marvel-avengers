@@ -23,10 +23,11 @@ body {
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
-  display: flex;
+  display: grid;
   width: 90vw;
   padding-bottom: 2rem;
   gap: 2rem;
+  grid-auto-flow: columns;
 }
 .container section {
   padding: 4rem 4rem;
@@ -116,7 +117,7 @@ button {
      object-fit: cover;
   -o-object-position: center center;
      object-position: center center;
-  height: 60vh;
+  height: 70vh;
 }
 .home .owl-theme .owl-prev,
 .home .owl-theme .owl-next {

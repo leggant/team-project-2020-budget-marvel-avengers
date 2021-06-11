@@ -25,10 +25,11 @@ body {
 .container {
     margin: 4rem auto;
     height: min-content;
-    display: flex;
+    display: grid;
     width: 90vw;
     padding-bottom: 2rem;
     gap:2rem;
+        grid-auto-flow: columns;
 
     //sections wrapping content
     section {
