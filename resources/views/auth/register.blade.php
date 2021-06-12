@@ -15,39 +15,43 @@
                 <div class="item"><img src="/images/slideshow/img-1.jpg" alt=""></div>
                 <div class="item"><img src="/images/slideshow/img-2.jpg" alt=""></div>
             </div>
-            <div class="login-form">
-                <form method="POST" action="{{ route('register') }}" class="login">
+            <div class="auth-form">
+                <form method="POST" action="{{ route('register') }}" class="auth register">
                     @csrf
-                    <label for="name">{{ __('Name') }}</label>
                     <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name"
-                        value="{{ old('name') }}" required autocomplete="name" autofocus>
+                        value="{{ old('name') }}" required autocomplete="name" autofocus placeholder="Enter Users Name">
                     @error('name')
                         <span class="invalid-feedback error" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
                     @enderror
 
-                    <label for="email" class="">{{ __('E-Mail Address') }}</label>
+                    {{-- <label for="email" class="">{{ __('E-Mail Address') }}</label> --}}
                     <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email"
-                        value="{{ old('email') }}" required autocomplete="email">
+                        value="{{ old('email') }}" required autocomplete="email" placeholder="studio@op.ac.nz">
                     @error('email')
                         <span class="invalid-feedback error" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
                     @enderror
-
-                    <label for="password">{{ __('Password') }}</label>
-                    <input id="password" type="password" class="form-control @error('password') is-invalid @enderror"
-                        name="password" required autocomplete="new-password">
-                    @error('password')
-                        <span class="invalid-feedback error" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                    @enderror
-
-                    <label for="password-confirm">{{ __('Confirm Password') }}</label>
-                    <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required
-                        autocomplete="new-password">
+                    <div class="form-col passwords">
+                        <div>
+                            <label for="password">{{ __('Password') }}</label>
+                            <input id="password" type="password"
+                                class="form-control @error('password') is-invalid @enderror" name="password" required
+                                autocomplete="new-password">
+                            @error('password')
+                                <span class="invalid-feedback error" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+                        <div>
+                            <label for="password-confirm">{{ __('Confirm Password') }}</label>
+                            <input id="password-confirm" type="password" class="form-control" name="password_confirmation"
+                                required autocomplete="new-password">
+                        </div>
+                    </div>
                     <button type="submit" class="submit-btn">
                         {{ __('Register') }}
                     </button>
@@ -55,20 +59,4 @@
             </div>
         </div>
     </div>
-    <script>
-        jQuery(document).ready(function($) {
-            $('.owl-carousel').owlCarousel({
-                loop: true,
-                center: true,
-                margin: 10,
-                autoplay: true,
-                autoplayTimeout: 2000,
-                autoplayHoverPause: true,
-                nav: true,
-                items: 1,
-                dots: false,
-            })
-        })
-    
-    </script>
 @endsection

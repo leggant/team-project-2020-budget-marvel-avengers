@@ -2,17 +2,20 @@
   /* STYLES SPECIFIC TO FOOTER  */
   .footer {
     padding-top: 2rem;
-    width: 100%;
     background-color:#11121c;
     display: flex;
     flex-direction: column;
-    align-content: space-between;
   }
   .footer-info {
+    margin: 0 auto;
     display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    gap:2.5rem;
   }
-  .footer .col {
-    padding: 0px 20px 20px 20px;
+  .footer-info > * {
+    flex: 1 1 10em;
+    
   }
   .footer .col h1 {
     margin: 0;
@@ -26,35 +29,74 @@
     text-transform: uppercase;
     letter-spacing: 0.250em;
   }
-  .footer .col p{
-    font-size: 15px;
+  .col.social {
+    padding: 0 0 1rem 1rem;
+  }
+  .footer p, .footer a, .footer address p {
+    font-size: .9rem;
     color: #aecf4b;
+    white-space: nowrap;
+    font-style: normal;
   }
-  .footer .col ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  .footer .col ul li {
-    color: #999999;
-    font-size: 14px;
-    font-family: inherit;
-    font-weight: bold;
-    padding: 5px 0px 5px 0px;
-    cursor: pointer;
-    transition: .2s;
-    -webkit-transition: .2s;
-    -moz-transition: .2s;
-  }
-  .social ul li {
-    display: inline-block;
-    padding-right: 5px !important;
-    
-  }
+ 
   
-  .footer .col ul li:hover {
-    color: #ffffff;
-    transition: .1s;
-    -webkit-transition: .1s;
-    -moz-transition: .1s;
-  }
+
+/*--------------------------------------social icons------------------------------*/
+.wrapper {
+  display: inline-flex;
+}
+
+.wrapper .icon {
+  position: relative;
+  background-color: $OPblue;
+  border-radius: 50%;
+  padding: 15px;
+  margin: 10px;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .icon a {
+    font-size: 1.9rem;
+    color: #fff;
+}
+.icon:hover {
+  background-color: #fff;
+  a {
+    color:$OPblue;
+  } 
+}
+.icon a:hover {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+// .wrapper .facebook:hover {
+//   background-color: #333333;
+//   color: $OPblue;
+// }
+
+// .wrapper .twitter:hover{
+//   background-color: #46c1f6;
+//   color: #ffffff;
+// }
+
+// .wrapper .instagram:hover {
+//   background-color: #e1306c;
+//   color: #ffffff;
+// }
+
+// .wrapper .LinkedIn:hover {
+//   background-color: #333333;
+//   color: $OPgreen;
+// }
+
+// .wrapper .youtube:hover {
+//   background-color: #de463b;
+//   color: $OPblue;
+// }

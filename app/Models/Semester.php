@@ -12,7 +12,8 @@ class Semester extends Model
     protected $primaryKey = 'id';
     protected $fillable = [
         'students',
-        'cohort_id'
+        'cohort_id',
+        'studio'
     ];
 
     public function cohort(){

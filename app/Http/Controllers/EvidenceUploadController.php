@@ -47,7 +47,7 @@ class EvidenceUploadController extends Controller
     public function store(Request $request)
     {
         Upload::create($request->all());
-        return redirect('uploads');
+        return redirect('students');
     }
 
     /**
@@ -84,7 +84,6 @@ class EvidenceUploadController extends Controller
         $uploads = Upload::query();
         if ($uploads->where('id', $id)->exists()) {
             $upload = $uploads->find($id);
-            $upload->studentName = is_null($request->studentName) ? $upload->studentName : $request->studentName;
             $upload->uploadURL = is_null($request->uploadURL) ? $upload->uploadURL : $request->uploadURL;
             $upload->description = is_null($request->description) ? $upload->description : $request->description;
             $upload->save();

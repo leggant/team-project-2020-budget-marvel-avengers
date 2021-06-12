@@ -18,6 +18,9 @@ table {
       color: #fff;
       text-align: left;
       border-bottom: solid 1px rgba(255,255,255,0.1);
+      a {
+        color: white;
+      }
   }
   th {
     padding: 20px 8px;
@@ -31,9 +34,45 @@ table {
     text-transform: uppercase;
   }
 }
+.actions {
+  min-width: max-content;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-end;
+  margin-left: 1rem;
+  .btn {
+    padding: 0 .5rem;
+    margin: 0;
+  }
+}
 
 //makes table scrollable
 .tbl-content{
   height:300px;
   overflow-x:auto;
+}
+.student-card {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-bottom: .8rem;
+  border-bottom: 1px solid #000;
+  justify-content: space-between;
+  p {
+    padding: 1rem 0;
+    color: #fff;
+    a {
+      color: #fff;
+      &::before {
+        color: $OPgreen;
+        display: inline-block;
+        content: 'ℹ️';
+        margin-right: .5rem;
+      }
+    }
+  }
 }

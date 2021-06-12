@@ -31,18 +31,30 @@ class SemesterController extends Controller
         return view('pages/cohort.semesters', ['cohort' => $cohort]);
     }
 
-    public function edit(Semester $semester)
+    public function edit(Semester $id)
     {
-        //
+        return view('pages.cohort.cohort_edit');
     }
 
-    public function update(Request $request, Semester $semester)
+    public function update(Request $request, Semester $id)
     {
-        //
+        $semesters = Semester::query();
+        if ($semesters->where('id', $id)->exists()) {
+            $semester = $semesters->find($id);
+            $semester->students = is_null($request->students) ? $semester->students : $request->students;
+            $semester->studio = is_null($request->studio) ? $semester->studio : $request->studio;
+            $semester->cohort_id = is_null($request->cohort_id) ? $semester->cohort_id : $request->cohort_id;
+            $semester->save();
+        }
     }
 
-    public function destroy(Semester $semester)
+    public function destroy($id)
     {
-        //
+        $semesters = Semester::query();
+        if($semesters->where('id', $id)->exists()){
+            $semester= $semesters->find($id);
+            $semester->delete();
+            return redirect('cohort');
+        }
     }
 }

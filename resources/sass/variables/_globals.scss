@@ -3,6 +3,7 @@
 $body-bg: #001326;
 $OPblue: #005aab;
 $OPgreen: #91c441;
+
 * {
     margin: 0;
     padding: 0;
@@ -27,31 +28,43 @@ body {
 //main container
 .container {
     margin: 0 auto;
-    min-height: min-content;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    min-height: 70vh;
+    display: grid;
+    width: 85vw;
+    grid-template-columns: 1fr;
+    padding: 2rem 0;
+    gap:2rem;
+
     //sections wrapping content
     section {
-        width: max-content;
-        min-width: 60vw;
-        max-width: 1200px;
-        height: 100%;
         padding: 4rem 4rem;
-        margin: 0 auto;
-        background-image: linear-gradient( to right bottom, #0e5ba5, #3169b1, #4777bd, #5b85ca, #6e94d6, #58a1e1, #3aaee9, #00bbec, #00c6d7, #00ccb0, #5fcd80, #a3c853);
+        background-image: linear-gradient(to right bottom,
+                #0e5ba5,
+                #3169b1,
+                #4777bd,
+                #5b85ca,
+                #6e94d6,
+                #58a1e1,
+                #3aaee9,
+                #00bbec,
+                #00c6d7,
+                #00ccb0,
+                #5fcd80,
+                #a3c853);
         border-radius: 20px;
         box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
         color: white;
         font-weight: 500;
+        align-self: flex-start;
         header {
             margin-bottom: 1.5rem;
         }
     }
 }
-
 h1 {
     font-size: 3rem;
     font-weight: 700;
+    text-transform: capitalize;
 }
 
 h2,
@@ -67,10 +80,12 @@ ul {
 
 a {
     display: inline-block;
+
     &:link,
     &:visited {
         text-decoration: none;
     }
+
     &:hover,
     a:active {
         text-decoration: underline;
@@ -81,4 +96,37 @@ button {
     cursor: pointer;
 }
 
-@import '../layout/homepage'
+.scroll {
+    width: max-content;
+    min-width: min-content;
+    max-height: 60vh;
+    padding-right: 1rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.student-profile {
+    min-height: 50vh;
+}
+
+.col-1 {
+    display: grid;
+    grid-template-columns: minmax(min-content, 1fr);
+    align-self: center;
+    justify-items: center;
+}
+.col-2 {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(min-content, 1fr));
+    align-self: center;
+    gap:2rem;
+}
+.col-3 {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(min-content, 1fr));
+    grid-template-rows: 1fr;
+    align-self: center;
+    gap: 2rem;
+}
+
+@import "../layout/homepage";

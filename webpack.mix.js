@@ -17,4 +17,6 @@ mix.js('resources/js/app.js', 'public/js')
     .sourceMaps();
  mix.js('resources/js/owl.carousel.min.js', 'public/js')
     .sourceMaps();
+    mix.js('resources/js/owl.plugin.js', 'public/js')
+    .sourceMaps();
 //mix.disableNotifications();

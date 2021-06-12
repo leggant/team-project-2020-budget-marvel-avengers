@@ -2,12 +2,12 @@
 
 namespace Database\Seeders;
 
-use App\Models\Cohort;
+use App\Models\Semester;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
 
-class cohorts extends Seeder
+class semesters extends Seeder
 {
     /**
      * Run the database seeds.
@@ -16,14 +16,14 @@ class cohorts extends Seeder
      */
     public function run()
     {
-        $json_file = File::get('database/data/cohort.json');
-        DB::table('cohorts')->delete();
+        $json_file = File::get('database/data/semesters.json');
+        DB::table('semesters')->delete();
         $data = json_decode($json_file);
         foreach ($data as $obj) {
-            Cohort::create(array(
-                'name' => $obj->name,
-                'paper' => $obj->paper,
-                'cohort' => $obj->cohort
+            Semester::create(array(
+                'students' => $obj->students,
+                'cohort_id' => $obj->cohort_id,
+                'studio' => $obj->studio,
             ));
         }
     }

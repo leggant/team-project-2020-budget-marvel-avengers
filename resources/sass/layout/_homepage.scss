@@ -1,9 +1,5 @@
 /* -------------------------------------------------------------------------- */
-
-
 /*                           HOME PAGE SLIDER STYLES                          */
-
-
 /* -------------------------------------------------------------------------- */
 
 .home {
@@ -18,71 +14,11 @@
     .hero {
         overflow: hidden;
     }
-    .login-form {
-        background: rgba(0, 19, 38, 0.25);
-        backdrop-filter: blur(4.5px);
-        -webkit-backdrop-filter: blur(4.5px);
-        border-radius: 10px;
-        border: 1px solid rgba(255, 255, 255, 0.18);
-        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37), 20px 20px 50px #005babbe, -30px -30px 60px #005bab5e, -30px -30px 60px #16324b;
-        position: absolute;
-        height: min-height;
-        width: 50%;
-        top: 50%;
-        left: 50%;
-        z-index: 10;
-        border-radius: 2rem;
-        transform: translate(-80%, -50%);
-        padding: 1.5rem 0;
-        .login {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 500;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: space-evenly;
-            width: 90%;
-            height: 100%;
-            margin: 0 auto;
-            .error {
-                display: inline-block;
-                padding: .8rem;
-                min-width: max-content;
-                text-align: center;
-                color: $OPgreen;
-                font-weight: 900;
-                margin: 1rem auto 0 auto;
-                background: rgba(38, 0, 25, 0.589);
-                -webkit-backdrop-filter: blur(10.5px);
-                border-radius: 10px;
-                border: 1px solid rgba(102, 1, 1, 0.486);
-            }
-            label {
-                font-weight: 600;
-                font-size: 1.5rem;
-                color: #ffffff;
-                white-space: nowrap;
-                cursor: pointer;
-            }
-            .remember {
-                margin-top: 1.5rem;
-                width: 100%;
-                display: flex;
-                flex-wrap: nowrap;
-                align-items: center;
-                justify-content: space-evenly;
-                a {
-                    color: #ffffff;
-                }
-            }
-        }
-    }
     .owl-carousel .item img {
         display: block;
         object-fit: cover;
         object-position: center center;
         height: 60vh;
-        border-radius: 20px;
     }
     .owl-theme {
         .owl-prev,
@@ -102,5 +38,44 @@
         .owl-next {
             right: 20px;
         }
+    }
+    .home .owl-carousel .item img {
+        border-radius: 50px
+    }
+    .owl-carousel .owl-nav button.owl-next,
+    .owl-carousel .owl-nav button.owl-prev,
+    .owl-carousel button.owl-dot {
+        margin-top: -80px;
+    }
+
+    /* -------------------------------------------------------------------------- */
+    /*                           HOME PAGE TILE STYLES                            */
+    /* -------------------------------------------------------------------------- */
+
+    .cards-list {
+        z-index: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin-bottom: 2rem;
+    }
+    .card {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: 0.4s;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-evenly;
+        background-color: rgba(0, 0, 0, 0.315);
+        color: aliceblue;
+        font-size: 1.5rem;
+    }
+    .card:hover {
+        transform: scale(0.9, 0.9);
+        color: #aecf4b;
     }
 }

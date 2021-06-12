@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Student;
+use App\Models\Note;
+use App\Models\Upload;
+use App\Models\Cohort;
 
 class PagesController extends Controller
 {
@@ -13,7 +17,11 @@ class PagesController extends Controller
      */
     public function index()
     {
-        return view('pages.index');
+        $student = Student::count();
+        $note = Note::count();
+        $upload = Upload::count();
+        $cohort = Cohort::count();
+        return view('pages.index')->with(compact('student','note','upload','cohort'));
     }
 
     /**

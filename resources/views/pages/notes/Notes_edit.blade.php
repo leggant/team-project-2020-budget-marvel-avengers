@@ -1,10 +1,9 @@
 @extends('layouts.app')
-
 @section('title')
 Studio Management Portal | Notes Edit
 @endsection
-
 @section('content')
+<div class="col-1">
 <section>
     <h1>Student Notes</h1>
     <form action="{{ route('notes.update', $note->id) }}" method="POST">
@@ -12,15 +11,8 @@ Studio Management Portal | Notes Edit
         @method('PUT')
         <div class="form-col">
             <div class="input-group">
-                <label for="student_name">Student Name:</label>
-                <input id="student_name" name="student_name" type="text" spellcheck="false" maxlength="255"
-                    value="{{ $note->student_name }}">
-            </div>
-        </div>
-        <div class="form-col">
-            <div class="input-group">
                 <label for="note">Notes:</label>
-                <textarea id="note" name="note" spellcheck="true">{{ $note->note }}</textarea>
+                <textarea id="note" name="note" spellcheck="true" required>{{ $note->note }}</textarea>
             </div>
             <div class="input-group">
                 <input id="saveForm" name="saveForm" type="submit" value="Save" class="submit-btn">
@@ -28,4 +20,5 @@ Studio Management Portal | Notes Edit
         </div>
     </form>
 </section>
+</div>
 @endsection
