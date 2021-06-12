@@ -37,9 +37,6 @@
                     @endforeach
                 </select>
                 <textarea id="student-names" name="students" placeholder="Enter student names ✍🏻"></textarea>
-                <input type="submit" value="Submit" class="submit-btn">
-            </div>
-            <div class="form-col">
                 <label for="studio1">Studio 1
                     <input type="radio" name="studio" id="studio1" value="Studio 1" checked>
                 </label>
@@ -52,6 +49,9 @@
                 <label for="studio4">Studio 4
                     <input type="radio" name="studio" id="studio4" value="Studio 4">
                 </label>
+                <input type="submit" value="Submit" class="submit-btn">
+            </div>
+            <div class="form-col">
             </div>
         </form>
     </section>

@@ -87,7 +87,7 @@ class EvidenceUploadController extends Controller
             $upload->uploadURL = is_null($request->uploadURL) ? $upload->uploadURL : $request->uploadURL;
             $upload->description = is_null($request->description) ? $upload->description : $request->description;
             $upload->save();
-            return redirect('uploads');
+            return redirect('students');
         }
     }
 
