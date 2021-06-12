@@ -20,7 +20,6 @@
                 <button class="submit-btn"  type="submit">Submit</button>
             </div>
         </form>
-    @endsection
 </section>
 </div>
 @endsection
