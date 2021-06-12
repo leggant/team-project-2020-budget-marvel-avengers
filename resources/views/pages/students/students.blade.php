@@ -12,11 +12,15 @@
                 <div class="input-group">
                     <input type="text" name="first_name" placeholder="Student First Name" required>
                     <input type="text" name="last_name" placeholder="Student Last Name" required>
+                </div>
+                <div class="input-group">
                     <input type="text" name="studentID" placeholder="Student ID" required>
                     <input type="text" name="github_username" placeholder="GitHub Username">
-                    <input type="email" name="student_email" placeholder="student@student.op.ac.nz" >
                 </div>
-                <button class="submit-btn" type="submit">Submit</button>
+                <div class="input-group">
+                    <input type="email" name="student_email" placeholder="student@student.op.ac.nz" >
+                    <button class="submit-btn" type="submit">Submit</button>
+                </div>
             </div>
         </form>
     </section>
@@ -35,15 +39,8 @@
                     </form>
                     <form action="{{ route('students.edit', $xstudent->id) }}" method="GET">
                         @csrf
-                        @method('POST')
                         <button class="btn btn-edit" type="submit">Edit</button>
-                    </form>
-                    <form onsubmit="return confirm('Do you really want to delete this student?');"
-                        action="{{ route('students.destroy', $xstudent->id) }}" method="POST">
-                        @csrf
-                        @method('DELETE')
-                        <button class="btn btn-delete" type="submit">Delete</button>
-                    </form>
+                    </form>  
                 </div>
             </article>
         @endforeach

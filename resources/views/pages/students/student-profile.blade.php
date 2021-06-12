@@ -15,9 +15,12 @@
         <ul>
             @foreach ($student->uploads as $user)
                 <li>
-                    <a href="{{ $user->uploadURL }}" target="_blank">{{ $user->description }}
+                <a href="{{ $user->uploadURL }}" target="_blank">{{ $user->description }}
                     {{ $user->updated_at->format('d-m-Y') }}</a>
-                    <button class="btn btn-edit"><a href="{{ route('uploads.edit', $user->id) }}">Update</a></button>
+                    <form action="{{ route('uploads.edit', $user->id) }}" method="get">
+                    @csrf
+                    <button class="btn btn-edit" type="submit">Edit</button>
+                </form>
                 </li>
             @endforeach
         </ul>
@@ -27,7 +30,10 @@
         <ul>
             @foreach ($student->notes as $user)
                 <li>{{ $user->note }} {{ $user->updated_at->format('d-m-Y') }}</li>
-                <button class="btn btn-edit"><a href="{{ route('notes.edit', $user->id) }}">Update</a></button>
+                <form action="{{ route('notes.edit', $user->id) }}" method="get">
+                    @csrf
+                    <button class="btn btn-edit" type="submit">Edit</button>
+                </form>
                 <form action="{{ route('notes.destroy', $user->id) }}" method="post">
                     @csrf
                     @method('delete')
