@@ -3,6 +3,7 @@
     Studio Management Portal | Student Details
 @endsection
 @section('content')
+<div class="col-3">
     <section class="student-profile">
         <h1>{{ $student->first_name }} {{ $student->last_name }} </h1>
         <div>Student #: {{ $student->studentID }}</div>

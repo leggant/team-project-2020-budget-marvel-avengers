@@ -113,6 +113,7 @@ button {
   display: grid;
   grid-template-columns: repeat(3, minmax(-webkit-min-content, 1fr));
   grid-template-columns: repeat(3, minmax(min-content, 1fr));
+  grid-template-rows: 1fr;
   align-self: center;
   gap: 2rem;
 }
