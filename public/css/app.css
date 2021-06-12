@@ -23,10 +23,11 @@ body {
 }
 
 .container {
-  margin: 10px auto;
+  margin: 0 auto;
   min-height: 70vh;
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  width: 85vw;
+  grid-template-columns: 1fr;
   padding: 2rem 0;
   gap: 2rem;
 }
@@ -37,13 +38,10 @@ body {
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   color: white;
   font-weight: 500;
+  align-self: flex-start;
 }
 .container section header {
   margin-bottom: 1.5rem;
-}
-
-.container > * {
-  flex: 1 1 10em;
 }
 
 h1 {
@@ -85,7 +83,7 @@ button {
   min-width: -webkit-min-content;
   min-width: -moz-min-content;
   min-width: min-content;
-  max-height: 70vh;
+  max-height: 60vh;
   padding-right: 1rem;
   overflow-x: hidden;
   overflow-y: auto;
@@ -93,6 +91,30 @@ button {
 
 .student-profile {
   min-height: 50vh;
+}
+
+.col-1 {
+  display: grid;
+  grid-template-columns: minmax(-webkit-min-content, 1fr);
+  grid-template-columns: minmax(min-content, 1fr);
+  align-self: center;
+  justify-items: center;
+}
+
+.col-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(-webkit-min-content, 1fr));
+  grid-template-columns: repeat(2, minmax(min-content, 1fr));
+  align-self: center;
+  gap: 2rem;
+}
+
+.col-3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(-webkit-min-content, 1fr));
+  grid-template-columns: repeat(3, minmax(min-content, 1fr));
+  align-self: center;
+  gap: 2rem;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -602,28 +624,6 @@ input[type=checkbox] {
 
 .createCohort {
   padding: 4rem 4rem;
-}
-
-/* -------------------------------------------------------------------------- */
-/*                            EVIDENCE FORM STYLES                            */
-/* -------------------------------------------------------------------------- */
-form#evidence h3 {
-  overflow-wrap: break-word;
-}
-form#evidence form {
-  justify-content: space-around;
-}
-form#evidence form:first-child .input-group {
-  margin-right: 1rem;
-}
-form#evidence form .input-group {
-  display: grid;
-}
-form#evidence form .input-group:nth-child(2) {
-  margin-right: 2rem;
-}
-form#evidence .form-col {
-  display: flex;
 }
 
 /* -------------------------------------------------------------------------- */
