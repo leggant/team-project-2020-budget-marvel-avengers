@@ -3,7 +3,8 @@
     Studio Management Portal | Cohort
 @endsection
 @section('content')
-    <section class="cohorts">
+<div class="col-2">
+    <section>
         <header>
             <h1>Create Cohort</h1>
         </header>
@@ -53,6 +54,8 @@
                 </label>
             </div>
         </form>
+    </section>
+    <section>
         <table cellpadding="0" cellspacing="0" cellborder="0">
             <thead>
                 <tr>
@@ -82,4 +85,5 @@
             </tbody>
         </table>
     </section>
+</div>
 @endsection

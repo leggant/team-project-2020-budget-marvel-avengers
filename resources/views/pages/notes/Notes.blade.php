@@ -5,6 +5,7 @@ Studio Management Portal | Notes
 @endsection
 
 @section('content')
+<div class="col-1">
 <section>
     <h1>Student Notes</h1>
     <form action="{{ route('notes.store') }}" method="POST">
@@ -31,4 +32,5 @@ Studio Management Portal | Notes
         </div>
     </form>
 </section>
+</div>
 @endsection

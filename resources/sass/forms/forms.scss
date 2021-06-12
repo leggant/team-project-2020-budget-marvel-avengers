@@ -5,17 +5,22 @@
 form {
     display: flex;
     width: fit-content;
+    outline: none;
 }
 
 input,
 select,
 textarea {
+    color: #000;
     margin: .5rem .5rem 0 0;
     outline: none;
     font-size: 1rem;
     padding: 0.8rem;
     border: 1.2px solid $OPblue;
     border-radius: 20px;
+    &:-moz-ui-invalid {
+        box-shadow: rgba(255, 0, 0, 0.411) 1px 3px 4px 3px;
+    }
 }
 textarea {
     width: 100%;
@@ -152,30 +157,6 @@ input[type="checkbox"] {
     padding: 4rem 4rem;
 }
 
-/* -------------------------------------------------------------------------- */
-/*                            EVIDENCE FORM STYLES                            */
-/* -------------------------------------------------------------------------- */
-
-form#evidence {
-    h3 {
-        overflow-wrap: break-word;
-    }
-    form {
-        justify-content: space-around;
-        &:first-child .input-group {
-            margin-right: 1rem;
-        }
-        .input-group {
-            display: grid;
-            &:nth-child(2) {
-                margin-right: 2rem;
-            }
-        }
-    }
-    .form-col {
-        display: flex;
-    }
-}
 
 /* -------------------------------------------------------------------------- */
 /*                             STUDENT FORM STYLES                            */
@@ -267,7 +248,7 @@ form#evidence {
             margin-top: 1.5rem;
             width: 100%;
             display: flex;
-            flex-wrap: nowrap;
+            flex-wrap: wrap;
             align-items: center;
             justify-content: space-evenly;
             a {

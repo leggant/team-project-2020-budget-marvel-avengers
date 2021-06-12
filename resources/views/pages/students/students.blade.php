@@ -3,6 +3,7 @@
     Studio Management Portal | Student Details
 @endsection
 @section('content')
+<div class="col-2">
     <section>
         <h1>Add New Student</h1>
         <form class="student-form" action="{{ route('students.store') }}" method="POST">
@@ -48,4 +49,5 @@
         @endforeach
         </div>
     </section>
+    </div>
 @endsection
