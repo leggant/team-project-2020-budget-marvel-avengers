@@ -25,10 +25,10 @@ body {
 .container {
     margin: 4rem auto;
     height: min-content;
-    display: grid;
+    display: flex;
     width: 90vw;
     padding-bottom: 2rem;
-    
+    gap:2rem;
 
     //sections wrapping content
     section {

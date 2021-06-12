@@ -23,9 +23,10 @@ body {
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
-  display: grid;
+  display: flex;
   width: 90vw;
   padding-bottom: 2rem;
+  gap: 2rem;
 }
 .container section {
   padding: 4rem 4rem;
