@@ -52,20 +52,19 @@
         <div class="wrapper">
             <div class="icon facebook">
                <a href="https://www.facebook.com/OtagoPoly">
-                    <span><i class="fab fa-facebook-f"></i></span>
-            </div></a>
+                <i class="fab fa-facebook-f"></i></a>
+            </div>
             <div class="icon instagram">
                <a href="https://www.instagram.com/otagopolytechnic/">
-                    <span><i class="fab fa-instagram"></i></span></a>
+                <i class="fab fa-instagram"></i></a>
             </div>
             <div class="icon LinkedIn">
                 <a href="https://www.linkedin.com/school/otagopolytechnic/">
-                    <span> <i class="fab fa-linkedin"></i></i></span></a>
+                <i class="fab fa-linkedin"></i></a>
             </div>
             <div class="icon youtube">
               <a href="https://www.youtube.com/channel/UCRSet54nNLAiFTGvVT7b0-g">
-                    <span><i class="fab fa-youtube"></i></span></a>
+                <i class="fab fa-youtube"></i></a>
             </div>
         </div>
     </div>
-    <!-- END OF FOOTER -->

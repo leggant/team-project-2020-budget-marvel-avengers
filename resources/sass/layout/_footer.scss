@@ -48,7 +48,7 @@
 
 .wrapper .icon {
   position: relative;
-  background-color: #f5f5f5;
+  background-color: $OPblue;
   border-radius: 50%;
   padding: 15px;
   margin: 10px;
@@ -64,35 +64,39 @@
 }
 .wrapper .icon a {
     font-size: 1.9rem;
-    color: #000;
+    color: #fff;
 }
-
-
-.wrapper .icon:hover span {
+.icon:hover {
+  background-color: #fff;
+  a {
+    color:$OPblue;
+  } 
+}
+.icon a:hover {
   text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
 }
 
-.wrapper .facebook:hover {
-  background-color: #3b5999;
-  color: #ffffff;
-}
+// .wrapper .facebook:hover {
+//   background-color: #333333;
+//   color: $OPblue;
+// }
 
-.wrapper .twitter:hover{
-  background-color: #46c1f6;
-  color: #ffffff;
-}
+// .wrapper .twitter:hover{
+//   background-color: #46c1f6;
+//   color: #ffffff;
+// }
 
-.wrapper .instagram:hover {
-  background-color: #e1306c;
-  color: #ffffff;
-}
+// .wrapper .instagram:hover {
+//   background-color: #e1306c;
+//   color: #ffffff;
+// }
 
-.wrapper .LinkedIn:hover {
-  background-color: #333333;
-  color: #ffffff;
-}
+// .wrapper .LinkedIn:hover {
+//   background-color: #333333;
+//   color: $OPgreen;
+// }
 
-.wrapper .youtube:hover {
-  background-color: #de463b;
-  color: #ffffff;
-}
+// .wrapper .youtube:hover {
+//   background-color: #de463b;
+//   color: $OPblue;
+// }
