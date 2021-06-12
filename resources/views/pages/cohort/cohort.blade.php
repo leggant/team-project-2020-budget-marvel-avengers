@@ -85,5 +85,5 @@
             </tbody>
         </table>
     </section>
-    </div>
+</div>
 @endsection

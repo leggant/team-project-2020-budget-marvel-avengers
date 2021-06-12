@@ -4,6 +4,7 @@
 @endsection
 <!-- Form begins-->
 @section('content')
+<div class="col-1">
     <section>
         <h1>Edit Semesters</h1>
         <form action="{{ route('semesters.edit',$cohort->id) }}" method="POST" class="cohorts-form">
@@ -37,5 +38,5 @@
             <input id="saveForm" name="saveForm" type="submit" value="Submit" class="submit-btn">
         </form>
     </section>
-    
+</div> 
 @endsection

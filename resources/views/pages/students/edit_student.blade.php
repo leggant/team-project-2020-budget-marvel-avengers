@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="col-1">
     <section>
         <h1>Edit student</h1>
         <form action="{{ route('students.update', $student->id) }}" method="POST">
@@ -21,3 +22,5 @@
         </form>
     @endsection
 </section>
+</div>
+@endsection

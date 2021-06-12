@@ -3,6 +3,7 @@
 Studio Management Portal | Notes Edit
 @endsection
 @section('content')
+<div class="col-1">
 <section>
     <h1>Student Notes</h1>
     <form action="{{ route('notes.update', $note->id) }}" method="POST">
@@ -19,4 +20,5 @@ Studio Management Portal | Notes Edit
         </div>
     </form>
 </section>
+</div>
 @endsection

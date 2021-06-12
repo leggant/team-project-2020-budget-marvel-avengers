@@ -5,6 +5,7 @@
 @endsection
 
 @section('content')
+<div class="col-1">
 <section id="evidence">
     <header>
         <h1>File Location Data</h1>
@@ -35,4 +36,5 @@
         </form>
     </div>
 </section>
+</div>
 @endsection
