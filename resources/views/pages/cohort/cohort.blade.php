@@ -56,34 +56,23 @@
         </form>
     </section>
     <section>
-        <table cellpadding="0" cellspacing="0" cellborder="0">
-            <thead>
-                <tr>
-                    <th>List of Cohorts 📜</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach ($cohort as $key)
-                    <tr>
-                        <td>
-                            <a href="{{ route('semesters.show', $key->id) }}">
-                                {{ $key->year }}
-                                {{ $key->semester }}
-                            </a>
-                        </td>
-                        <td>
-                            <form onsubmit="return confirm('Do you really want to delete this cohort?');"
-                                action="{{ route('cohort.destroy', $key->id) }}" method="POST">
-                                @csrf
-                                @method('DELETE')
-                                <button class="btn btn-delete" type="submit" class="">Delete</button>
-                            </form>
-                        </td>
-                    </tr>
-                @endforeach
-            </tbody>
-        </table>
+    <h2>List of Cohorts 📜</h2>
+        <div class="scroll">
+            @foreach ($cohort as $key)
+                <article class="student-card">
+                    <p><a href="{{ route('semesters.show', $key->id) }}">
+                            {{ $key->year }}
+                            {{ $key->semester }}
+                        </a></p>
+                    <form onsubmit="return confirm('Do you really want to delete this cohort?');"
+                        action="{{ route('cohort.destroy', $key->id) }}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button class="btn btn-delete" type="submit" class="">Delete</button>
+                    </form>
+                </article>
+            @endforeach
+        </div>
     </section>
 </div>
 @endsection
