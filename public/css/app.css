@@ -458,17 +458,24 @@ form {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  outline: none;
 }
 
 input,
 select,
 textarea {
+  color: #000;
   margin: 0.5rem 0.5rem 0 0;
   outline: none;
   font-size: 1rem;
   padding: 0.8rem;
   border: 1.2px solid #005aab;
   border-radius: 20px;
+}
+input:-moz-ui-invalid,
+select:-moz-ui-invalid,
+textarea:-moz-ui-invalid {
+  box-shadow: rgba(255, 0, 0, 0.411) 1px 3px 4px 3px;
 }
 
 textarea {

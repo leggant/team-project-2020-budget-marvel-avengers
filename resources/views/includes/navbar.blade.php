@@ -35,7 +35,7 @@
                 <a class="nav-link" href="{{ route('register') }}" alt="Link to admin registration page">{{ __('Register') }} New User</a>
             </li>
             <li class="nav-item">
-                <a class="navbar-link" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" alt="Link to logout">
+                <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" alt="Link to logout">
                     {{ __('Logout') }}
                 </a>
             </li>

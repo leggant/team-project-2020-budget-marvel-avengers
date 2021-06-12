@@ -11,7 +11,7 @@
         <div>Email: {{ $student->student_email }}</div>
     </section>
     <section class="student-profile">
-        <h1>{{ $student->first_name }} Links</h1>
+        <h1>{{ $student->first_name }}'s Links</h1>
         <ul>
             @foreach ($student->uploads as $user)
                 <li>
@@ -23,7 +23,7 @@
         </ul>
     </section>
     <section class="student-profile">
-        <h1>{{ $student->first_name }} Notes</h1>
+        <h1>{{ $student->first_name }}'s Notes</h1>
         <ul>
             @foreach ($student->notes as $user)
                 <li>{{ $user->note }} {{ $user->updated_at->format('d-m-Y') }}</li>
